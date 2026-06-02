@@ -8,7 +8,7 @@ import type { User } from './user';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ButtonComponent],
   template: `<header>
-  <div class="storybook-header">
+  <div class="usli-header">
     <div>
       <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" fillRule="evenodd">

@@ -1,2 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@use '../../../projects/ui-sdk/src/lib/usli-palette';
+@use '../../../projects/ui-sdk/src/lib/usli-typography';
+
 body { margin: 0; padding: 0; }

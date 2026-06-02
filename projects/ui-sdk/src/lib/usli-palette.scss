@@ -1,0 +1,158 @@
+:root {
+  // ---------------------------------------------------------------------------
+  // USLI Orange — 500: #f69728
+  // ---------------------------------------------------------------------------
+  --usli-orange-50:   #fff4ea;
+  --usli-orange-100:  #fde4c0;
+  --usli-orange-200:  #fbce94;
+  --usli-orange-300:  #f9b868;
+  --usli-orange-400:  #f8a63f;
+  --usli-orange-500:  #f69728;
+  --usli-orange-600:  #d4841e;
+  --usli-orange-700:  #b27015;
+  --usli-orange-800:  #905c0d;
+  --usli-orange-900:  #6e4807;
+  --usli-orange-a100: #ffe0b2;
+  --usli-orange-a200: #ffb74d;
+  --usli-orange-a400: #ff9800;
+  --usli-orange-a700: #ff6d00;
+
+  // ---------------------------------------------------------------------------
+  // USLI Blue — 500: #00338e
+  // ---------------------------------------------------------------------------
+  --usli-blue-50:   #e3e9f6;
+  --usli-blue-100:  #b3c2e6;
+  --usli-blue-200:  #809dd8;
+  --usli-blue-300:  #4d78c9;
+  --usli-blue-400:  #255dbf;
+  --usli-blue-500:  #00338e;
+  --usli-blue-600:  #002c7c;
+  --usli-blue-700:  #00216a;
+  --usli-blue-800:  #001657;
+  --usli-blue-900:  #000b44;
+  --usli-blue-a100: #80b0ff;
+  --usli-blue-a200: #448aff;
+  --usli-blue-a400: #2979ff;
+  --usli-blue-a700: #2962ff;
+
+  // ---------------------------------------------------------------------------
+  // USLI Gray — 500: #a8a8a8
+  // ---------------------------------------------------------------------------
+  --usli-gray-50:   #fafafa;
+  --usli-gray-100:  #f5f5f5;
+  --usli-gray-200:  #eeeeee;
+  --usli-gray-300:  #e0e0e0;
+  --usli-gray-400:  #bdbdbd;
+  --usli-gray-500:  #a8a8a8;
+  --usli-gray-600:  #757575;
+  --usli-gray-700:  #616161;
+  --usli-gray-800:  #424242;
+  --usli-gray-900:  #212121;
+  --usli-gray-a100: #ffffff;
+  --usli-gray-a200: #eeeeee;
+  --usli-gray-a400: #bdbdbd;
+  --usli-gray-a700: #616161;
+
+  // ---------------------------------------------------------------------------
+  // Info — 500: #5aaafa
+  // ---------------------------------------------------------------------------
+  --usli-info-50:   #e8f4ff;
+  --usli-info-100:  #c0e0ff;
+  --usli-info-200:  #90c8fe;
+  --usli-info-300:  #60b0fd;
+  --usli-info-400:  #3da0fc;
+  --usli-info-500:  #5aaafa;
+  --usli-info-600:  #4996e3;
+  --usli-info-700:  #3478c3;
+  --usli-info-800:  #235aa0;
+  --usli-info-900:  #163d7a;
+  --usli-info-a100: #b3d8ff;
+  --usli-info-a200: #64b5ff;
+  --usli-info-a400: #1890ff;
+  --usli-info-a700: #0070e0;
+
+  // ---------------------------------------------------------------------------
+  // Success — 500: #14661a
+  // ---------------------------------------------------------------------------
+  --usli-success-50:   #edfaee;
+  --usli-success-100:  #bce8be;
+  --usli-success-200:  #88d58b;
+  --usli-success-300:  #55bb59;
+  --usli-success-400:  #2da332;
+  --usli-success-500:  #14661a;
+  --usli-success-600:  #105515;
+  --usli-success-700:  #0d4411;
+  --usli-success-800:  #09330c;
+  --usli-success-900:  #062207;
+  --usli-success-a100: #ccff90;
+  --usli-success-a200: #b2ff59;
+  --usli-success-a400: #76ff03;
+  --usli-success-a700: #64dd17;
+
+  // ---------------------------------------------------------------------------
+  // Warning — 500: #efc100
+  // ---------------------------------------------------------------------------
+  --usli-warning-50:   #fffde7;
+  --usli-warning-100:  #fff9c4;
+  --usli-warning-200:  #fff59d;
+  --usli-warning-300:  #fff176;
+  --usli-warning-400:  #ffee58;
+  --usli-warning-500:  #efc100;
+  --usli-warning-600:  #c29a00;
+  --usli-warning-700:  #997800;
+  --usli-warning-800:  #705800;
+  --usli-warning-900:  #4d3c00;
+  --usli-warning-a100: #ffff8d;
+  --usli-warning-a200: #ffff00;
+  --usli-warning-a400: #ffea00;
+  --usli-warning-a700: #ffd600;
+
+  // ---------------------------------------------------------------------------
+  // Error — 500: #b10505
+  // ---------------------------------------------------------------------------
+  --usli-error-50:   #fff0f0;
+  --usli-error-100:  #f9c4c4;
+  --usli-error-200:  #f09090;
+  --usli-error-300:  #e65858;
+  --usli-error-400:  #d92828;
+  --usli-error-500:  #b10505;
+  --usli-error-600:  #940404;
+  --usli-error-700:  #770303;
+  --usli-error-800:  #590202;
+  --usli-error-900:  #3b0101;
+  --usli-error-a100: #ff8a80;
+  --usli-error-a200: #ff5252;
+  --usli-error-a400: #ff1744;
+  --usli-error-a700: #d50000;
+
+  // ---------------------------------------------------------------------------
+  // Semantic aliases
+  // ---------------------------------------------------------------------------
+  --color-primary:         var(--usli-orange-500);
+  --color-primary-light:   var(--usli-orange-300);
+  --color-primary-dark:    var(--usli-orange-700);
+
+  --color-secondary:       var(--usli-blue-500);
+  --color-secondary-light: var(--usli-blue-300);
+  --color-secondary-dark:  var(--usli-blue-700);
+
+  --color-info:            var(--usli-info-500);
+  --color-info-light:      var(--usli-info-100);
+  --color-info-dark:       var(--usli-info-700);
+
+  --color-success:         var(--usli-success-500);
+  --color-success-light:   var(--usli-success-100);
+  --color-success-dark:    var(--usli-success-700);
+
+  --color-warning:         var(--usli-warning-500);
+  --color-warning-light:   var(--usli-warning-100);
+  --color-warning-dark:    var(--usli-warning-700);
+
+  --color-error:           var(--usli-error-500);
+  --color-error-light:     var(--usli-error-100);
+  --color-error-dark:      var(--usli-error-700);
+
+  --color-neutral:         var(--usli-gray-500);
+  --color-neutral-light:   var(--usli-gray-100);
+  --color-neutral-dark:    var(--usli-gray-800);
+}

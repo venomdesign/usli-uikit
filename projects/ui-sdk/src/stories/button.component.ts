@@ -34,7 +34,7 @@ export class ButtonComponent {
   onClick = output<Event>();
 
   classes = computed(() => {
-    const mode = this.primary() ? 'storybook-button--primary' : 'storybook-button--secondary';
-    return ['storybook-button', `storybook-button--${this.size()}`, mode].join(' ');
+    const mode = this.primary() ? 'usli-button--primary' : 'usli-button--secondary';
+    return ['usli-button', `usli-button--${this.size()}`, mode].join(' ');
   });
 }

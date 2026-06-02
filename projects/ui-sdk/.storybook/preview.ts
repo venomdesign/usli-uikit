@@ -1,4 +1,6 @@
 import type { Preview } from '@storybook/angular'
+import '../src/lib/usli-palette.scss'
+import '../src/lib/usli-typography.scss'
 import { setCompodocJson } from "@storybook/addon-docs/angular";
 import docJson from "../documentation.json";
 setCompodocJson(docJson);

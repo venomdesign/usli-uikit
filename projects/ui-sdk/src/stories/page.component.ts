@@ -14,7 +14,7 @@ import type { User } from './user';
     (onLogin)="doLogin()"
     (onCreateAccount)="doCreateAccount()"
   ></usli-header>
-  <section class="storybook-page">
+  <section class="usli-page">
     <h2>Pages in Storybook</h2>
     <p>
       We recommend building UIs with a

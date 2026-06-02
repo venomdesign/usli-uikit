@@ -1,0 +1,103 @@
+// Google Fonts — Roboto (300–900) + Open Sans (300–800)
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@300;400;500;600;700;900&display=swap');
+
+// 1rem = 16px (reference: https://pixelsconverter.com/px-to-rem)
+
+:root {
+  // ---------------------------------------------------------------------------
+  // Font families
+  // ---------------------------------------------------------------------------
+  --usli-font-roboto:    'Roboto', sans-serif;
+  --usli-font-open-sans: 'Open Sans', sans-serif;
+
+  // ---------------------------------------------------------------------------
+  // Font weights
+  //   Roboto:    300 · 400 · 500 · 600 · 700 · 900
+  //   Open Sans: 300 · 400 · 600 · 700 · 800
+  // ---------------------------------------------------------------------------
+  --usli-fw-light:     300;
+  --usli-fw-regular:   400;
+  --usli-fw-medium:    500;
+  --usli-fw-semibold:  600;
+  --usli-fw-bold:      700;
+  --usli-fw-extrabold: 800;
+  --usli-fw-black:     900;
+
+  // ---------------------------------------------------------------------------
+  // Type scale  (1rem = 16px)
+  // ---------------------------------------------------------------------------
+  --usli-fs-h1:         3rem;       // 48px
+  --usli-fs-h2:         2.5rem;     // 40px
+  --usli-fs-h3:         2rem;       // 32px
+  --usli-fs-h4:         1.5rem;     // 24px
+  --usli-fs-h5:         1.25rem;    // 20px
+  --usli-fs-h6:         1rem;       // 16px
+  --usli-fs-body-1:     1rem;       // 16px
+  --usli-fs-subtitle-2: 0.875rem;   // 14px
+  --usli-fs-button:     0.875rem;   // 14px
+  --usli-fs-body-2:     0.875rem;   // 14px
+  --usli-fs-caption:    0.75rem;    // 12px
+  --usli-fs-overline:   0.625rem;   // 10px
+
+  // ---------------------------------------------------------------------------
+  // Typography roles — Roboto
+  //
+  //   H1          Light   3rem
+  //   H2          Light   2.5rem
+  //   H3          Regular 2rem
+  //   H4          Regular 1.5rem
+  //   H5          Regular 1.25rem
+  //   H6          Medium  1rem
+  //   Body 1      Regular 1rem
+  //   Subtitle 2  Medium  0.875rem
+  //   Button      Medium  0.875rem  UPPERCASE
+  //   Body 2      Regular 0.875rem
+  //   Caption     Regular 0.75rem
+  //   Overline    Regular 0.625rem  UPPERCASE
+  // ---------------------------------------------------------------------------
+  --usli-type-h1-size:           var(--usli-fs-h1);
+  --usli-type-h1-weight:         var(--usli-fw-light);
+  --usli-type-h1-transform:      none;
+
+  --usli-type-h2-size:           var(--usli-fs-h2);
+  --usli-type-h2-weight:         var(--usli-fw-light);
+  --usli-type-h2-transform:      none;
+
+  --usli-type-h3-size:           var(--usli-fs-h3);
+  --usli-type-h3-weight:         var(--usli-fw-regular);
+  --usli-type-h3-transform:      none;
+
+  --usli-type-h4-size:           var(--usli-fs-h4);
+  --usli-type-h4-weight:         var(--usli-fw-regular);
+  --usli-type-h4-transform:      none;
+
+  --usli-type-h5-size:           var(--usli-fs-h5);
+  --usli-type-h5-weight:         var(--usli-fw-regular);
+  --usli-type-h5-transform:      none;
+
+  --usli-type-h6-size:           var(--usli-fs-h6);
+  --usli-type-h6-weight:         var(--usli-fw-medium);   // Open Sans: semibold
+  --usli-type-h6-transform:      none;
+
+  --usli-type-body-1-size:       var(--usli-fs-body-1);
+  --usli-type-body-1-weight:     var(--usli-fw-regular);
+
+  --usli-type-subtitle-2-size:   var(--usli-fs-subtitle-2);
+  --usli-type-subtitle-2-weight: var(--usli-fw-medium);   // Open Sans: semibold
+
+  --usli-type-button-size:       var(--usli-fs-button);
+  --usli-type-button-weight:     var(--usli-fw-medium);   // Open Sans: semibold
+  --usli-type-button-transform:  uppercase;
+  --usli-type-button-spacing:    0.08em;
+
+  --usli-type-body-2-size:       var(--usli-fs-body-2);
+  --usli-type-body-2-weight:     var(--usli-fw-regular);
+
+  --usli-type-caption-size:      var(--usli-fs-caption);
+  --usli-type-caption-weight:    var(--usli-fw-regular);
+
+  --usli-type-overline-size:     var(--usli-fs-overline);
+  --usli-type-overline-weight:   var(--usli-fw-regular);
+  --usli-type-overline-transform: uppercase;
+  --usli-type-overline-spacing:  0.15em;
+}
