@@ -1,20 +1,19 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 import { HeaderComponent } from './header.component';
 import type { User } from './user';
 
 @Component({
-  selector: 'storybook-page',
-  standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  selector: 'usli-page',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [HeaderComponent],
   template: `<article>
-  <storybook-header
-    [user]="user"
+  <usli-header
+    [user]="user()"
     (onLogout)="doLogout()"
     (onLogin)="doLogin()"
     (onCreateAccount)="doCreateAccount()"
-  ></storybook-header>
+  ></usli-header>
   <section class="storybook-page">
     <h2>Pages in Storybook</h2>
     <p>
@@ -66,17 +65,17 @@ import type { User } from './user';
   styleUrls: ['./page.css'],
 })
 export class PageComponent {
-  user: User | null = null;
+  user = signal<User | null>(null);
 
   doLogout() {
-    this.user = null;
+    this.user.set(null);
   }
 
   doLogin() {
-    this.user = { name: 'Jane Doe' };
+    this.user.set({ name: 'Jane Doe' });
   }
 
   doCreateAccount() {
-    this.user = { name: 'Jane Doe' };
+    this.user.set({ name: 'Jane Doe' });
   }
 }
