@@ -14,7 +14,7 @@
     "run:story": "concurrently \"npm run serve:ssr:showcase\" \"npm run storybook\"",
     "compodoc": "compodoc -p projects/ui-sdk/tsconfig.lib.json -d docs --theme default",
     "compodoc:ci": "compodoc -p projects/ui-sdk/tsconfig.lib.json -d dist/compodoc/ui-sdk --theme default",
-    "run:dsm": "concurrently \"ng build ui-sdk --watch\" \"npm run serve:showcase\""
+    "dsm": "concurrently \"ng build ui-sdk --watch\" \"npm run serve:showcase\""
   },
   "private": true,
   "packageManager": "npm@11.6.4",
