@@ -10,37 +10,37 @@
   // ---------------------------------------------------------------------------
   // Font families
   // ---------------------------------------------------------------------------
-  --usli-font-roboto:    'Roboto', sans-serif;
-  --usli-font-open-sans: 'Open Sans', sans-serif;
+  --font-roboto:    'Roboto', sans-serif;
+  --font-open-sans: 'Open Sans', sans-serif;
 
   // ---------------------------------------------------------------------------
   // Font weights
   //   Roboto:    300 · 400 · 500 · 600 · 700 · 900
   //   Open Sans: 300 · 400 · 600 · 700 · 800
   // ---------------------------------------------------------------------------
-  --usli-fw-light:     300;
-  --usli-fw-regular:   400;
-  --usli-fw-medium:    500;
-  --usli-fw-semibold:  600;
-  --usli-fw-bold:      700;
-  --usli-fw-extrabold: 800;
-  --usli-fw-black:     900;
+  --fw-light:     300;
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-extrabold: 800;
+  --fw-black:     900;
 
   // ---------------------------------------------------------------------------
   // Type scale  (1rem = 16px)
   // ---------------------------------------------------------------------------
-  --usli-fs-h1:         3rem;       // 48px
-  --usli-fs-h2:         2.5rem;     // 40px
-  --usli-fs-h3:         2rem;       // 32px
-  --usli-fs-h4:         1.5rem;     // 24px
-  --usli-fs-h5:         1.25rem;    // 20px
-  --usli-fs-h6:         1rem;       // 16px
-  --usli-fs-body-1:     1rem;       // 16px
-  --usli-fs-subtitle-2: 0.875rem;   // 14px
-  --usli-fs-button:     0.875rem;   // 14px
-  --usli-fs-body-2:     0.875rem;   // 14px
-  --usli-fs-caption:    0.75rem;    // 12px
-  --usli-fs-overline:   0.625rem;   // 10px
+  --fs-h1:         3rem;       // 48px
+  --fs-h2:         2.5rem;     // 40px
+  --fs-h3:         2rem;       // 32px
+  --fs-h4:         1.5rem;     // 24px
+  --fs-h5:         1.25rem;    // 20px
+  --fs-h6:         1rem;       // 16px
+  --fs-body-1:     1rem;       // 16px
+  --fs-subtitle-2: 0.875rem;   // 14px
+  --fs-button:     0.875rem;   // 14px
+  --fs-body-2:     0.875rem;   // 14px
+  --fs-caption:    0.75rem;    // 12px
+  --fs-overline:   0.625rem;   // 10px
 
   // ---------------------------------------------------------------------------
   // Typography roles — Roboto
@@ -58,49 +58,49 @@
   //   Caption     Regular 0.75rem
   //   Overline    Regular 0.625rem  UPPERCASE
   // ---------------------------------------------------------------------------
-  --usli-type-h1-size:           var(--usli-fs-h1);
-  --usli-type-h1-weight:         var(--usli-fw-light);
-  --usli-type-h1-transform:      none;
+  --type-h1-size:           var(--fs-h1);
+  --type-h1-weight:         var(--fw-light);
+  --type-h1-transform:      none;
 
-  --usli-type-h2-size:           var(--usli-fs-h2);
-  --usli-type-h2-weight:         var(--usli-fw-light);
-  --usli-type-h2-transform:      none;
+  --type-h2-size:           var(--fs-h2);
+  --type-h2-weight:         var(--fw-light);
+  --type-h2-transform:      none;
 
-  --usli-type-h3-size:           var(--usli-fs-h3);
-  --usli-type-h3-weight:         var(--usli-fw-regular);
-  --usli-type-h3-transform:      none;
+  --type-h3-size:           var(--fs-h3);
+  --type-h3-weight:         var(--fw-regular);
+  --type-h3-transform:      none;
 
-  --usli-type-h4-size:           var(--usli-fs-h4);
-  --usli-type-h4-weight:         var(--usli-fw-regular);
-  --usli-type-h4-transform:      none;
+  --type-h4-size:           var(--fs-h4);
+  --type-h4-weight:         var(--fw-regular);
+  --type-h4-transform:      none;
 
-  --usli-type-h5-size:           var(--usli-fs-h5);
-  --usli-type-h5-weight:         var(--usli-fw-regular);
-  --usli-type-h5-transform:      none;
+  --type-h5-size:           var(--fs-h5);
+  --type-h5-weight:         var(--fw-regular);
+  --type-h5-transform:      none;
 
-  --usli-type-h6-size:           var(--usli-fs-h6);
-  --usli-type-h6-weight:         var(--usli-fw-medium);   // Open Sans: semibold
-  --usli-type-h6-transform:      none;
+  --type-h6-size:           var(--fs-h6);
+  --type-h6-weight:         var(--fw-medium);   // Open Sans: semibold
+  --type-h6-transform:      none;
 
-  --usli-type-body-1-size:       var(--usli-fs-body-1);
-  --usli-type-body-1-weight:     var(--usli-fw-regular);
+  --type-body-1-size:       var(--fs-body-1);
+  --type-body-1-weight:     var(--fw-regular);
 
-  --usli-type-subtitle-2-size:   var(--usli-fs-subtitle-2);
-  --usli-type-subtitle-2-weight: var(--usli-fw-medium);   // Open Sans: semibold
+  --type-subtitle-2-size:   var(--fs-subtitle-2);
+  --type-subtitle-2-weight: var(--fw-medium);   // Open Sans: semibold
 
-  --usli-type-button-size:       var(--usli-fs-button);
-  --usli-type-button-weight:     var(--usli-fw-medium);   // Open Sans: semibold
-  --usli-type-button-transform:  uppercase;
-  --usli-type-button-spacing:    0.08em;
+  --type-button-size:       var(--fs-button);
+  --type-button-weight:     var(--fw-medium);   // Open Sans: semibold
+  --type-button-transform:  uppercase;
+  --type-button-spacing:    0.08em;
 
-  --usli-type-body-2-size:       var(--usli-fs-body-2);
-  --usli-type-body-2-weight:     var(--usli-fw-regular);
+  --type-body-2-size:       var(--fs-body-2);
+  --type-body-2-weight:     var(--fw-regular);
 
-  --usli-type-caption-size:      var(--usli-fs-caption);
-  --usli-type-caption-weight:    var(--usli-fw-regular);
+  --type-caption-size:      var(--fs-caption);
+  --type-caption-weight:    var(--fw-regular);
 
-  --usli-type-overline-size:     var(--usli-fs-overline);
-  --usli-type-overline-weight:   var(--usli-fw-regular);
-  --usli-type-overline-transform: uppercase;
-  --usli-type-overline-spacing:  0.15em;
+  --type-overline-size:     var(--fs-overline);
+  --type-overline-weight:   var(--fw-regular);
+  --type-overline-transform: uppercase;
+  --type-overline-spacing:  0.15em;
 }
