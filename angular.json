@@ -45,9 +45,6 @@
               "projects/ui-sdk/src/lib/usli-palette.scss",
               "projects/ui-sdk/src/lib/usli-typography.scss"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ],
             "compodoc": true,
             "compodocArgs": [
               "-e",
@@ -67,9 +64,6 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "projects/ui-sdk/src/lib/usli-palette.scss",
               "projects/ui-sdk/src/lib/usli-typography.scss"
-            ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ],
             "compodoc": true,
             "compodocArgs": [
