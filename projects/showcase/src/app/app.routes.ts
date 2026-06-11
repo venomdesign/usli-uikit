@@ -22,6 +22,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/components/card/card-docs').then(m => m.CardDocs),
   },
   {
+    path: 'components/spinner',
+    loadComponent: () => import('./pages/components/spinner/spinner-docs').then(m => m.SpinnerDocs),
+  },
+  {
     path: 'design/colors',
     loadComponent: () => import('./pages/design/colors/colors-docs').then(m => m.ColorsDocs),
   },
