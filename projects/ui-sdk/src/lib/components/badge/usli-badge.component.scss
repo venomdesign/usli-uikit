@@ -1,0 +1,50 @@
+:host {
+  display: inline-block;
+}
+
+.usli-badge {
+  font-family: var(--font-roboto, 'Roboto', sans-serif);
+  font-weight: var(--fw-medium, 500);
+}
+
+// ── Primary — filled USLI Blue ─────────────────────────────────────────────
+.badge-usli-primary {
+  --bs-badge-color: var(--white, #ffffff);
+  background-color: var(--blue-500, #00338e);
+}
+
+// ── Secondary — soft blue ───────────────────────────────────────────────────
+.badge-usli-secondary {
+  --bs-badge-color: var(--blue-700, #00216a);
+  background-color: var(--blue-50, #e3e9f6);
+}
+
+// ── Tertiary — soft gray ─────────────────────────────────────────────────────
+.badge-usli-tertiary {
+  --bs-badge-color: var(--gray-700, #616161);
+  background-color: var(--gray-100, #f5f5f5);
+}
+
+// ── Error ────────────────────────────────────────────────────────────────────
+.badge-usli-error {
+  --bs-badge-color: var(--white, #ffffff);
+  background-color: var(--error-500, #b10505);
+}
+
+// ── Warning ──────────────────────────────────────────────────────────────────
+.badge-usli-warning {
+  --bs-badge-color: var(--warning-900, #4d3c00);
+  background-color: var(--warning-500, #efc100);
+}
+
+// ── Info ─────────────────────────────────────────────────────────────────────
+.badge-usli-info {
+  --bs-badge-color: var(--white, #ffffff);
+  background-color: var(--info-600, #4996e3);
+}
+
+// ── Success ──────────────────────────────────────────────────────────────────
+.badge-usli-success {
+  --bs-badge-color: var(--white, #ffffff);
+  background-color: var(--success-500, #14661a);
+}

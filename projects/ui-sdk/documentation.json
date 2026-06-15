@@ -1,15 +1,431 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "Palette",
+            "id": "interface-Palette-25202c34da7bf98dfba9e3732bebe59c865378ec12f542fafad51cbe96ff01767571a013b7746cef01c9b119418f15b44f442fbe4fbf0c5c18326625a6b67d90",
+            "file": "projects/ui-sdk/src/stories/colors.stories.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import type { Meta, StoryObj } from '@storybook/angular';\r\nimport { Component } from '@angular/core';\r\n\r\ninterface Shade {\r\n  key: string;\r\n  cssVar: string;\r\n  hex: string;\r\n  darkText: boolean;\r\n}\r\n\r\ninterface Palette {\r\n  name: string;\r\n  shades: Shade[];\r\n  accents: Shade[];\r\n}\r\n\r\nconst palettes: Palette[] = [\r\n  {\r\n    name: 'USLI Orange',\r\n    shades: [\r\n      { key: '50',  cssVar: '--orange-50',  hex: '#fff4ea', darkText: true  },\r\n      { key: '100', cssVar: '--orange-100', hex: '#fde4c0', darkText: true  },\r\n      { key: '200', cssVar: '--orange-200', hex: '#fbce94', darkText: true  },\r\n      { key: '300', cssVar: '--orange-300', hex: '#f9b868', darkText: true  },\r\n      { key: '400', cssVar: '--orange-400', hex: '#f8a63f', darkText: true  },\r\n      { key: '500', cssVar: '--orange-500', hex: '#f69728', darkText: true  },\r\n      { key: '600', cssVar: '--orange-600', hex: '#d4841e', darkText: false },\r\n      { key: '700', cssVar: '--orange-700', hex: '#b27015', darkText: false },\r\n      { key: '800', cssVar: '--orange-800', hex: '#905c0d', darkText: false },\r\n      { key: '900', cssVar: '--orange-900', hex: '#6e4807', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--orange-a100', hex: '#ffe0b2', darkText: true  },\r\n      { key: 'A200', cssVar: '--orange-a200', hex: '#ffb74d', darkText: true  },\r\n      { key: 'A400', cssVar: '--orange-a400', hex: '#ff9800', darkText: true  },\r\n      { key: 'A700', cssVar: '--orange-a700', hex: '#ff6d00', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'USLI Blue',\r\n    shades: [\r\n      { key: '50',  cssVar: '--blue-50',  hex: '#e3e9f6', darkText: true  },\r\n      { key: '100', cssVar: '--blue-100', hex: '#b3c2e6', darkText: true  },\r\n      { key: '200', cssVar: '--blue-200', hex: '#809dd8', darkText: true  },\r\n      { key: '300', cssVar: '--blue-300', hex: '#4d78c9', darkText: false },\r\n      { key: '400', cssVar: '--blue-400', hex: '#255dbf', darkText: false },\r\n      { key: '500', cssVar: '--blue-500', hex: '#00338e', darkText: false },\r\n      { key: '600', cssVar: '--blue-600', hex: '#002c7c', darkText: false },\r\n      { key: '700', cssVar: '--blue-700', hex: '#00216a', darkText: false },\r\n      { key: '800', cssVar: '--blue-800', hex: '#001657', darkText: false },\r\n      { key: '900', cssVar: '--blue-900', hex: '#000b44', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--blue-a100', hex: '#80b0ff', darkText: true  },\r\n      { key: 'A200', cssVar: '--blue-a200', hex: '#448aff', darkText: false },\r\n      { key: 'A400', cssVar: '--blue-a400', hex: '#2979ff', darkText: false },\r\n      { key: 'A700', cssVar: '--blue-a700', hex: '#2962ff', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'USLI Gray',\r\n    shades: [\r\n      { key: '50',  cssVar: '--gray-50',  hex: '#fafafa', darkText: true  },\r\n      { key: '100', cssVar: '--gray-100', hex: '#f5f5f5', darkText: true  },\r\n      { key: '200', cssVar: '--gray-200', hex: '#eeeeee', darkText: true  },\r\n      { key: '300', cssVar: '--gray-300', hex: '#e0e0e0', darkText: true  },\r\n      { key: '400', cssVar: '--gray-400', hex: '#bdbdbd', darkText: true  },\r\n      { key: '500', cssVar: '--gray-500', hex: '#a8a8a8', darkText: true  },\r\n      { key: '600', cssVar: '--gray-600', hex: '#757575', darkText: false },\r\n      { key: '700', cssVar: '--gray-700', hex: '#616161', darkText: false },\r\n      { key: '800', cssVar: '--gray-800', hex: '#424242', darkText: false },\r\n      { key: '900', cssVar: '--gray-900', hex: '#212121', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--gray-a100', hex: '#ffffff', darkText: true  },\r\n      { key: 'A200', cssVar: '--gray-a200', hex: '#eeeeee', darkText: true  },\r\n      { key: 'A400', cssVar: '--gray-a400', hex: '#bdbdbd', darkText: true  },\r\n      { key: 'A700', cssVar: '--gray-a700', hex: '#616161', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Info',\r\n    shades: [\r\n      { key: '50',  cssVar: '--info-50',  hex: '#e8f4ff', darkText: true  },\r\n      { key: '100', cssVar: '--info-100', hex: '#c0e0ff', darkText: true  },\r\n      { key: '200', cssVar: '--info-200', hex: '#90c8fe', darkText: true  },\r\n      { key: '300', cssVar: '--info-300', hex: '#60b0fd', darkText: true  },\r\n      { key: '400', cssVar: '--info-400', hex: '#3da0fc', darkText: true  },\r\n      { key: '500', cssVar: '--info-500', hex: '#5aaafa', darkText: true  },\r\n      { key: '600', cssVar: '--info-600', hex: '#4996e3', darkText: false },\r\n      { key: '700', cssVar: '--info-700', hex: '#3478c3', darkText: false },\r\n      { key: '800', cssVar: '--info-800', hex: '#235aa0', darkText: false },\r\n      { key: '900', cssVar: '--info-900', hex: '#163d7a', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--info-a100', hex: '#b3d8ff', darkText: true  },\r\n      { key: 'A200', cssVar: '--info-a200', hex: '#64b5ff', darkText: true  },\r\n      { key: 'A400', cssVar: '--info-a400', hex: '#1890ff', darkText: false },\r\n      { key: 'A700', cssVar: '--info-a700', hex: '#0070e0', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Success',\r\n    shades: [\r\n      { key: '50',  cssVar: '--success-50',  hex: '#edfaee', darkText: true  },\r\n      { key: '100', cssVar: '--success-100', hex: '#bce8be', darkText: true  },\r\n      { key: '200', cssVar: '--success-200', hex: '#88d58b', darkText: true  },\r\n      { key: '300', cssVar: '--success-300', hex: '#55bb59', darkText: true  },\r\n      { key: '400', cssVar: '--success-400', hex: '#2da332', darkText: false },\r\n      { key: '500', cssVar: '--success-500', hex: '#14661a', darkText: false },\r\n      { key: '600', cssVar: '--success-600', hex: '#105515', darkText: false },\r\n      { key: '700', cssVar: '--success-700', hex: '#0d4411', darkText: false },\r\n      { key: '800', cssVar: '--success-800', hex: '#09330c', darkText: false },\r\n      { key: '900', cssVar: '--success-900', hex: '#062207', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--success-a100', hex: '#ccff90', darkText: true  },\r\n      { key: 'A200', cssVar: '--success-a200', hex: '#b2ff59', darkText: true  },\r\n      { key: 'A400', cssVar: '--success-a400', hex: '#76ff03', darkText: true  },\r\n      { key: 'A700', cssVar: '--success-a700', hex: '#64dd17', darkText: true  },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Warning',\r\n    shades: [\r\n      { key: '50',  cssVar: '--warning-50',  hex: '#fffde7', darkText: true  },\r\n      { key: '100', cssVar: '--warning-100', hex: '#fff9c4', darkText: true  },\r\n      { key: '200', cssVar: '--warning-200', hex: '#fff59d', darkText: true  },\r\n      { key: '300', cssVar: '--warning-300', hex: '#fff176', darkText: true  },\r\n      { key: '400', cssVar: '--warning-400', hex: '#ffee58', darkText: true  },\r\n      { key: '500', cssVar: '--warning-500', hex: '#efc100', darkText: true  },\r\n      { key: '600', cssVar: '--warning-600', hex: '#c29a00', darkText: true  },\r\n      { key: '700', cssVar: '--warning-700', hex: '#997800', darkText: false },\r\n      { key: '800', cssVar: '--warning-800', hex: '#705800', darkText: false },\r\n      { key: '900', cssVar: '--warning-900', hex: '#4d3c00', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--warning-a100', hex: '#ffff8d', darkText: true  },\r\n      { key: 'A200', cssVar: '--warning-a200', hex: '#ffff00', darkText: true  },\r\n      { key: 'A400', cssVar: '--warning-a400', hex: '#ffea00', darkText: true  },\r\n      { key: 'A700', cssVar: '--warning-a700', hex: '#ffd600', darkText: true  },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Error',\r\n    shades: [\r\n      { key: '50',  cssVar: '--error-50',  hex: '#fff0f0', darkText: true  },\r\n      { key: '100', cssVar: '--error-100', hex: '#f9c4c4', darkText: true  },\r\n      { key: '200', cssVar: '--error-200', hex: '#f09090', darkText: true  },\r\n      { key: '300', cssVar: '--error-300', hex: '#e65858', darkText: false },\r\n      { key: '400', cssVar: '--error-400', hex: '#d92828', darkText: false },\r\n      { key: '500', cssVar: '--error-500', hex: '#b10505', darkText: false },\r\n      { key: '600', cssVar: '--error-600', hex: '#940404', darkText: false },\r\n      { key: '700', cssVar: '--error-700', hex: '#770303', darkText: false },\r\n      { key: '800', cssVar: '--error-800', hex: '#590202', darkText: false },\r\n      { key: '900', cssVar: '--error-900', hex: '#3b0101', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--error-a100', hex: '#ff8a80', darkText: true  },\r\n      { key: 'A200', cssVar: '--error-a200', hex: '#ff5252', darkText: false },\r\n      { key: 'A400', cssVar: '--error-a400', hex: '#ff1744', darkText: false },\r\n      { key: 'A700', cssVar: '--error-a700', hex: '#d50000', darkText: false },\r\n    ],\r\n  },\r\n];\r\n\r\n@Component({\r\n  selector: 'usli-colors-story',\r\n  standalone: true,\r\n  styles: [`\r\n    .page { padding: 2rem; font-family: 'Roboto', sans-serif; background: #fafafa; min-height: 100vh; }\r\n    h1 { font-size: 1.5rem; font-weight: 500; color: #212121; margin: 0 0 2rem; }\r\n    .palette { margin-bottom: 2.5rem; }\r\n    .palette-name { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #757575; margin: 0 0 0.5rem; }\r\n    .shades { display: flex; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.12); }\r\n    .accents { display: flex; gap: 4px; margin-top: 4px; }\r\n    .swatch {\r\n      flex: 1;\r\n      padding: 0.625rem 0.5rem;\r\n      min-height: 72px;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: space-between;\r\n    }\r\n    .accent-swatch {\r\n      flex: 1;\r\n      padding: 0.625rem 0.5rem;\r\n      min-height: 60px;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: space-between;\r\n      border-radius: 4px;\r\n      box-shadow: 0 1px 3px rgba(0,0,0,.12);\r\n    }\r\n    .swatch-key { font-size: 11px; font-weight: 700; }\r\n    .swatch-hex { font-size: 10px; opacity: 0.8; font-family: 'Roboto Mono', monospace; }\r\n  `],\r\n  template: `\r\n    <div class=\"page\">\r\n      <h1>Color Palette</h1>\r\n      @for (palette of palettes; track palette.name) {\r\n        <div class=\"palette\">\r\n          <p class=\"palette-name\">{{ palette.name }}</p>\r\n          <div class=\"shades\">\r\n            @for (shade of palette.shades; track shade.key) {\r\n              <div class=\"swatch\"\r\n                   [style.background-color]=\"shade.hex\"\r\n                   [style.color]=\"shade.darkText ? '#212121' : '#ffffff'\">\r\n                <span class=\"swatch-key\">{{ shade.key }} | Variable: {{ shade.cssVar }}</span>\r\n                <span class=\"swatch-hex\">{{ shade.hex }}</span>\r\n              </div>\r\n            }\r\n          </div>\r\n          <div class=\"accents\">\r\n            @for (shade of palette.accents; track shade.key) {\r\n              <div class=\"accent-swatch\"\r\n                   [style.background-color]=\"shade.hex\"\r\n                   [style.color]=\"shade.darkText ? '#212121' : '#ffffff'\">\r\n                <span class=\"swatch-key\">{{ shade.key }}</span>\r\n                <span class=\"swatch-hex\">{{ shade.hex }}</span>\r\n              </div>\r\n            }\r\n          </div>\r\n        </div>\r\n      }\r\n    </div>\r\n  `,\r\n})\r\nclass ColorsStoryComponent {\r\n  palettes = palettes;\r\n}\r\n\r\nconst meta: Meta<ColorsStoryComponent> = {\r\n  title: 'Design System/Colors',\r\n  component: ColorsStoryComponent,\r\n  parameters: { layout: 'fullscreen' },\r\n  tags: ['autodocs'],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<ColorsStoryComponent>;\r\n\r\nexport const AllPalettes: Story = {};\r\n",
+            "properties": [
+                {
+                    "name": "accents",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Shade[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "shades",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Shade[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "Shade",
+            "id": "interface-Shade-25202c34da7bf98dfba9e3732bebe59c865378ec12f542fafad51cbe96ff01767571a013b7746cef01c9b119418f15b44f442fbe4fbf0c5c18326625a6b67d90",
+            "file": "projects/ui-sdk/src/stories/colors.stories.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import type { Meta, StoryObj } from '@storybook/angular';\r\nimport { Component } from '@angular/core';\r\n\r\ninterface Shade {\r\n  key: string;\r\n  cssVar: string;\r\n  hex: string;\r\n  darkText: boolean;\r\n}\r\n\r\ninterface Palette {\r\n  name: string;\r\n  shades: Shade[];\r\n  accents: Shade[];\r\n}\r\n\r\nconst palettes: Palette[] = [\r\n  {\r\n    name: 'USLI Orange',\r\n    shades: [\r\n      { key: '50',  cssVar: '--orange-50',  hex: '#fff4ea', darkText: true  },\r\n      { key: '100', cssVar: '--orange-100', hex: '#fde4c0', darkText: true  },\r\n      { key: '200', cssVar: '--orange-200', hex: '#fbce94', darkText: true  },\r\n      { key: '300', cssVar: '--orange-300', hex: '#f9b868', darkText: true  },\r\n      { key: '400', cssVar: '--orange-400', hex: '#f8a63f', darkText: true  },\r\n      { key: '500', cssVar: '--orange-500', hex: '#f69728', darkText: true  },\r\n      { key: '600', cssVar: '--orange-600', hex: '#d4841e', darkText: false },\r\n      { key: '700', cssVar: '--orange-700', hex: '#b27015', darkText: false },\r\n      { key: '800', cssVar: '--orange-800', hex: '#905c0d', darkText: false },\r\n      { key: '900', cssVar: '--orange-900', hex: '#6e4807', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--orange-a100', hex: '#ffe0b2', darkText: true  },\r\n      { key: 'A200', cssVar: '--orange-a200', hex: '#ffb74d', darkText: true  },\r\n      { key: 'A400', cssVar: '--orange-a400', hex: '#ff9800', darkText: true  },\r\n      { key: 'A700', cssVar: '--orange-a700', hex: '#ff6d00', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'USLI Blue',\r\n    shades: [\r\n      { key: '50',  cssVar: '--blue-50',  hex: '#e3e9f6', darkText: true  },\r\n      { key: '100', cssVar: '--blue-100', hex: '#b3c2e6', darkText: true  },\r\n      { key: '200', cssVar: '--blue-200', hex: '#809dd8', darkText: true  },\r\n      { key: '300', cssVar: '--blue-300', hex: '#4d78c9', darkText: false },\r\n      { key: '400', cssVar: '--blue-400', hex: '#255dbf', darkText: false },\r\n      { key: '500', cssVar: '--blue-500', hex: '#00338e', darkText: false },\r\n      { key: '600', cssVar: '--blue-600', hex: '#002c7c', darkText: false },\r\n      { key: '700', cssVar: '--blue-700', hex: '#00216a', darkText: false },\r\n      { key: '800', cssVar: '--blue-800', hex: '#001657', darkText: false },\r\n      { key: '900', cssVar: '--blue-900', hex: '#000b44', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--blue-a100', hex: '#80b0ff', darkText: true  },\r\n      { key: 'A200', cssVar: '--blue-a200', hex: '#448aff', darkText: false },\r\n      { key: 'A400', cssVar: '--blue-a400', hex: '#2979ff', darkText: false },\r\n      { key: 'A700', cssVar: '--blue-a700', hex: '#2962ff', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'USLI Gray',\r\n    shades: [\r\n      { key: '50',  cssVar: '--gray-50',  hex: '#fafafa', darkText: true  },\r\n      { key: '100', cssVar: '--gray-100', hex: '#f5f5f5', darkText: true  },\r\n      { key: '200', cssVar: '--gray-200', hex: '#eeeeee', darkText: true  },\r\n      { key: '300', cssVar: '--gray-300', hex: '#e0e0e0', darkText: true  },\r\n      { key: '400', cssVar: '--gray-400', hex: '#bdbdbd', darkText: true  },\r\n      { key: '500', cssVar: '--gray-500', hex: '#a8a8a8', darkText: true  },\r\n      { key: '600', cssVar: '--gray-600', hex: '#757575', darkText: false },\r\n      { key: '700', cssVar: '--gray-700', hex: '#616161', darkText: false },\r\n      { key: '800', cssVar: '--gray-800', hex: '#424242', darkText: false },\r\n      { key: '900', cssVar: '--gray-900', hex: '#212121', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--gray-a100', hex: '#ffffff', darkText: true  },\r\n      { key: 'A200', cssVar: '--gray-a200', hex: '#eeeeee', darkText: true  },\r\n      { key: 'A400', cssVar: '--gray-a400', hex: '#bdbdbd', darkText: true  },\r\n      { key: 'A700', cssVar: '--gray-a700', hex: '#616161', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Info',\r\n    shades: [\r\n      { key: '50',  cssVar: '--info-50',  hex: '#e8f4ff', darkText: true  },\r\n      { key: '100', cssVar: '--info-100', hex: '#c0e0ff', darkText: true  },\r\n      { key: '200', cssVar: '--info-200', hex: '#90c8fe', darkText: true  },\r\n      { key: '300', cssVar: '--info-300', hex: '#60b0fd', darkText: true  },\r\n      { key: '400', cssVar: '--info-400', hex: '#3da0fc', darkText: true  },\r\n      { key: '500', cssVar: '--info-500', hex: '#5aaafa', darkText: true  },\r\n      { key: '600', cssVar: '--info-600', hex: '#4996e3', darkText: false },\r\n      { key: '700', cssVar: '--info-700', hex: '#3478c3', darkText: false },\r\n      { key: '800', cssVar: '--info-800', hex: '#235aa0', darkText: false },\r\n      { key: '900', cssVar: '--info-900', hex: '#163d7a', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--info-a100', hex: '#b3d8ff', darkText: true  },\r\n      { key: 'A200', cssVar: '--info-a200', hex: '#64b5ff', darkText: true  },\r\n      { key: 'A400', cssVar: '--info-a400', hex: '#1890ff', darkText: false },\r\n      { key: 'A700', cssVar: '--info-a700', hex: '#0070e0', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Success',\r\n    shades: [\r\n      { key: '50',  cssVar: '--success-50',  hex: '#edfaee', darkText: true  },\r\n      { key: '100', cssVar: '--success-100', hex: '#bce8be', darkText: true  },\r\n      { key: '200', cssVar: '--success-200', hex: '#88d58b', darkText: true  },\r\n      { key: '300', cssVar: '--success-300', hex: '#55bb59', darkText: true  },\r\n      { key: '400', cssVar: '--success-400', hex: '#2da332', darkText: false },\r\n      { key: '500', cssVar: '--success-500', hex: '#14661a', darkText: false },\r\n      { key: '600', cssVar: '--success-600', hex: '#105515', darkText: false },\r\n      { key: '700', cssVar: '--success-700', hex: '#0d4411', darkText: false },\r\n      { key: '800', cssVar: '--success-800', hex: '#09330c', darkText: false },\r\n      { key: '900', cssVar: '--success-900', hex: '#062207', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--success-a100', hex: '#ccff90', darkText: true  },\r\n      { key: 'A200', cssVar: '--success-a200', hex: '#b2ff59', darkText: true  },\r\n      { key: 'A400', cssVar: '--success-a400', hex: '#76ff03', darkText: true  },\r\n      { key: 'A700', cssVar: '--success-a700', hex: '#64dd17', darkText: true  },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Warning',\r\n    shades: [\r\n      { key: '50',  cssVar: '--warning-50',  hex: '#fffde7', darkText: true  },\r\n      { key: '100', cssVar: '--warning-100', hex: '#fff9c4', darkText: true  },\r\n      { key: '200', cssVar: '--warning-200', hex: '#fff59d', darkText: true  },\r\n      { key: '300', cssVar: '--warning-300', hex: '#fff176', darkText: true  },\r\n      { key: '400', cssVar: '--warning-400', hex: '#ffee58', darkText: true  },\r\n      { key: '500', cssVar: '--warning-500', hex: '#efc100', darkText: true  },\r\n      { key: '600', cssVar: '--warning-600', hex: '#c29a00', darkText: true  },\r\n      { key: '700', cssVar: '--warning-700', hex: '#997800', darkText: false },\r\n      { key: '800', cssVar: '--warning-800', hex: '#705800', darkText: false },\r\n      { key: '900', cssVar: '--warning-900', hex: '#4d3c00', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--warning-a100', hex: '#ffff8d', darkText: true  },\r\n      { key: 'A200', cssVar: '--warning-a200', hex: '#ffff00', darkText: true  },\r\n      { key: 'A400', cssVar: '--warning-a400', hex: '#ffea00', darkText: true  },\r\n      { key: 'A700', cssVar: '--warning-a700', hex: '#ffd600', darkText: true  },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Error',\r\n    shades: [\r\n      { key: '50',  cssVar: '--error-50',  hex: '#fff0f0', darkText: true  },\r\n      { key: '100', cssVar: '--error-100', hex: '#f9c4c4', darkText: true  },\r\n      { key: '200', cssVar: '--error-200', hex: '#f09090', darkText: true  },\r\n      { key: '300', cssVar: '--error-300', hex: '#e65858', darkText: false },\r\n      { key: '400', cssVar: '--error-400', hex: '#d92828', darkText: false },\r\n      { key: '500', cssVar: '--error-500', hex: '#b10505', darkText: false },\r\n      { key: '600', cssVar: '--error-600', hex: '#940404', darkText: false },\r\n      { key: '700', cssVar: '--error-700', hex: '#770303', darkText: false },\r\n      { key: '800', cssVar: '--error-800', hex: '#590202', darkText: false },\r\n      { key: '900', cssVar: '--error-900', hex: '#3b0101', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--error-a100', hex: '#ff8a80', darkText: true  },\r\n      { key: 'A200', cssVar: '--error-a200', hex: '#ff5252', darkText: false },\r\n      { key: 'A400', cssVar: '--error-a400', hex: '#ff1744', darkText: false },\r\n      { key: 'A700', cssVar: '--error-a700', hex: '#d50000', darkText: false },\r\n    ],\r\n  },\r\n];\r\n\r\n@Component({\r\n  selector: 'usli-colors-story',\r\n  standalone: true,\r\n  styles: [`\r\n    .page { padding: 2rem; font-family: 'Roboto', sans-serif; background: #fafafa; min-height: 100vh; }\r\n    h1 { font-size: 1.5rem; font-weight: 500; color: #212121; margin: 0 0 2rem; }\r\n    .palette { margin-bottom: 2.5rem; }\r\n    .palette-name { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #757575; margin: 0 0 0.5rem; }\r\n    .shades { display: flex; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.12); }\r\n    .accents { display: flex; gap: 4px; margin-top: 4px; }\r\n    .swatch {\r\n      flex: 1;\r\n      padding: 0.625rem 0.5rem;\r\n      min-height: 72px;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: space-between;\r\n    }\r\n    .accent-swatch {\r\n      flex: 1;\r\n      padding: 0.625rem 0.5rem;\r\n      min-height: 60px;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: space-between;\r\n      border-radius: 4px;\r\n      box-shadow: 0 1px 3px rgba(0,0,0,.12);\r\n    }\r\n    .swatch-key { font-size: 11px; font-weight: 700; }\r\n    .swatch-hex { font-size: 10px; opacity: 0.8; font-family: 'Roboto Mono', monospace; }\r\n  `],\r\n  template: `\r\n    <div class=\"page\">\r\n      <h1>Color Palette</h1>\r\n      @for (palette of palettes; track palette.name) {\r\n        <div class=\"palette\">\r\n          <p class=\"palette-name\">{{ palette.name }}</p>\r\n          <div class=\"shades\">\r\n            @for (shade of palette.shades; track shade.key) {\r\n              <div class=\"swatch\"\r\n                   [style.background-color]=\"shade.hex\"\r\n                   [style.color]=\"shade.darkText ? '#212121' : '#ffffff'\">\r\n                <span class=\"swatch-key\">{{ shade.key }} | Variable: {{ shade.cssVar }}</span>\r\n                <span class=\"swatch-hex\">{{ shade.hex }}</span>\r\n              </div>\r\n            }\r\n          </div>\r\n          <div class=\"accents\">\r\n            @for (shade of palette.accents; track shade.key) {\r\n              <div class=\"accent-swatch\"\r\n                   [style.background-color]=\"shade.hex\"\r\n                   [style.color]=\"shade.darkText ? '#212121' : '#ffffff'\">\r\n                <span class=\"swatch-key\">{{ shade.key }}</span>\r\n                <span class=\"swatch-hex\">{{ shade.hex }}</span>\r\n              </div>\r\n            }\r\n          </div>\r\n        </div>\r\n      }\r\n    </div>\r\n  `,\r\n})\r\nclass ColorsStoryComponent {\r\n  palettes = palettes;\r\n}\r\n\r\nconst meta: Meta<ColorsStoryComponent> = {\r\n  title: 'Design System/Colors',\r\n  component: ColorsStoryComponent,\r\n  parameters: { layout: 'fullscreen' },\r\n  tags: ['autodocs'],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<ColorsStoryComponent>;\r\n\r\nexport const AllPalettes: Story = {};\r\n",
+            "properties": [
+                {
+                    "name": "cssVar",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "darkText",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "hex",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "key",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "TypeRole",
+            "id": "interface-TypeRole-bad3efbdbfbc50f08fcca3b783c87a8fccd2a242f2be6eed61691dc9a0b68af7ff9de67db49be98f336a9b44e06bbc4cff8acf9707c48f54af78a48be5bf0a14",
+            "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import type { Meta, StoryObj } from '@storybook/angular';\r\nimport { Component } from '@angular/core';\r\n\r\ninterface TypeRole {\r\n  label: string;\r\n  sample: string;\r\n  spec: string;\r\n  fontSize: string;\r\n  fontWeight: number;\r\n  fontFamily: string;\r\n  textTransform?: string;\r\n  letterSpacing?: string;\r\n  divider?: boolean;\r\n}\r\n\r\nconst ROBOTO = `'Roboto', sans-serif`;\r\nconst OPEN_SANS = `'Open Sans', sans-serif`;\r\n\r\nconst roles: TypeRole[] = [\r\n  { label: 'H1 Head',    sample: 'The quick brown fox',   spec: 'Roboto · Light 300 · 3rem',        fontSize: '3rem',     fontWeight: 300, fontFamily: ROBOTO },\r\n  { label: 'H2 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Light 300 · 2.5rem',      fontSize: '2.5rem',   fontWeight: 300, fontFamily: ROBOTO },\r\n  { label: 'H3 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 2rem',      fontSize: '2rem',     fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H4 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 1.5rem',    fontSize: '1.5rem',   fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H5 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 1.25rem',   fontSize: '1.25rem',  fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H6 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Medium 500 · 1rem',       fontSize: '1rem',     fontWeight: 500, fontFamily: ROBOTO, divider: true },\r\n  { label: 'Body 1',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Roboto · Regular 400 · 1rem',   fontSize: '1rem',     fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'Body 2',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Roboto · Regular 400 · 0.875rem', fontSize: '0.875rem', fontWeight: 400, fontFamily: ROBOTO, divider: true },\r\n  { label: 'Subtitle 2',  sample: 'Section title or supporting label',            spec: 'Roboto · Medium 500 · 0.875rem', fontSize: '0.875rem', fontWeight: 500, fontFamily: ROBOTO },\r\n  { label: 'Caption',     sample: 'Helper text or annotation',                    spec: 'Roboto · Regular 400 · 0.75rem', fontSize: '0.75rem',  fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'Button',      sample: 'CALL TO ACTION',                               spec: 'Roboto · Medium 500 · 0.875rem · Uppercase', fontSize: '0.875rem', fontWeight: 500, fontFamily: ROBOTO, textTransform: 'uppercase', letterSpacing: '0.08em' },\r\n  { label: 'Overline',    sample: 'SECTION LABEL',                                spec: 'Roboto · Regular 400 · 0.625rem · Uppercase', fontSize: '0.625rem', fontWeight: 400, fontFamily: ROBOTO, textTransform: 'uppercase', letterSpacing: '0.15em' },\r\n];\r\n\r\nconst openSansRoles: TypeRole[] = [\r\n  { label: 'H1 Head',     sample: 'The quick brown fox',   spec: 'Open Sans · Light 300 · 3rem',        fontSize: '3rem',     fontWeight: 300, fontFamily: OPEN_SANS },\r\n  { label: 'H2 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Light 300 · 2.5rem',      fontSize: '2.5rem',   fontWeight: 300, fontFamily: OPEN_SANS },\r\n  { label: 'H3 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 2rem',      fontSize: '2rem',     fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H4 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 1.5rem',    fontSize: '1.5rem',   fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H5 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 1.25rem',   fontSize: '1.25rem',  fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H6 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · SemiBold 600 · 1rem',     fontSize: '1rem',     fontWeight: 600, fontFamily: OPEN_SANS, divider: true },\r\n  { label: 'Body 1',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Open Sans · Regular 400 · 1rem',      fontSize: '1rem',     fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'Body 2',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Open Sans · Regular 400 · 0.875rem',  fontSize: '0.875rem', fontWeight: 400, fontFamily: OPEN_SANS, divider: true },\r\n  { label: 'Subtitle 2',  sample: 'Section title or supporting label',            spec: 'Open Sans · SemiBold 600 · 0.875rem', fontSize: '0.875rem', fontWeight: 600, fontFamily: OPEN_SANS },\r\n  { label: 'Caption',     sample: 'Helper text or annotation',                    spec: 'Open Sans · Regular 400 · 0.75rem',   fontSize: '0.75rem',  fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'Button',      sample: 'CALL TO ACTION',                               spec: 'Open Sans · SemiBold 600 · 0.875rem · Uppercase', fontSize: '0.875rem', fontWeight: 600, fontFamily: OPEN_SANS, textTransform: 'uppercase', letterSpacing: '0.08em' },\r\n  { label: 'Overline',    sample: 'SECTION LABEL',                                spec: 'Open Sans · Regular 400 · 0.625rem · Uppercase', fontSize: '0.625rem', fontWeight: 400, fontFamily: OPEN_SANS, textTransform: 'uppercase', letterSpacing: '0.15em' },\r\n];\r\n\r\n@Component({\r\n  selector: 'usli-typography-story',\r\n  standalone: true,\r\n  styles: [`\r\n    .page { padding: 2rem 3rem; background: #fafafa; min-height: 100vh; }\r\n    h1 { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #757575; margin: 0 0 0.25rem; }\r\n    .font-section { margin-bottom: 3rem; }\r\n    .section-rule { border: none; border-top: 2px solid #e0e0e0; margin: 2.5rem 0; }\r\n    .row {\r\n      display: grid;\r\n      grid-template-columns: 140px 1fr 260px;\r\n      align-items: baseline;\r\n      gap: 1.5rem;\r\n      padding: 1rem 0;\r\n      border-bottom: 1px solid #eeeeee;\r\n    }\r\n    .row.divider-above { border-top: 1px solid #bdbdbd; margin-top: 0.5rem; padding-top: 1.25rem; }\r\n    .role-label { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 500; color: #757575; white-space: nowrap; }\r\n    .spec { font-family: 'Roboto', sans-serif; font-size: 0.7rem; color: #9e9e9e; text-align: right; }\r\n  `],\r\n  template: `\r\n    <div class=\"page\">\r\n      <div class=\"font-section\">\r\n        <h1>Roboto</h1>\r\n        @for (role of robotoRoles; track role.label) {\r\n          <div class=\"row\" [class.divider-above]=\"role.divider\">\r\n            <span class=\"role-label\">{{ role.label }}</span>\r\n            <span [style.font-family]=\"role.fontFamily\"\r\n                  [style.font-size]=\"role.fontSize\"\r\n                  [style.font-weight]=\"role.fontWeight\"\r\n                  [style.text-transform]=\"role.textTransform || 'none'\"\r\n                  [style.letter-spacing]=\"role.letterSpacing || 'normal'\">\r\n              {{ role.sample }}\r\n            </span>\r\n            <span class=\"spec\">{{ role.spec }}</span>\r\n          </div>\r\n        }\r\n      </div>\r\n\r\n      <hr class=\"section-rule\" />\r\n\r\n      <div class=\"font-section\">\r\n        <h1>Open Sans</h1>\r\n        @for (role of openSansRoles; track role.label) {\r\n          <div class=\"row\" [class.divider-above]=\"role.divider\">\r\n            <span class=\"role-label\">{{ role.label }}</span>\r\n            <span [style.font-family]=\"role.fontFamily\"\r\n                  [style.font-size]=\"role.fontSize\"\r\n                  [style.font-weight]=\"role.fontWeight\"\r\n                  [style.text-transform]=\"role.textTransform || 'none'\"\r\n                  [style.letter-spacing]=\"role.letterSpacing || 'normal'\">\r\n              {{ role.sample }}\r\n            </span>\r\n            <span class=\"spec\">{{ role.spec }}</span>\r\n          </div>\r\n        }\r\n      </div>\r\n    </div>\r\n  `,\r\n})\r\nclass TypographyStoryComponent {\r\n  robotoRoles = roles;\r\n  openSansRoles = openSansRoles;\r\n}\r\n\r\nconst meta: Meta<TypographyStoryComponent> = {\r\n  title: 'Design System/Typography',\r\n  component: TypographyStoryComponent,\r\n  parameters: { layout: 'fullscreen' },\r\n  tags: ['autodocs'],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<TypographyStoryComponent>;\r\n\r\nexport const Scale: Story = {};\r\n",
+            "properties": [
+                {
+                    "name": "divider",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "fontFamily",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "fontSize",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "fontWeight",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "letterSpacing",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "sample",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "spec",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "textTransform",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": []
+        }
+    ],
     "injectables": [],
     "guards": [],
     "interceptors": [],
     "classes": [],
     "directives": [],
-    "components": [],
+    "components": [
+        {
+            "name": "ColorsStoryComponent",
+            "id": "component-ColorsStoryComponent-25202c34da7bf98dfba9e3732bebe59c865378ec12f542fafad51cbe96ff01767571a013b7746cef01c9b119418f15b44f442fbe4fbf0c5c18326625a6b67d90",
+            "file": "projects/ui-sdk/src/stories/colors.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "usli-colors-story",
+            "styleUrls": [],
+            "styles": [
+                "\n    .page { padding: 2rem; font-family: 'Roboto', sans-serif; background: #fafafa; min-height: 100vh; }\n    h1 { font-size: 1.5rem; font-weight: 500; color: #212121; margin: 0 0 2rem; }\n    .palette { margin-bottom: 2.5rem; }\n    .palette-name { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #757575; margin: 0 0 0.5rem; }\n    .shades { display: flex; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.12); }\n    .accents { display: flex; gap: 4px; margin-top: 4px; }\n    .swatch {\n      flex: 1;\n      padding: 0.625rem 0.5rem;\n      min-height: 72px;\n      display: flex;\n      flex-direction: column;\n      justify-content: space-between;\n    }\n    .accent-swatch {\n      flex: 1;\n      padding: 0.625rem 0.5rem;\n      min-height: 60px;\n      display: flex;\n      flex-direction: column;\n      justify-content: space-between;\n      border-radius: 4px;\n      box-shadow: 0 1px 3px rgba(0,0,0,.12);\n    }\n    .swatch-key { font-size: 11px; font-weight: 700; }\n    .swatch-hex { font-size: 10px; opacity: 0.8; font-family: 'Roboto Mono', monospace; }\n  "
+            ],
+            "template": "<div class=\"page\">\n  <h1>Color Palette</h1>\n  @for (palette of palettes; track palette.name) {\n    <div class=\"palette\">\n      <p class=\"palette-name\">{{ palette.name }}</p>\n      <div class=\"shades\">\n        @for (shade of palette.shades; track shade.key) {\n          <div class=\"swatch\"\n               [style.background-color]=\"shade.hex\"\n               [style.color]=\"shade.darkText ? '#212121' : '#ffffff'\">\n            <span class=\"swatch-key\">{{ shade.key }} | Variable: {{ shade.cssVar }}</span>\n            <span class=\"swatch-hex\">{{ shade.hex }}</span>\n          </div>\n        }\n      </div>\n      <div class=\"accents\">\n        @for (shade of palette.accents; track shade.key) {\n          <div class=\"accent-swatch\"\n               [style.background-color]=\"shade.hex\"\n               [style.color]=\"shade.darkText ? '#212121' : '#ffffff'\">\n            <span class=\"swatch-key\">{{ shade.key }}</span>\n            <span class=\"swatch-hex\">{{ shade.hex }}</span>\n          </div>\n        }\n      </div>\n    </div>\n  }\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "palettes",
+                    "defaultValue": "palettes",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 230
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import type { Meta, StoryObj } from '@storybook/angular';\r\nimport { Component } from '@angular/core';\r\n\r\ninterface Shade {\r\n  key: string;\r\n  cssVar: string;\r\n  hex: string;\r\n  darkText: boolean;\r\n}\r\n\r\ninterface Palette {\r\n  name: string;\r\n  shades: Shade[];\r\n  accents: Shade[];\r\n}\r\n\r\nconst palettes: Palette[] = [\r\n  {\r\n    name: 'USLI Orange',\r\n    shades: [\r\n      { key: '50',  cssVar: '--orange-50',  hex: '#fff4ea', darkText: true  },\r\n      { key: '100', cssVar: '--orange-100', hex: '#fde4c0', darkText: true  },\r\n      { key: '200', cssVar: '--orange-200', hex: '#fbce94', darkText: true  },\r\n      { key: '300', cssVar: '--orange-300', hex: '#f9b868', darkText: true  },\r\n      { key: '400', cssVar: '--orange-400', hex: '#f8a63f', darkText: true  },\r\n      { key: '500', cssVar: '--orange-500', hex: '#f69728', darkText: true  },\r\n      { key: '600', cssVar: '--orange-600', hex: '#d4841e', darkText: false },\r\n      { key: '700', cssVar: '--orange-700', hex: '#b27015', darkText: false },\r\n      { key: '800', cssVar: '--orange-800', hex: '#905c0d', darkText: false },\r\n      { key: '900', cssVar: '--orange-900', hex: '#6e4807', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--orange-a100', hex: '#ffe0b2', darkText: true  },\r\n      { key: 'A200', cssVar: '--orange-a200', hex: '#ffb74d', darkText: true  },\r\n      { key: 'A400', cssVar: '--orange-a400', hex: '#ff9800', darkText: true  },\r\n      { key: 'A700', cssVar: '--orange-a700', hex: '#ff6d00', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'USLI Blue',\r\n    shades: [\r\n      { key: '50',  cssVar: '--blue-50',  hex: '#e3e9f6', darkText: true  },\r\n      { key: '100', cssVar: '--blue-100', hex: '#b3c2e6', darkText: true  },\r\n      { key: '200', cssVar: '--blue-200', hex: '#809dd8', darkText: true  },\r\n      { key: '300', cssVar: '--blue-300', hex: '#4d78c9', darkText: false },\r\n      { key: '400', cssVar: '--blue-400', hex: '#255dbf', darkText: false },\r\n      { key: '500', cssVar: '--blue-500', hex: '#00338e', darkText: false },\r\n      { key: '600', cssVar: '--blue-600', hex: '#002c7c', darkText: false },\r\n      { key: '700', cssVar: '--blue-700', hex: '#00216a', darkText: false },\r\n      { key: '800', cssVar: '--blue-800', hex: '#001657', darkText: false },\r\n      { key: '900', cssVar: '--blue-900', hex: '#000b44', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--blue-a100', hex: '#80b0ff', darkText: true  },\r\n      { key: 'A200', cssVar: '--blue-a200', hex: '#448aff', darkText: false },\r\n      { key: 'A400', cssVar: '--blue-a400', hex: '#2979ff', darkText: false },\r\n      { key: 'A700', cssVar: '--blue-a700', hex: '#2962ff', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'USLI Gray',\r\n    shades: [\r\n      { key: '50',  cssVar: '--gray-50',  hex: '#fafafa', darkText: true  },\r\n      { key: '100', cssVar: '--gray-100', hex: '#f5f5f5', darkText: true  },\r\n      { key: '200', cssVar: '--gray-200', hex: '#eeeeee', darkText: true  },\r\n      { key: '300', cssVar: '--gray-300', hex: '#e0e0e0', darkText: true  },\r\n      { key: '400', cssVar: '--gray-400', hex: '#bdbdbd', darkText: true  },\r\n      { key: '500', cssVar: '--gray-500', hex: '#a8a8a8', darkText: true  },\r\n      { key: '600', cssVar: '--gray-600', hex: '#757575', darkText: false },\r\n      { key: '700', cssVar: '--gray-700', hex: '#616161', darkText: false },\r\n      { key: '800', cssVar: '--gray-800', hex: '#424242', darkText: false },\r\n      { key: '900', cssVar: '--gray-900', hex: '#212121', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--gray-a100', hex: '#ffffff', darkText: true  },\r\n      { key: 'A200', cssVar: '--gray-a200', hex: '#eeeeee', darkText: true  },\r\n      { key: 'A400', cssVar: '--gray-a400', hex: '#bdbdbd', darkText: true  },\r\n      { key: 'A700', cssVar: '--gray-a700', hex: '#616161', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Info',\r\n    shades: [\r\n      { key: '50',  cssVar: '--info-50',  hex: '#e8f4ff', darkText: true  },\r\n      { key: '100', cssVar: '--info-100', hex: '#c0e0ff', darkText: true  },\r\n      { key: '200', cssVar: '--info-200', hex: '#90c8fe', darkText: true  },\r\n      { key: '300', cssVar: '--info-300', hex: '#60b0fd', darkText: true  },\r\n      { key: '400', cssVar: '--info-400', hex: '#3da0fc', darkText: true  },\r\n      { key: '500', cssVar: '--info-500', hex: '#5aaafa', darkText: true  },\r\n      { key: '600', cssVar: '--info-600', hex: '#4996e3', darkText: false },\r\n      { key: '700', cssVar: '--info-700', hex: '#3478c3', darkText: false },\r\n      { key: '800', cssVar: '--info-800', hex: '#235aa0', darkText: false },\r\n      { key: '900', cssVar: '--info-900', hex: '#163d7a', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--info-a100', hex: '#b3d8ff', darkText: true  },\r\n      { key: 'A200', cssVar: '--info-a200', hex: '#64b5ff', darkText: true  },\r\n      { key: 'A400', cssVar: '--info-a400', hex: '#1890ff', darkText: false },\r\n      { key: 'A700', cssVar: '--info-a700', hex: '#0070e0', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Success',\r\n    shades: [\r\n      { key: '50',  cssVar: '--success-50',  hex: '#edfaee', darkText: true  },\r\n      { key: '100', cssVar: '--success-100', hex: '#bce8be', darkText: true  },\r\n      { key: '200', cssVar: '--success-200', hex: '#88d58b', darkText: true  },\r\n      { key: '300', cssVar: '--success-300', hex: '#55bb59', darkText: true  },\r\n      { key: '400', cssVar: '--success-400', hex: '#2da332', darkText: false },\r\n      { key: '500', cssVar: '--success-500', hex: '#14661a', darkText: false },\r\n      { key: '600', cssVar: '--success-600', hex: '#105515', darkText: false },\r\n      { key: '700', cssVar: '--success-700', hex: '#0d4411', darkText: false },\r\n      { key: '800', cssVar: '--success-800', hex: '#09330c', darkText: false },\r\n      { key: '900', cssVar: '--success-900', hex: '#062207', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--success-a100', hex: '#ccff90', darkText: true  },\r\n      { key: 'A200', cssVar: '--success-a200', hex: '#b2ff59', darkText: true  },\r\n      { key: 'A400', cssVar: '--success-a400', hex: '#76ff03', darkText: true  },\r\n      { key: 'A700', cssVar: '--success-a700', hex: '#64dd17', darkText: true  },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Warning',\r\n    shades: [\r\n      { key: '50',  cssVar: '--warning-50',  hex: '#fffde7', darkText: true  },\r\n      { key: '100', cssVar: '--warning-100', hex: '#fff9c4', darkText: true  },\r\n      { key: '200', cssVar: '--warning-200', hex: '#fff59d', darkText: true  },\r\n      { key: '300', cssVar: '--warning-300', hex: '#fff176', darkText: true  },\r\n      { key: '400', cssVar: '--warning-400', hex: '#ffee58', darkText: true  },\r\n      { key: '500', cssVar: '--warning-500', hex: '#efc100', darkText: true  },\r\n      { key: '600', cssVar: '--warning-600', hex: '#c29a00', darkText: true  },\r\n      { key: '700', cssVar: '--warning-700', hex: '#997800', darkText: false },\r\n      { key: '800', cssVar: '--warning-800', hex: '#705800', darkText: false },\r\n      { key: '900', cssVar: '--warning-900', hex: '#4d3c00', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--warning-a100', hex: '#ffff8d', darkText: true  },\r\n      { key: 'A200', cssVar: '--warning-a200', hex: '#ffff00', darkText: true  },\r\n      { key: 'A400', cssVar: '--warning-a400', hex: '#ffea00', darkText: true  },\r\n      { key: 'A700', cssVar: '--warning-a700', hex: '#ffd600', darkText: true  },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Error',\r\n    shades: [\r\n      { key: '50',  cssVar: '--error-50',  hex: '#fff0f0', darkText: true  },\r\n      { key: '100', cssVar: '--error-100', hex: '#f9c4c4', darkText: true  },\r\n      { key: '200', cssVar: '--error-200', hex: '#f09090', darkText: true  },\r\n      { key: '300', cssVar: '--error-300', hex: '#e65858', darkText: false },\r\n      { key: '400', cssVar: '--error-400', hex: '#d92828', darkText: false },\r\n      { key: '500', cssVar: '--error-500', hex: '#b10505', darkText: false },\r\n      { key: '600', cssVar: '--error-600', hex: '#940404', darkText: false },\r\n      { key: '700', cssVar: '--error-700', hex: '#770303', darkText: false },\r\n      { key: '800', cssVar: '--error-800', hex: '#590202', darkText: false },\r\n      { key: '900', cssVar: '--error-900', hex: '#3b0101', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--error-a100', hex: '#ff8a80', darkText: true  },\r\n      { key: 'A200', cssVar: '--error-a200', hex: '#ff5252', darkText: false },\r\n      { key: 'A400', cssVar: '--error-a400', hex: '#ff1744', darkText: false },\r\n      { key: 'A700', cssVar: '--error-a700', hex: '#d50000', darkText: false },\r\n    ],\r\n  },\r\n];\r\n\r\n@Component({\r\n  selector: 'usli-colors-story',\r\n  standalone: true,\r\n  styles: [`\r\n    .page { padding: 2rem; font-family: 'Roboto', sans-serif; background: #fafafa; min-height: 100vh; }\r\n    h1 { font-size: 1.5rem; font-weight: 500; color: #212121; margin: 0 0 2rem; }\r\n    .palette { margin-bottom: 2.5rem; }\r\n    .palette-name { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #757575; margin: 0 0 0.5rem; }\r\n    .shades { display: flex; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.12); }\r\n    .accents { display: flex; gap: 4px; margin-top: 4px; }\r\n    .swatch {\r\n      flex: 1;\r\n      padding: 0.625rem 0.5rem;\r\n      min-height: 72px;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: space-between;\r\n    }\r\n    .accent-swatch {\r\n      flex: 1;\r\n      padding: 0.625rem 0.5rem;\r\n      min-height: 60px;\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: space-between;\r\n      border-radius: 4px;\r\n      box-shadow: 0 1px 3px rgba(0,0,0,.12);\r\n    }\r\n    .swatch-key { font-size: 11px; font-weight: 700; }\r\n    .swatch-hex { font-size: 10px; opacity: 0.8; font-family: 'Roboto Mono', monospace; }\r\n  `],\r\n  template: `\r\n    <div class=\"page\">\r\n      <h1>Color Palette</h1>\r\n      @for (palette of palettes; track palette.name) {\r\n        <div class=\"palette\">\r\n          <p class=\"palette-name\">{{ palette.name }}</p>\r\n          <div class=\"shades\">\r\n            @for (shade of palette.shades; track shade.key) {\r\n              <div class=\"swatch\"\r\n                   [style.background-color]=\"shade.hex\"\r\n                   [style.color]=\"shade.darkText ? '#212121' : '#ffffff'\">\r\n                <span class=\"swatch-key\">{{ shade.key }} | Variable: {{ shade.cssVar }}</span>\r\n                <span class=\"swatch-hex\">{{ shade.hex }}</span>\r\n              </div>\r\n            }\r\n          </div>\r\n          <div class=\"accents\">\r\n            @for (shade of palette.accents; track shade.key) {\r\n              <div class=\"accent-swatch\"\r\n                   [style.background-color]=\"shade.hex\"\r\n                   [style.color]=\"shade.darkText ? '#212121' : '#ffffff'\">\r\n                <span class=\"swatch-key\">{{ shade.key }}</span>\r\n                <span class=\"swatch-hex\">{{ shade.hex }}</span>\r\n              </div>\r\n            }\r\n          </div>\r\n        </div>\r\n      }\r\n    </div>\r\n  `,\r\n})\r\nclass ColorsStoryComponent {\r\n  palettes = palettes;\r\n}\r\n\r\nconst meta: Meta<ColorsStoryComponent> = {\r\n  title: 'Design System/Colors',\r\n  component: ColorsStoryComponent,\r\n  parameters: { layout: 'fullscreen' },\r\n  tags: ['autodocs'],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<ColorsStoryComponent>;\r\n\r\nexport const AllPalettes: Story = {};\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n    .page { padding: 2rem; font-family: 'Roboto', sans-serif; background: #fafafa; min-height: 100vh; }\n    h1 { font-size: 1.5rem; font-weight: 500; color: #212121; margin: 0 0 2rem; }\n    .palette { margin-bottom: 2.5rem; }\n    .palette-name { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #757575; margin: 0 0 0.5rem; }\n    .shades { display: flex; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.12); }\n    .accents { display: flex; gap: 4px; margin-top: 4px; }\n    .swatch {\n      flex: 1;\n      padding: 0.625rem 0.5rem;\n      min-height: 72px;\n      display: flex;\n      flex-direction: column;\n      justify-content: space-between;\n    }\n    .accent-swatch {\n      flex: 1;\n      padding: 0.625rem 0.5rem;\n      min-height: 60px;\n      display: flex;\n      flex-direction: column;\n      justify-content: space-between;\n      border-radius: 4px;\n      box-shadow: 0 1px 3px rgba(0,0,0,.12);\n    }\n    .swatch-key { font-size: 11px; font-weight: 700; }\n    .swatch-hex { font-size: 10px; opacity: 0.8; font-family: 'Roboto Mono', monospace; }\n  \n",
+            "extends": []
+        },
+        {
+            "name": "TypographyStoryComponent",
+            "id": "component-TypographyStoryComponent-bad3efbdbfbc50f08fcca3b783c87a8fccd2a242f2be6eed61691dc9a0b68af7ff9de67db49be98f336a9b44e06bbc4cff8acf9707c48f54af78a48be5bf0a14",
+            "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "usli-typography-story",
+            "styleUrls": [],
+            "styles": [
+                "\n    .page { padding: 2rem 3rem; background: #fafafa; min-height: 100vh; }\n    h1 { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #757575; margin: 0 0 0.25rem; }\n    .font-section { margin-bottom: 3rem; }\n    .section-rule { border: none; border-top: 2px solid #e0e0e0; margin: 2.5rem 0; }\n    .row {\n      display: grid;\n      grid-template-columns: 140px 1fr 260px;\n      align-items: baseline;\n      gap: 1.5rem;\n      padding: 1rem 0;\n      border-bottom: 1px solid #eeeeee;\n    }\n    .row.divider-above { border-top: 1px solid #bdbdbd; margin-top: 0.5rem; padding-top: 1.25rem; }\n    .role-label { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 500; color: #757575; white-space: nowrap; }\n    .spec { font-family: 'Roboto', sans-serif; font-size: 0.7rem; color: #9e9e9e; text-align: right; }\n  "
+            ],
+            "template": "<div class=\"page\">\n  <div class=\"font-section\">\n    <h1>Roboto</h1>\n    @for (role of robotoRoles; track role.label) {\n      <div class=\"row\" [class.divider-above]=\"role.divider\">\n        <span class=\"role-label\">{{ role.label }}</span>\n        <span [style.font-family]=\"role.fontFamily\"\n              [style.font-size]=\"role.fontSize\"\n              [style.font-weight]=\"role.fontWeight\"\n              [style.text-transform]=\"role.textTransform || 'none'\"\n              [style.letter-spacing]=\"role.letterSpacing || 'normal'\">\n          {{ role.sample }}\n        </span>\n        <span class=\"spec\">{{ role.spec }}</span>\n      </div>\n    }\n  </div>\n\n  <hr class=\"section-rule\" />\n\n  <div class=\"font-section\">\n    <h1>Open Sans</h1>\n    @for (role of openSansRoles; track role.label) {\n      <div class=\"row\" [class.divider-above]=\"role.divider\">\n        <span class=\"role-label\">{{ role.label }}</span>\n        <span [style.font-family]=\"role.fontFamily\"\n              [style.font-size]=\"role.fontSize\"\n              [style.font-weight]=\"role.fontWeight\"\n              [style.text-transform]=\"role.textTransform || 'none'\"\n              [style.letter-spacing]=\"role.letterSpacing || 'normal'\">\n          {{ role.sample }}\n        </span>\n        <span class=\"spec\">{{ role.spec }}</span>\n      </div>\n    }\n  </div>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "openSansRoles",
+                    "defaultValue": "openSansRoles",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 111
+                },
+                {
+                    "name": "robotoRoles",
+                    "defaultValue": "roles",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 110
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import type { Meta, StoryObj } from '@storybook/angular';\r\nimport { Component } from '@angular/core';\r\n\r\ninterface TypeRole {\r\n  label: string;\r\n  sample: string;\r\n  spec: string;\r\n  fontSize: string;\r\n  fontWeight: number;\r\n  fontFamily: string;\r\n  textTransform?: string;\r\n  letterSpacing?: string;\r\n  divider?: boolean;\r\n}\r\n\r\nconst ROBOTO = `'Roboto', sans-serif`;\r\nconst OPEN_SANS = `'Open Sans', sans-serif`;\r\n\r\nconst roles: TypeRole[] = [\r\n  { label: 'H1 Head',    sample: 'The quick brown fox',   spec: 'Roboto · Light 300 · 3rem',        fontSize: '3rem',     fontWeight: 300, fontFamily: ROBOTO },\r\n  { label: 'H2 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Light 300 · 2.5rem',      fontSize: '2.5rem',   fontWeight: 300, fontFamily: ROBOTO },\r\n  { label: 'H3 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 2rem',      fontSize: '2rem',     fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H4 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 1.5rem',    fontSize: '1.5rem',   fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H5 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 1.25rem',   fontSize: '1.25rem',  fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H6 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Medium 500 · 1rem',       fontSize: '1rem',     fontWeight: 500, fontFamily: ROBOTO, divider: true },\r\n  { label: 'Body 1',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Roboto · Regular 400 · 1rem',   fontSize: '1rem',     fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'Body 2',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Roboto · Regular 400 · 0.875rem', fontSize: '0.875rem', fontWeight: 400, fontFamily: ROBOTO, divider: true },\r\n  { label: 'Subtitle 2',  sample: 'Section title or supporting label',            spec: 'Roboto · Medium 500 · 0.875rem', fontSize: '0.875rem', fontWeight: 500, fontFamily: ROBOTO },\r\n  { label: 'Caption',     sample: 'Helper text or annotation',                    spec: 'Roboto · Regular 400 · 0.75rem', fontSize: '0.75rem',  fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'Button',      sample: 'CALL TO ACTION',                               spec: 'Roboto · Medium 500 · 0.875rem · Uppercase', fontSize: '0.875rem', fontWeight: 500, fontFamily: ROBOTO, textTransform: 'uppercase', letterSpacing: '0.08em' },\r\n  { label: 'Overline',    sample: 'SECTION LABEL',                                spec: 'Roboto · Regular 400 · 0.625rem · Uppercase', fontSize: '0.625rem', fontWeight: 400, fontFamily: ROBOTO, textTransform: 'uppercase', letterSpacing: '0.15em' },\r\n];\r\n\r\nconst openSansRoles: TypeRole[] = [\r\n  { label: 'H1 Head',     sample: 'The quick brown fox',   spec: 'Open Sans · Light 300 · 3rem',        fontSize: '3rem',     fontWeight: 300, fontFamily: OPEN_SANS },\r\n  { label: 'H2 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Light 300 · 2.5rem',      fontSize: '2.5rem',   fontWeight: 300, fontFamily: OPEN_SANS },\r\n  { label: 'H3 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 2rem',      fontSize: '2rem',     fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H4 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 1.5rem',    fontSize: '1.5rem',   fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H5 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 1.25rem',   fontSize: '1.25rem',  fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H6 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · SemiBold 600 · 1rem',     fontSize: '1rem',     fontWeight: 600, fontFamily: OPEN_SANS, divider: true },\r\n  { label: 'Body 1',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Open Sans · Regular 400 · 1rem',      fontSize: '1rem',     fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'Body 2',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Open Sans · Regular 400 · 0.875rem',  fontSize: '0.875rem', fontWeight: 400, fontFamily: OPEN_SANS, divider: true },\r\n  { label: 'Subtitle 2',  sample: 'Section title or supporting label',            spec: 'Open Sans · SemiBold 600 · 0.875rem', fontSize: '0.875rem', fontWeight: 600, fontFamily: OPEN_SANS },\r\n  { label: 'Caption',     sample: 'Helper text or annotation',                    spec: 'Open Sans · Regular 400 · 0.75rem',   fontSize: '0.75rem',  fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'Button',      sample: 'CALL TO ACTION',                               spec: 'Open Sans · SemiBold 600 · 0.875rem · Uppercase', fontSize: '0.875rem', fontWeight: 600, fontFamily: OPEN_SANS, textTransform: 'uppercase', letterSpacing: '0.08em' },\r\n  { label: 'Overline',    sample: 'SECTION LABEL',                                spec: 'Open Sans · Regular 400 · 0.625rem · Uppercase', fontSize: '0.625rem', fontWeight: 400, fontFamily: OPEN_SANS, textTransform: 'uppercase', letterSpacing: '0.15em' },\r\n];\r\n\r\n@Component({\r\n  selector: 'usli-typography-story',\r\n  standalone: true,\r\n  styles: [`\r\n    .page { padding: 2rem 3rem; background: #fafafa; min-height: 100vh; }\r\n    h1 { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #757575; margin: 0 0 0.25rem; }\r\n    .font-section { margin-bottom: 3rem; }\r\n    .section-rule { border: none; border-top: 2px solid #e0e0e0; margin: 2.5rem 0; }\r\n    .row {\r\n      display: grid;\r\n      grid-template-columns: 140px 1fr 260px;\r\n      align-items: baseline;\r\n      gap: 1.5rem;\r\n      padding: 1rem 0;\r\n      border-bottom: 1px solid #eeeeee;\r\n    }\r\n    .row.divider-above { border-top: 1px solid #bdbdbd; margin-top: 0.5rem; padding-top: 1.25rem; }\r\n    .role-label { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 500; color: #757575; white-space: nowrap; }\r\n    .spec { font-family: 'Roboto', sans-serif; font-size: 0.7rem; color: #9e9e9e; text-align: right; }\r\n  `],\r\n  template: `\r\n    <div class=\"page\">\r\n      <div class=\"font-section\">\r\n        <h1>Roboto</h1>\r\n        @for (role of robotoRoles; track role.label) {\r\n          <div class=\"row\" [class.divider-above]=\"role.divider\">\r\n            <span class=\"role-label\">{{ role.label }}</span>\r\n            <span [style.font-family]=\"role.fontFamily\"\r\n                  [style.font-size]=\"role.fontSize\"\r\n                  [style.font-weight]=\"role.fontWeight\"\r\n                  [style.text-transform]=\"role.textTransform || 'none'\"\r\n                  [style.letter-spacing]=\"role.letterSpacing || 'normal'\">\r\n              {{ role.sample }}\r\n            </span>\r\n            <span class=\"spec\">{{ role.spec }}</span>\r\n          </div>\r\n        }\r\n      </div>\r\n\r\n      <hr class=\"section-rule\" />\r\n\r\n      <div class=\"font-section\">\r\n        <h1>Open Sans</h1>\r\n        @for (role of openSansRoles; track role.label) {\r\n          <div class=\"row\" [class.divider-above]=\"role.divider\">\r\n            <span class=\"role-label\">{{ role.label }}</span>\r\n            <span [style.font-family]=\"role.fontFamily\"\r\n                  [style.font-size]=\"role.fontSize\"\r\n                  [style.font-weight]=\"role.fontWeight\"\r\n                  [style.text-transform]=\"role.textTransform || 'none'\"\r\n                  [style.letter-spacing]=\"role.letterSpacing || 'normal'\">\r\n              {{ role.sample }}\r\n            </span>\r\n            <span class=\"spec\">{{ role.spec }}</span>\r\n          </div>\r\n        }\r\n      </div>\r\n    </div>\r\n  `,\r\n})\r\nclass TypographyStoryComponent {\r\n  robotoRoles = roles;\r\n  openSansRoles = openSansRoles;\r\n}\r\n\r\nconst meta: Meta<TypographyStoryComponent> = {\r\n  title: 'Design System/Typography',\r\n  component: TypographyStoryComponent,\r\n  parameters: { layout: 'fullscreen' },\r\n  tags: ['autodocs'],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<TypographyStoryComponent>;\r\n\r\nexport const Scale: Story = {};\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n    .page { padding: 2rem 3rem; background: #fafafa; min-height: 100vh; }\n    h1 { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #757575; margin: 0 0 0.25rem; }\n    .font-section { margin-bottom: 3rem; }\n    .section-rule { border: none; border-top: 2px solid #e0e0e0; margin: 2.5rem 0; }\n    .row {\n      display: grid;\n      grid-template-columns: 140px 1fr 260px;\n      align-items: baseline;\n      gap: 1.5rem;\n      padding: 1rem 0;\n      border-bottom: 1px solid #eeeeee;\n    }\n    .row.divider-above { border-top: 1px solid #bdbdbd; margin-top: 0.5rem; padding-top: 1.25rem; }\n    .role-label { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 500; color: #757575; white-space: nowrap; }\n    .spec { font-family: 'Roboto', sans-serif; font-size: 0.7rem; color: #9e9e9e; text-align: right; }\n  \n",
+            "extends": []
+        }
+    ],
     "modules": [],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "AllPalettes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/colors.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Border",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { type: 'border' } }"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { title: 'Card title', subtitle: 'Card subtitle' } }"
+            },
+            {
+                "name": "Dismissible",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'warning', title: 'Heads up', dismissible: true } }"
+            },
+            {
+                "name": "Error",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'error' } }"
+            },
+            {
+                "name": "Error",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'error' } }"
+            },
+            {
+                "name": "Error",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'error', title: 'Error accent' } }"
+            },
+            {
+                "name": "Grow",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { type: 'grow' } }"
+            },
+            {
+                "name": "Info",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'info' } }"
+            },
+            {
+                "name": "Info",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'info' } }"
+            },
             {
                 "name": "Large",
                 "ctype": "miscellaneous",
@@ -18,7 +434,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    size: 'large',\r\n    label: 'Button',\r\n  },\r\n}"
+            },
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { size: 'large' } }"
             },
             {
                 "name": "LoggedIn",
@@ -28,7 +454,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    user: {\r\n      name: 'Jane Doe',\r\n    },\r\n  },\r\n}"
             },
             {
                 "name": "LoggedIn",
@@ -38,7 +464,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\n    await expect(loginButton).toBeInTheDocument();\n    await userEvent.click(loginButton);\n    await expect(loginButton).not.toBeInTheDocument();\n\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n    await expect(logoutButton).toBeInTheDocument();\n  },\n}"
+                "defaultValue": "{\r\n  play: async ({ canvasElement }) => {\r\n    const canvas = within(canvasElement);\r\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\r\n    await expect(loginButton).toBeInTheDocument();\r\n    await userEvent.click(loginButton);\r\n    await expect(loginButton).not.toBeInTheDocument();\r\n\r\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\r\n    await expect(logoutButton).toBeInTheDocument();\r\n  },\r\n}"
             },
             {
                 "name": "LoggedOut",
@@ -59,6 +485,26 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<UsliAlertComponent>",
+                "defaultValue": "{\n  title: 'Components/Alert',\n  component: UsliAlertComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    variant: {\n      control: 'select',\n      options: ['error', 'warning', 'info', 'success'],\n    },\n    title: { control: 'text' },\n    dismissible: { control: 'boolean' },\n  },\n  args: {\n    variant: 'info',\n    dismissible: false,\n  },\n  render: (args) => ({\n    props: args,\n    template: `<usli-alert [variant]=\"variant\" [title]=\"title\" [dismissible]=\"dismissible\">This is an alert message.</usli-alert>`,\n  }),\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<UsliBadgeComponent>",
+                "defaultValue": "{\n  title: 'Components/Badge',\n  component: UsliBadgeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    variant: {\n      control: 'select',\n      options: ['primary', 'secondary', 'tertiary', 'error', 'warning', 'info', 'success'],\n    },\n    pill: { control: 'boolean' },\n    label: { control: 'text' },\n  },\n  args: {\n    variant: 'primary',\n    label: 'Badge',\n    pill: false,\n  },\n}"
             },
             {
                 "name": "meta",
@@ -68,7 +514,27 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n  title: 'Example/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#story-args\n  args: { onClick: fn() },\n}"
+                "defaultValue": "{\r\n  title: 'Example/Button',\r\n  component: ButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#story-args\r\n  args: { onClick: fn() },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<UsliCardComponent>",
+                "defaultValue": "{\n  title: 'Components/Card',\n  component: UsliCardComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    variant: {\n      control: 'select',\n      options: ['primary', 'secondary', 'tertiary', 'error', 'warning', 'info', 'success'],\n    },\n    title: { control: 'text' },\n    subtitle: { control: 'text' },\n  },\n  render: (args) => ({\n    props: args,\n    template: `<usli-card [variant]=\"variant\" [title]=\"title\" [subtitle]=\"subtitle\" style=\"max-width: 20rem;\">Some quick example text to build on the card and make up the bulk of its content.</usli-card>`,\n  }),\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/colors.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ColorsStoryComponent>",
+                "defaultValue": "{\r\n  title: 'Design System/Colors',\r\n  component: ColorsStoryComponent,\r\n  parameters: { layout: 'fullscreen' },\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -78,7 +544,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<HeaderComponent>",
-                "defaultValue": "{\n  title: 'Example/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
+                "defaultValue": "{\r\n  title: 'Example/Header',\r\n  component: HeaderComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  args: {\r\n    onLogin: fn(),\r\n    onLogout: fn(),\r\n    onCreateAccount: fn(),\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -88,7 +554,77 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<PageComponent>",
-                "defaultValue": "{\n  title: 'Example/Page',\n  component: PageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                "defaultValue": "{\r\n  title: 'Example/Page',\r\n  component: PageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<UsliSpinnerComponent>",
+                "defaultValue": "{\n  title: 'Components/Spinner',\n  component: UsliSpinnerComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    variant: {\n      control: 'select',\n      options: ['primary', 'secondary', 'tertiary', 'error', 'warning', 'info', 'success'],\n    },\n    size: {\n      control: 'select',\n      options: ['small', 'medium', 'large'],\n    },\n    type: {\n      control: 'select',\n      options: ['border', 'grow'],\n    },\n    label: { control: 'text' },\n  },\n  args: {\n    variant: 'primary',\n    size: 'medium',\n    type: 'border',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TypographyStoryComponent>",
+                "defaultValue": "{\r\n  title: 'Design System/Typography',\r\n  component: TypographyStoryComponent,\r\n  parameters: { layout: 'fullscreen' },\r\n  tags: ['autodocs'],\r\n}"
+            },
+            {
+                "name": "NoTitle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: {} }"
+            },
+            {
+                "name": "OPEN_SANS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "`'Open Sans', sans-serif`"
+            },
+            {
+                "name": "openSansRoles",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "TypeRole[]",
+                "defaultValue": "[\r\n  { label: 'H1 Head',     sample: 'The quick brown fox',   spec: 'Open Sans · Light 300 · 3rem',        fontSize: '3rem',     fontWeight: 300, fontFamily: OPEN_SANS },\r\n  { label: 'H2 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Light 300 · 2.5rem',      fontSize: '2.5rem',   fontWeight: 300, fontFamily: OPEN_SANS },\r\n  { label: 'H3 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 2rem',      fontSize: '2rem',     fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H4 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 1.5rem',    fontSize: '1.5rem',   fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H5 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 1.25rem',   fontSize: '1.25rem',  fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H6 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · SemiBold 600 · 1rem',     fontSize: '1rem',     fontWeight: 600, fontFamily: OPEN_SANS, divider: true },\r\n  { label: 'Body 1',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Open Sans · Regular 400 · 1rem',      fontSize: '1rem',     fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'Body 2',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Open Sans · Regular 400 · 0.875rem',  fontSize: '0.875rem', fontWeight: 400, fontFamily: OPEN_SANS, divider: true },\r\n  { label: 'Subtitle 2',  sample: 'Section title or supporting label',            spec: 'Open Sans · SemiBold 600 · 0.875rem', fontSize: '0.875rem', fontWeight: 600, fontFamily: OPEN_SANS },\r\n  { label: 'Caption',     sample: 'Helper text or annotation',                    spec: 'Open Sans · Regular 400 · 0.75rem',   fontSize: '0.75rem',  fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'Button',      sample: 'CALL TO ACTION',                               spec: 'Open Sans · SemiBold 600 · 0.875rem · Uppercase', fontSize: '0.875rem', fontWeight: 600, fontFamily: OPEN_SANS, textTransform: 'uppercase', letterSpacing: '0.08em' },\r\n  { label: 'Overline',    sample: 'SECTION LABEL',                                spec: 'Open Sans · Regular 400 · 0.625rem · Uppercase', fontSize: '0.625rem', fontWeight: 400, fontFamily: OPEN_SANS, textTransform: 'uppercase', letterSpacing: '0.15em' },\r\n]"
+            },
+            {
+                "name": "palettes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/colors.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Palette[]",
+                "defaultValue": "[\r\n  {\r\n    name: 'USLI Orange',\r\n    shades: [\r\n      { key: '50',  cssVar: '--orange-50',  hex: '#fff4ea', darkText: true  },\r\n      { key: '100', cssVar: '--orange-100', hex: '#fde4c0', darkText: true  },\r\n      { key: '200', cssVar: '--orange-200', hex: '#fbce94', darkText: true  },\r\n      { key: '300', cssVar: '--orange-300', hex: '#f9b868', darkText: true  },\r\n      { key: '400', cssVar: '--orange-400', hex: '#f8a63f', darkText: true  },\r\n      { key: '500', cssVar: '--orange-500', hex: '#f69728', darkText: true  },\r\n      { key: '600', cssVar: '--orange-600', hex: '#d4841e', darkText: false },\r\n      { key: '700', cssVar: '--orange-700', hex: '#b27015', darkText: false },\r\n      { key: '800', cssVar: '--orange-800', hex: '#905c0d', darkText: false },\r\n      { key: '900', cssVar: '--orange-900', hex: '#6e4807', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--orange-a100', hex: '#ffe0b2', darkText: true  },\r\n      { key: 'A200', cssVar: '--orange-a200', hex: '#ffb74d', darkText: true  },\r\n      { key: 'A400', cssVar: '--orange-a400', hex: '#ff9800', darkText: true  },\r\n      { key: 'A700', cssVar: '--orange-a700', hex: '#ff6d00', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'USLI Blue',\r\n    shades: [\r\n      { key: '50',  cssVar: '--blue-50',  hex: '#e3e9f6', darkText: true  },\r\n      { key: '100', cssVar: '--blue-100', hex: '#b3c2e6', darkText: true  },\r\n      { key: '200', cssVar: '--blue-200', hex: '#809dd8', darkText: true  },\r\n      { key: '300', cssVar: '--blue-300', hex: '#4d78c9', darkText: false },\r\n      { key: '400', cssVar: '--blue-400', hex: '#255dbf', darkText: false },\r\n      { key: '500', cssVar: '--blue-500', hex: '#00338e', darkText: false },\r\n      { key: '600', cssVar: '--blue-600', hex: '#002c7c', darkText: false },\r\n      { key: '700', cssVar: '--blue-700', hex: '#00216a', darkText: false },\r\n      { key: '800', cssVar: '--blue-800', hex: '#001657', darkText: false },\r\n      { key: '900', cssVar: '--blue-900', hex: '#000b44', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--blue-a100', hex: '#80b0ff', darkText: true  },\r\n      { key: 'A200', cssVar: '--blue-a200', hex: '#448aff', darkText: false },\r\n      { key: 'A400', cssVar: '--blue-a400', hex: '#2979ff', darkText: false },\r\n      { key: 'A700', cssVar: '--blue-a700', hex: '#2962ff', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'USLI Gray',\r\n    shades: [\r\n      { key: '50',  cssVar: '--gray-50',  hex: '#fafafa', darkText: true  },\r\n      { key: '100', cssVar: '--gray-100', hex: '#f5f5f5', darkText: true  },\r\n      { key: '200', cssVar: '--gray-200', hex: '#eeeeee', darkText: true  },\r\n      { key: '300', cssVar: '--gray-300', hex: '#e0e0e0', darkText: true  },\r\n      { key: '400', cssVar: '--gray-400', hex: '#bdbdbd', darkText: true  },\r\n      { key: '500', cssVar: '--gray-500', hex: '#a8a8a8', darkText: true  },\r\n      { key: '600', cssVar: '--gray-600', hex: '#757575', darkText: false },\r\n      { key: '700', cssVar: '--gray-700', hex: '#616161', darkText: false },\r\n      { key: '800', cssVar: '--gray-800', hex: '#424242', darkText: false },\r\n      { key: '900', cssVar: '--gray-900', hex: '#212121', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--gray-a100', hex: '#ffffff', darkText: true  },\r\n      { key: 'A200', cssVar: '--gray-a200', hex: '#eeeeee', darkText: true  },\r\n      { key: 'A400', cssVar: '--gray-a400', hex: '#bdbdbd', darkText: true  },\r\n      { key: 'A700', cssVar: '--gray-a700', hex: '#616161', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Info',\r\n    shades: [\r\n      { key: '50',  cssVar: '--info-50',  hex: '#e8f4ff', darkText: true  },\r\n      { key: '100', cssVar: '--info-100', hex: '#c0e0ff', darkText: true  },\r\n      { key: '200', cssVar: '--info-200', hex: '#90c8fe', darkText: true  },\r\n      { key: '300', cssVar: '--info-300', hex: '#60b0fd', darkText: true  },\r\n      { key: '400', cssVar: '--info-400', hex: '#3da0fc', darkText: true  },\r\n      { key: '500', cssVar: '--info-500', hex: '#5aaafa', darkText: true  },\r\n      { key: '600', cssVar: '--info-600', hex: '#4996e3', darkText: false },\r\n      { key: '700', cssVar: '--info-700', hex: '#3478c3', darkText: false },\r\n      { key: '800', cssVar: '--info-800', hex: '#235aa0', darkText: false },\r\n      { key: '900', cssVar: '--info-900', hex: '#163d7a', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--info-a100', hex: '#b3d8ff', darkText: true  },\r\n      { key: 'A200', cssVar: '--info-a200', hex: '#64b5ff', darkText: true  },\r\n      { key: 'A400', cssVar: '--info-a400', hex: '#1890ff', darkText: false },\r\n      { key: 'A700', cssVar: '--info-a700', hex: '#0070e0', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Success',\r\n    shades: [\r\n      { key: '50',  cssVar: '--success-50',  hex: '#edfaee', darkText: true  },\r\n      { key: '100', cssVar: '--success-100', hex: '#bce8be', darkText: true  },\r\n      { key: '200', cssVar: '--success-200', hex: '#88d58b', darkText: true  },\r\n      { key: '300', cssVar: '--success-300', hex: '#55bb59', darkText: true  },\r\n      { key: '400', cssVar: '--success-400', hex: '#2da332', darkText: false },\r\n      { key: '500', cssVar: '--success-500', hex: '#14661a', darkText: false },\r\n      { key: '600', cssVar: '--success-600', hex: '#105515', darkText: false },\r\n      { key: '700', cssVar: '--success-700', hex: '#0d4411', darkText: false },\r\n      { key: '800', cssVar: '--success-800', hex: '#09330c', darkText: false },\r\n      { key: '900', cssVar: '--success-900', hex: '#062207', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--success-a100', hex: '#ccff90', darkText: true  },\r\n      { key: 'A200', cssVar: '--success-a200', hex: '#b2ff59', darkText: true  },\r\n      { key: 'A400', cssVar: '--success-a400', hex: '#76ff03', darkText: true  },\r\n      { key: 'A700', cssVar: '--success-a700', hex: '#64dd17', darkText: true  },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Warning',\r\n    shades: [\r\n      { key: '50',  cssVar: '--warning-50',  hex: '#fffde7', darkText: true  },\r\n      { key: '100', cssVar: '--warning-100', hex: '#fff9c4', darkText: true  },\r\n      { key: '200', cssVar: '--warning-200', hex: '#fff59d', darkText: true  },\r\n      { key: '300', cssVar: '--warning-300', hex: '#fff176', darkText: true  },\r\n      { key: '400', cssVar: '--warning-400', hex: '#ffee58', darkText: true  },\r\n      { key: '500', cssVar: '--warning-500', hex: '#efc100', darkText: true  },\r\n      { key: '600', cssVar: '--warning-600', hex: '#c29a00', darkText: true  },\r\n      { key: '700', cssVar: '--warning-700', hex: '#997800', darkText: false },\r\n      { key: '800', cssVar: '--warning-800', hex: '#705800', darkText: false },\r\n      { key: '900', cssVar: '--warning-900', hex: '#4d3c00', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--warning-a100', hex: '#ffff8d', darkText: true  },\r\n      { key: 'A200', cssVar: '--warning-a200', hex: '#ffff00', darkText: true  },\r\n      { key: 'A400', cssVar: '--warning-a400', hex: '#ffea00', darkText: true  },\r\n      { key: 'A700', cssVar: '--warning-a700', hex: '#ffd600', darkText: true  },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Error',\r\n    shades: [\r\n      { key: '50',  cssVar: '--error-50',  hex: '#fff0f0', darkText: true  },\r\n      { key: '100', cssVar: '--error-100', hex: '#f9c4c4', darkText: true  },\r\n      { key: '200', cssVar: '--error-200', hex: '#f09090', darkText: true  },\r\n      { key: '300', cssVar: '--error-300', hex: '#e65858', darkText: false },\r\n      { key: '400', cssVar: '--error-400', hex: '#d92828', darkText: false },\r\n      { key: '500', cssVar: '--error-500', hex: '#b10505', darkText: false },\r\n      { key: '600', cssVar: '--error-600', hex: '#940404', darkText: false },\r\n      { key: '700', cssVar: '--error-700', hex: '#770303', darkText: false },\r\n      { key: '800', cssVar: '--error-800', hex: '#590202', darkText: false },\r\n      { key: '900', cssVar: '--error-900', hex: '#3b0101', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--error-a100', hex: '#ff8a80', darkText: true  },\r\n      { key: 'A200', cssVar: '--error-a200', hex: '#ff5252', darkText: false },\r\n      { key: 'A400', cssVar: '--error-a400', hex: '#ff1744', darkText: false },\r\n      { key: 'A700', cssVar: '--error-a700', hex: '#d50000', darkText: false },\r\n    ],\r\n  },\r\n]"
+            },
+            {
+                "name": "Pill",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'primary', label: 'New', pill: true } }"
             },
             {
                 "name": "preview",
@@ -98,7 +634,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n       color: /(background|color)$/i,\n       date: /Date$/i,\n      },\n    },\n  },\n}"
+                "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n       color: /(background|color)$/i,\r\n       date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'primary' } }"
             },
             {
                 "name": "Primary",
@@ -108,7 +654,57 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'primary', title: 'Primary accent' } }"
+            },
+            {
+                "name": "ROBOTO",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "`'Roboto', sans-serif`"
+            },
+            {
+                "name": "roles",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "TypeRole[]",
+                "defaultValue": "[\r\n  { label: 'H1 Head',    sample: 'The quick brown fox',   spec: 'Roboto · Light 300 · 3rem',        fontSize: '3rem',     fontWeight: 300, fontFamily: ROBOTO },\r\n  { label: 'H2 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Light 300 · 2.5rem',      fontSize: '2.5rem',   fontWeight: 300, fontFamily: ROBOTO },\r\n  { label: 'H3 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 2rem',      fontSize: '2rem',     fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H4 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 1.5rem',    fontSize: '1.5rem',   fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H5 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 1.25rem',   fontSize: '1.25rem',  fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H6 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Medium 500 · 1rem',       fontSize: '1rem',     fontWeight: 500, fontFamily: ROBOTO, divider: true },\r\n  { label: 'Body 1',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Roboto · Regular 400 · 1rem',   fontSize: '1rem',     fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'Body 2',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Roboto · Regular 400 · 0.875rem', fontSize: '0.875rem', fontWeight: 400, fontFamily: ROBOTO, divider: true },\r\n  { label: 'Subtitle 2',  sample: 'Section title or supporting label',            spec: 'Roboto · Medium 500 · 0.875rem', fontSize: '0.875rem', fontWeight: 500, fontFamily: ROBOTO },\r\n  { label: 'Caption',     sample: 'Helper text or annotation',                    spec: 'Roboto · Regular 400 · 0.75rem', fontSize: '0.75rem',  fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'Button',      sample: 'CALL TO ACTION',                               spec: 'Roboto · Medium 500 · 0.875rem · Uppercase', fontSize: '0.875rem', fontWeight: 500, fontFamily: ROBOTO, textTransform: 'uppercase', letterSpacing: '0.08em' },\r\n  { label: 'Overline',    sample: 'SECTION LABEL',                                spec: 'Roboto · Regular 400 · 0.625rem · Uppercase', fontSize: '0.625rem', fontWeight: 400, fontFamily: ROBOTO, textTransform: 'uppercase', letterSpacing: '0.15em' },\r\n]"
+            },
+            {
+                "name": "Scale",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'secondary' } }"
             },
             {
                 "name": "Secondary",
@@ -118,7 +714,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    label: 'Button',\r\n  },\r\n}"
             },
             {
                 "name": "Small",
@@ -128,7 +724,97 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    size: 'small',\r\n    label: 'Button',\r\n  },\r\n}"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { size: 'small' } }"
+            },
+            {
+                "name": "Success",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'success' } }"
+            },
+            {
+                "name": "Success",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'success' } }"
+            },
+            {
+                "name": "Success",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'success', title: 'Success accent' } }"
+            },
+            {
+                "name": "Success",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'success' } }"
+            },
+            {
+                "name": "Tertiary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'tertiary' } }"
+            },
+            {
+                "name": "Warning",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'warning' } }"
+            },
+            {
+                "name": "Warning",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'warning' } }"
+            },
+            {
+                "name": "WithTitle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{ args: { variant: 'success', title: 'Saved' } }"
             }
         ],
         "functions": [],
@@ -137,8 +823,52 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<UsliAlertComponent>",
+                "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<UsliBadgeComponent>",
+                "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<ButtonComponent>",
                 "file": "projects/ui-sdk/src/stories/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<UsliCardComponent>",
+                "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ColorsStoryComponent>",
+                "file": "projects/ui-sdk/src/stories/colors.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -165,10 +895,352 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<UsliSpinnerComponent>",
+                "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TypographyStoryComponent>",
+                "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
             }
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/ui-sdk/src/stories/colors.stories.ts": [
+                {
+                    "name": "AllPalettes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/colors.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/colors.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ColorsStoryComponent>",
+                    "defaultValue": "{\r\n  title: 'Design System/Colors',\r\n  component: ColorsStoryComponent,\r\n  parameters: { layout: 'fullscreen' },\r\n  tags: ['autodocs'],\r\n}"
+                },
+                {
+                    "name": "palettes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/colors.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Palette[]",
+                    "defaultValue": "[\r\n  {\r\n    name: 'USLI Orange',\r\n    shades: [\r\n      { key: '50',  cssVar: '--orange-50',  hex: '#fff4ea', darkText: true  },\r\n      { key: '100', cssVar: '--orange-100', hex: '#fde4c0', darkText: true  },\r\n      { key: '200', cssVar: '--orange-200', hex: '#fbce94', darkText: true  },\r\n      { key: '300', cssVar: '--orange-300', hex: '#f9b868', darkText: true  },\r\n      { key: '400', cssVar: '--orange-400', hex: '#f8a63f', darkText: true  },\r\n      { key: '500', cssVar: '--orange-500', hex: '#f69728', darkText: true  },\r\n      { key: '600', cssVar: '--orange-600', hex: '#d4841e', darkText: false },\r\n      { key: '700', cssVar: '--orange-700', hex: '#b27015', darkText: false },\r\n      { key: '800', cssVar: '--orange-800', hex: '#905c0d', darkText: false },\r\n      { key: '900', cssVar: '--orange-900', hex: '#6e4807', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--orange-a100', hex: '#ffe0b2', darkText: true  },\r\n      { key: 'A200', cssVar: '--orange-a200', hex: '#ffb74d', darkText: true  },\r\n      { key: 'A400', cssVar: '--orange-a400', hex: '#ff9800', darkText: true  },\r\n      { key: 'A700', cssVar: '--orange-a700', hex: '#ff6d00', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'USLI Blue',\r\n    shades: [\r\n      { key: '50',  cssVar: '--blue-50',  hex: '#e3e9f6', darkText: true  },\r\n      { key: '100', cssVar: '--blue-100', hex: '#b3c2e6', darkText: true  },\r\n      { key: '200', cssVar: '--blue-200', hex: '#809dd8', darkText: true  },\r\n      { key: '300', cssVar: '--blue-300', hex: '#4d78c9', darkText: false },\r\n      { key: '400', cssVar: '--blue-400', hex: '#255dbf', darkText: false },\r\n      { key: '500', cssVar: '--blue-500', hex: '#00338e', darkText: false },\r\n      { key: '600', cssVar: '--blue-600', hex: '#002c7c', darkText: false },\r\n      { key: '700', cssVar: '--blue-700', hex: '#00216a', darkText: false },\r\n      { key: '800', cssVar: '--blue-800', hex: '#001657', darkText: false },\r\n      { key: '900', cssVar: '--blue-900', hex: '#000b44', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--blue-a100', hex: '#80b0ff', darkText: true  },\r\n      { key: 'A200', cssVar: '--blue-a200', hex: '#448aff', darkText: false },\r\n      { key: 'A400', cssVar: '--blue-a400', hex: '#2979ff', darkText: false },\r\n      { key: 'A700', cssVar: '--blue-a700', hex: '#2962ff', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'USLI Gray',\r\n    shades: [\r\n      { key: '50',  cssVar: '--gray-50',  hex: '#fafafa', darkText: true  },\r\n      { key: '100', cssVar: '--gray-100', hex: '#f5f5f5', darkText: true  },\r\n      { key: '200', cssVar: '--gray-200', hex: '#eeeeee', darkText: true  },\r\n      { key: '300', cssVar: '--gray-300', hex: '#e0e0e0', darkText: true  },\r\n      { key: '400', cssVar: '--gray-400', hex: '#bdbdbd', darkText: true  },\r\n      { key: '500', cssVar: '--gray-500', hex: '#a8a8a8', darkText: true  },\r\n      { key: '600', cssVar: '--gray-600', hex: '#757575', darkText: false },\r\n      { key: '700', cssVar: '--gray-700', hex: '#616161', darkText: false },\r\n      { key: '800', cssVar: '--gray-800', hex: '#424242', darkText: false },\r\n      { key: '900', cssVar: '--gray-900', hex: '#212121', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--gray-a100', hex: '#ffffff', darkText: true  },\r\n      { key: 'A200', cssVar: '--gray-a200', hex: '#eeeeee', darkText: true  },\r\n      { key: 'A400', cssVar: '--gray-a400', hex: '#bdbdbd', darkText: true  },\r\n      { key: 'A700', cssVar: '--gray-a700', hex: '#616161', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Info',\r\n    shades: [\r\n      { key: '50',  cssVar: '--info-50',  hex: '#e8f4ff', darkText: true  },\r\n      { key: '100', cssVar: '--info-100', hex: '#c0e0ff', darkText: true  },\r\n      { key: '200', cssVar: '--info-200', hex: '#90c8fe', darkText: true  },\r\n      { key: '300', cssVar: '--info-300', hex: '#60b0fd', darkText: true  },\r\n      { key: '400', cssVar: '--info-400', hex: '#3da0fc', darkText: true  },\r\n      { key: '500', cssVar: '--info-500', hex: '#5aaafa', darkText: true  },\r\n      { key: '600', cssVar: '--info-600', hex: '#4996e3', darkText: false },\r\n      { key: '700', cssVar: '--info-700', hex: '#3478c3', darkText: false },\r\n      { key: '800', cssVar: '--info-800', hex: '#235aa0', darkText: false },\r\n      { key: '900', cssVar: '--info-900', hex: '#163d7a', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--info-a100', hex: '#b3d8ff', darkText: true  },\r\n      { key: 'A200', cssVar: '--info-a200', hex: '#64b5ff', darkText: true  },\r\n      { key: 'A400', cssVar: '--info-a400', hex: '#1890ff', darkText: false },\r\n      { key: 'A700', cssVar: '--info-a700', hex: '#0070e0', darkText: false },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Success',\r\n    shades: [\r\n      { key: '50',  cssVar: '--success-50',  hex: '#edfaee', darkText: true  },\r\n      { key: '100', cssVar: '--success-100', hex: '#bce8be', darkText: true  },\r\n      { key: '200', cssVar: '--success-200', hex: '#88d58b', darkText: true  },\r\n      { key: '300', cssVar: '--success-300', hex: '#55bb59', darkText: true  },\r\n      { key: '400', cssVar: '--success-400', hex: '#2da332', darkText: false },\r\n      { key: '500', cssVar: '--success-500', hex: '#14661a', darkText: false },\r\n      { key: '600', cssVar: '--success-600', hex: '#105515', darkText: false },\r\n      { key: '700', cssVar: '--success-700', hex: '#0d4411', darkText: false },\r\n      { key: '800', cssVar: '--success-800', hex: '#09330c', darkText: false },\r\n      { key: '900', cssVar: '--success-900', hex: '#062207', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--success-a100', hex: '#ccff90', darkText: true  },\r\n      { key: 'A200', cssVar: '--success-a200', hex: '#b2ff59', darkText: true  },\r\n      { key: 'A400', cssVar: '--success-a400', hex: '#76ff03', darkText: true  },\r\n      { key: 'A700', cssVar: '--success-a700', hex: '#64dd17', darkText: true  },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Warning',\r\n    shades: [\r\n      { key: '50',  cssVar: '--warning-50',  hex: '#fffde7', darkText: true  },\r\n      { key: '100', cssVar: '--warning-100', hex: '#fff9c4', darkText: true  },\r\n      { key: '200', cssVar: '--warning-200', hex: '#fff59d', darkText: true  },\r\n      { key: '300', cssVar: '--warning-300', hex: '#fff176', darkText: true  },\r\n      { key: '400', cssVar: '--warning-400', hex: '#ffee58', darkText: true  },\r\n      { key: '500', cssVar: '--warning-500', hex: '#efc100', darkText: true  },\r\n      { key: '600', cssVar: '--warning-600', hex: '#c29a00', darkText: true  },\r\n      { key: '700', cssVar: '--warning-700', hex: '#997800', darkText: false },\r\n      { key: '800', cssVar: '--warning-800', hex: '#705800', darkText: false },\r\n      { key: '900', cssVar: '--warning-900', hex: '#4d3c00', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--warning-a100', hex: '#ffff8d', darkText: true  },\r\n      { key: 'A200', cssVar: '--warning-a200', hex: '#ffff00', darkText: true  },\r\n      { key: 'A400', cssVar: '--warning-a400', hex: '#ffea00', darkText: true  },\r\n      { key: 'A700', cssVar: '--warning-a700', hex: '#ffd600', darkText: true  },\r\n    ],\r\n  },\r\n  {\r\n    name: 'Error',\r\n    shades: [\r\n      { key: '50',  cssVar: '--error-50',  hex: '#fff0f0', darkText: true  },\r\n      { key: '100', cssVar: '--error-100', hex: '#f9c4c4', darkText: true  },\r\n      { key: '200', cssVar: '--error-200', hex: '#f09090', darkText: true  },\r\n      { key: '300', cssVar: '--error-300', hex: '#e65858', darkText: false },\r\n      { key: '400', cssVar: '--error-400', hex: '#d92828', darkText: false },\r\n      { key: '500', cssVar: '--error-500', hex: '#b10505', darkText: false },\r\n      { key: '600', cssVar: '--error-600', hex: '#940404', darkText: false },\r\n      { key: '700', cssVar: '--error-700', hex: '#770303', darkText: false },\r\n      { key: '800', cssVar: '--error-800', hex: '#590202', darkText: false },\r\n      { key: '900', cssVar: '--error-900', hex: '#3b0101', darkText: false },\r\n    ],\r\n    accents: [\r\n      { key: 'A100', cssVar: '--error-a100', hex: '#ff8a80', darkText: true  },\r\n      { key: 'A200', cssVar: '--error-a200', hex: '#ff5252', darkText: false },\r\n      { key: 'A400', cssVar: '--error-a400', hex: '#ff1744', darkText: false },\r\n      { key: 'A700', cssVar: '--error-a700', hex: '#d50000', darkText: false },\r\n    ],\r\n  },\r\n]"
+                }
+            ],
+            "projects/ui-sdk/src/stories/spinner.stories.ts": [
+                {
+                    "name": "Border",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { type: 'border' } }"
+                },
+                {
+                    "name": "Grow",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { type: 'grow' } }"
+                },
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { size: 'large' } }"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<UsliSpinnerComponent>",
+                    "defaultValue": "{\n  title: 'Components/Spinner',\n  component: UsliSpinnerComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    variant: {\n      control: 'select',\n      options: ['primary', 'secondary', 'tertiary', 'error', 'warning', 'info', 'success'],\n    },\n    size: {\n      control: 'select',\n      options: ['small', 'medium', 'large'],\n    },\n    type: {\n      control: 'select',\n      options: ['border', 'grow'],\n    },\n    label: { control: 'text' },\n  },\n  args: {\n    variant: 'primary',\n    size: 'medium',\n    type: 'border',\n  },\n}"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { size: 'small' } }"
+                },
+                {
+                    "name": "Success",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'success' } }"
+                }
+            ],
+            "projects/ui-sdk/src/stories/card.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { title: 'Card title', subtitle: 'Card subtitle' } }"
+                },
+                {
+                    "name": "Error",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'error', title: 'Error accent' } }"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<UsliCardComponent>",
+                    "defaultValue": "{\n  title: 'Components/Card',\n  component: UsliCardComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    variant: {\n      control: 'select',\n      options: ['primary', 'secondary', 'tertiary', 'error', 'warning', 'info', 'success'],\n    },\n    title: { control: 'text' },\n    subtitle: { control: 'text' },\n  },\n  render: (args) => ({\n    props: args,\n    template: `<usli-card [variant]=\"variant\" [title]=\"title\" [subtitle]=\"subtitle\" style=\"max-width: 20rem;\">Some quick example text to build on the card and make up the bulk of its content.</usli-card>`,\n  }),\n}"
+                },
+                {
+                    "name": "NoTitle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: {} }"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'primary', title: 'Primary accent' } }"
+                },
+                {
+                    "name": "Success",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'success', title: 'Success accent' } }"
+                }
+            ],
+            "projects/ui-sdk/src/stories/alert.stories.ts": [
+                {
+                    "name": "Dismissible",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'warning', title: 'Heads up', dismissible: true } }"
+                },
+                {
+                    "name": "Error",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'error' } }"
+                },
+                {
+                    "name": "Info",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'info' } }"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<UsliAlertComponent>",
+                    "defaultValue": "{\n  title: 'Components/Alert',\n  component: UsliAlertComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    variant: {\n      control: 'select',\n      options: ['error', 'warning', 'info', 'success'],\n    },\n    title: { control: 'text' },\n    dismissible: { control: 'boolean' },\n  },\n  args: {\n    variant: 'info',\n    dismissible: false,\n  },\n  render: (args) => ({\n    props: args,\n    template: `<usli-alert [variant]=\"variant\" [title]=\"title\" [dismissible]=\"dismissible\">This is an alert message.</usli-alert>`,\n  }),\n}"
+                },
+                {
+                    "name": "Success",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'success' } }"
+                },
+                {
+                    "name": "Warning",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'warning' } }"
+                },
+                {
+                    "name": "WithTitle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'success', title: 'Saved' } }"
+                }
+            ],
+            "projects/ui-sdk/src/stories/badge.stories.ts": [
+                {
+                    "name": "Error",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'error' } }"
+                },
+                {
+                    "name": "Info",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'info' } }"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<UsliBadgeComponent>",
+                    "defaultValue": "{\n  title: 'Components/Badge',\n  component: UsliBadgeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    variant: {\n      control: 'select',\n      options: ['primary', 'secondary', 'tertiary', 'error', 'warning', 'info', 'success'],\n    },\n    pill: { control: 'boolean' },\n    label: { control: 'text' },\n  },\n  args: {\n    variant: 'primary',\n    label: 'Badge',\n    pill: false,\n  },\n}"
+                },
+                {
+                    "name": "Pill",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'primary', label: 'New', pill: true } }"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'primary' } }"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'secondary' } }"
+                },
+                {
+                    "name": "Success",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'success' } }"
+                },
+                {
+                    "name": "Tertiary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'tertiary' } }"
+                },
+                {
+                    "name": "Warning",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{ args: { variant: 'warning' } }"
+                }
+            ],
             "projects/ui-sdk/src/stories/button.stories.ts": [
                 {
                     "name": "Large",
@@ -178,7 +1250,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    size: 'large',\r\n    label: 'Button',\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -188,7 +1260,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n  title: 'Example/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#story-args\n  args: { onClick: fn() },\n}"
+                    "defaultValue": "{\r\n  title: 'Example/Button',\r\n  component: ButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#story-args\r\n  args: { onClick: fn() },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -198,7 +1270,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n  },\r\n}"
                 },
                 {
                     "name": "Secondary",
@@ -208,7 +1280,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    label: 'Button',\r\n  },\r\n}"
                 },
                 {
                     "name": "Small",
@@ -218,7 +1290,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    size: 'small',\r\n    label: 'Button',\r\n  },\r\n}"
                 }
             ],
             "projects/ui-sdk/src/stories/header.stories.ts": [
@@ -230,7 +1302,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    user: {\r\n      name: 'Jane Doe',\r\n    },\r\n  },\r\n}"
                 },
                 {
                     "name": "LoggedOut",
@@ -250,7 +1322,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<HeaderComponent>",
-                    "defaultValue": "{\n  title: 'Example/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
+                    "defaultValue": "{\r\n  title: 'Example/Header',\r\n  component: HeaderComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  args: {\r\n    onLogin: fn(),\r\n    onLogout: fn(),\r\n    onCreateAccount: fn(),\r\n  },\r\n}"
                 }
             ],
             "projects/ui-sdk/src/stories/page.stories.ts": [
@@ -262,7 +1334,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\n    await expect(loginButton).toBeInTheDocument();\n    await userEvent.click(loginButton);\n    await expect(loginButton).not.toBeInTheDocument();\n\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n    await expect(logoutButton).toBeInTheDocument();\n  },\n}"
+                    "defaultValue": "{\r\n  play: async ({ canvasElement }) => {\r\n    const canvas = within(canvasElement);\r\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\r\n    await expect(loginButton).toBeInTheDocument();\r\n    await userEvent.click(loginButton);\r\n    await expect(loginButton).not.toBeInTheDocument();\r\n\r\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\r\n    await expect(logoutButton).toBeInTheDocument();\r\n  },\r\n}"
                 },
                 {
                     "name": "LoggedOut",
@@ -282,7 +1354,69 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<PageComponent>",
-                    "defaultValue": "{\n  title: 'Example/Page',\n  component: PageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                    "defaultValue": "{\r\n  title: 'Example/Page',\r\n  component: PageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                }
+            ],
+            "projects/ui-sdk/src/stories/typography.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TypographyStoryComponent>",
+                    "defaultValue": "{\r\n  title: 'Design System/Typography',\r\n  component: TypographyStoryComponent,\r\n  parameters: { layout: 'fullscreen' },\r\n  tags: ['autodocs'],\r\n}"
+                },
+                {
+                    "name": "OPEN_SANS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "`'Open Sans', sans-serif`"
+                },
+                {
+                    "name": "openSansRoles",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "TypeRole[]",
+                    "defaultValue": "[\r\n  { label: 'H1 Head',     sample: 'The quick brown fox',   spec: 'Open Sans · Light 300 · 3rem',        fontSize: '3rem',     fontWeight: 300, fontFamily: OPEN_SANS },\r\n  { label: 'H2 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Light 300 · 2.5rem',      fontSize: '2.5rem',   fontWeight: 300, fontFamily: OPEN_SANS },\r\n  { label: 'H3 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 2rem',      fontSize: '2rem',     fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H4 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 1.5rem',    fontSize: '1.5rem',   fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H5 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · Regular 400 · 1.25rem',   fontSize: '1.25rem',  fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'H6 Headline', sample: 'The quick brown fox',   spec: 'Open Sans · SemiBold 600 · 1rem',     fontSize: '1rem',     fontWeight: 600, fontFamily: OPEN_SANS, divider: true },\r\n  { label: 'Body 1',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Open Sans · Regular 400 · 1rem',      fontSize: '1rem',     fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'Body 2',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Open Sans · Regular 400 · 0.875rem',  fontSize: '0.875rem', fontWeight: 400, fontFamily: OPEN_SANS, divider: true },\r\n  { label: 'Subtitle 2',  sample: 'Section title or supporting label',            spec: 'Open Sans · SemiBold 600 · 0.875rem', fontSize: '0.875rem', fontWeight: 600, fontFamily: OPEN_SANS },\r\n  { label: 'Caption',     sample: 'Helper text or annotation',                    spec: 'Open Sans · Regular 400 · 0.75rem',   fontSize: '0.75rem',  fontWeight: 400, fontFamily: OPEN_SANS },\r\n  { label: 'Button',      sample: 'CALL TO ACTION',                               spec: 'Open Sans · SemiBold 600 · 0.875rem · Uppercase', fontSize: '0.875rem', fontWeight: 600, fontFamily: OPEN_SANS, textTransform: 'uppercase', letterSpacing: '0.08em' },\r\n  { label: 'Overline',    sample: 'SECTION LABEL',                                spec: 'Open Sans · Regular 400 · 0.625rem · Uppercase', fontSize: '0.625rem', fontWeight: 400, fontFamily: OPEN_SANS, textTransform: 'uppercase', letterSpacing: '0.15em' },\r\n]"
+                },
+                {
+                    "name": "ROBOTO",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "`'Roboto', sans-serif`"
+                },
+                {
+                    "name": "roles",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "TypeRole[]",
+                    "defaultValue": "[\r\n  { label: 'H1 Head',    sample: 'The quick brown fox',   spec: 'Roboto · Light 300 · 3rem',        fontSize: '3rem',     fontWeight: 300, fontFamily: ROBOTO },\r\n  { label: 'H2 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Light 300 · 2.5rem',      fontSize: '2.5rem',   fontWeight: 300, fontFamily: ROBOTO },\r\n  { label: 'H3 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 2rem',      fontSize: '2rem',     fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H4 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 1.5rem',    fontSize: '1.5rem',   fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H5 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Regular 400 · 1.25rem',   fontSize: '1.25rem',  fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'H6 Headline', sample: 'The quick brown fox',  spec: 'Roboto · Medium 500 · 1rem',       fontSize: '1rem',     fontWeight: 500, fontFamily: ROBOTO, divider: true },\r\n  { label: 'Body 1',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Roboto · Regular 400 · 1rem',   fontSize: '1rem',     fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'Body 2',      sample: 'The quick brown fox jumps over the lazy dog.', spec: 'Roboto · Regular 400 · 0.875rem', fontSize: '0.875rem', fontWeight: 400, fontFamily: ROBOTO, divider: true },\r\n  { label: 'Subtitle 2',  sample: 'Section title or supporting label',            spec: 'Roboto · Medium 500 · 0.875rem', fontSize: '0.875rem', fontWeight: 500, fontFamily: ROBOTO },\r\n  { label: 'Caption',     sample: 'Helper text or annotation',                    spec: 'Roboto · Regular 400 · 0.75rem', fontSize: '0.75rem',  fontWeight: 400, fontFamily: ROBOTO },\r\n  { label: 'Button',      sample: 'CALL TO ACTION',                               spec: 'Roboto · Medium 500 · 0.875rem · Uppercase', fontSize: '0.875rem', fontWeight: 500, fontFamily: ROBOTO, textTransform: 'uppercase', letterSpacing: '0.08em' },\r\n  { label: 'Overline',    sample: 'SECTION LABEL',                                spec: 'Roboto · Regular 400 · 0.625rem · Uppercase', fontSize: '0.625rem', fontWeight: 400, fontFamily: ROBOTO, textTransform: 'uppercase', letterSpacing: '0.15em' },\r\n]"
+                },
+                {
+                    "name": "Scale",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
                 }
             ],
             "projects/ui-sdk/.storybook/preview.ts": [
@@ -294,13 +1428,39 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n       color: /(background|color)$/i,\n       date: /Date$/i,\n      },\n    },\n  },\n}"
+                    "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n       color: /(background|color)$/i,\r\n       date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
                 }
             ]
         },
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "projects/ui-sdk/src/stories/alert.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<UsliAlertComponent>",
+                    "file": "projects/ui-sdk/src/stories/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui-sdk/src/stories/badge.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<UsliBadgeComponent>",
+                    "file": "projects/ui-sdk/src/stories/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
             "projects/ui-sdk/src/stories/button.stories.ts": [
                 {
                     "name": "Story",
@@ -308,6 +1468,32 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ButtonComponent>",
                     "file": "projects/ui-sdk/src/stories/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui-sdk/src/stories/card.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<UsliCardComponent>",
+                    "file": "projects/ui-sdk/src/stories/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui-sdk/src/stories/colors.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ColorsStoryComponent>",
+                    "file": "projects/ui-sdk/src/stories/colors.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -339,6 +1525,32 @@
                     "description": "",
                     "kind": 184
                 }
+            ],
+            "projects/ui-sdk/src/stories/spinner.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<UsliSpinnerComponent>",
+                    "file": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui-sdk/src/stories/typography.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TypographyStoryComponent>",
+                    "file": "projects/ui-sdk/src/stories/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
             ]
         }
     },
@@ -357,6 +1569,186 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dismissible",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Error",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Info",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Success",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Warning",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithTitle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/alert.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Error",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Info",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Pill",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Success",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Tertiary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Warning",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/badge.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -422,6 +1814,143 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/ui-sdk/src/stories/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Error",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "NoTitle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Success",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/card.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/colors.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ColorsStoryComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/colors.stories.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Palette",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/colors.stories.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Shade",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "AllPalettes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "palettes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/colors.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/ui-sdk/src/stories/header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -493,6 +2022,164 @@
             },
             {
                 "filePath": "projects/ui-sdk/src/stories/page.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Border",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Grow",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Success",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/spinner.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TypographyStoryComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "TypeRole",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "OPEN_SANS",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "openSansRoles",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ROBOTO",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "roles",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Scale",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-sdk/src/stories/typography.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

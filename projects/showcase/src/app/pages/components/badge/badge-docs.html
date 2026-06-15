@@ -1,0 +1,99 @@
+<div class="page">
+
+  <header class="page-header">
+    <nav class="breadcrumb">
+      <span>Components</span>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Badge</span>
+    </nav>
+    <h1 class="page-title">Badge</h1>
+    <p class="page-lead">
+      Small status descriptors for UI elements. Badges support the same semantic
+      variants as Button, plus an optional pill shape for counts and status dots.
+    </p>
+  </header>
+
+  <!-- Variants -->
+  <section class="section">
+    <h2 class="section__title">Variants</h2>
+    <p class="section__desc">
+      Use the variant input to choose the visual style. primary, secondary, and
+      tertiary provide neutral emphasis levels; error, warning, info, and success
+      communicate status.
+    </p>
+    <div class="example-box">
+      <usli-badge variant="primary">Primary</usli-badge>
+      <usli-badge variant="secondary">Secondary</usli-badge>
+      <usli-badge variant="tertiary">Tertiary</usli-badge>
+      <usli-badge variant="error">Error</usli-badge>
+      <usli-badge variant="warning">Warning</usli-badge>
+      <usli-badge variant="info">Info</usli-badge>
+      <usli-badge variant="success">Success</usli-badge>
+    </div>
+    <div class="code-block">
+      <pre><code>&lt;usli-badge variant="primary"&gt;Primary&lt;/usli-badge&gt;
+&lt;usli-badge variant="secondary"&gt;Secondary&lt;/usli-badge&gt;
+&lt;usli-badge variant="tertiary"&gt;Tertiary&lt;/usli-badge&gt;
+&lt;usli-badge variant="error"&gt;Error&lt;/usli-badge&gt;
+&lt;usli-badge variant="warning"&gt;Warning&lt;/usli-badge&gt;
+&lt;usli-badge variant="info"&gt;Info&lt;/usli-badge&gt;
+&lt;usli-badge variant="success"&gt;Success&lt;/usli-badge&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Pill shape -->
+  <section class="section">
+    <h2 class="section__title">Pill shape</h2>
+    <p class="section__desc">Set [pill]="true" for a fully rounded badge, useful for counts and status dots.</p>
+    <div class="example-box">
+      <usli-badge variant="primary" [pill]="true">New</usli-badge>
+      <usli-badge variant="success" [pill]="true">Active</usli-badge>
+      <usli-badge variant="error" [pill]="true">3</usli-badge>
+    </div>
+    <div class="code-block">
+      <pre><code>&lt;usli-badge variant="primary" [pill]="true"&gt;New&lt;/usli-badge&gt;
+&lt;usli-badge variant="success" [pill]="true"&gt;Active&lt;/usli-badge&gt;
+&lt;usli-badge variant="error" [pill]="true"&gt;3&lt;/usli-badge&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- API -->
+  <section class="section">
+    <h2 class="section__title">API</h2>
+    <table class="api-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="prop-name">variant</span></td>
+          <td><span class="prop-type">'primary' | 'secondary' | 'tertiary' | 'error' | 'warning' | 'info' | 'success'</span></td>
+          <td><span class="prop-default">'primary'</span></td>
+          <td>Semantic color variant.</td>
+        </tr>
+        <tr>
+          <td><span class="prop-name">pill</span></td>
+          <td><span class="prop-type">boolean</span></td>
+          <td><span class="prop-default">false</span></td>
+          <td>Renders a fully rounded pill shape.</td>
+        </tr>
+        <tr>
+          <td><span class="prop-name">label</span></td>
+          <td><span class="prop-type">string</span></td>
+          <td><span class="prop-default">''</span></td>
+          <td>Text content. Overridden by projected content.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>

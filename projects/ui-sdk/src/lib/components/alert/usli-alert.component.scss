@@ -1,0 +1,39 @@
+:host {
+  display: block;
+}
+
+.usli-alert {
+  font-family: var(--font-roboto, 'Roboto', sans-serif);
+}
+
+// ── Error ────────────────────────────────────────────────────────────────────
+.alert-usli-error {
+  --bs-alert-color: var(--error-700, #770303);
+  --bs-alert-bg: var(--error-50, #fff0f0);
+  --bs-alert-border-color: var(--error-200, #f09090);
+  --bs-alert-link-color: var(--error-700, #770303);
+}
+
+// ── Warning ──────────────────────────────────────────────────────────────────
+.alert-usli-warning {
+  --bs-alert-color: var(--warning-900, #4d3c00);
+  --bs-alert-bg: var(--warning-50, #fffde7);
+  --bs-alert-border-color: var(--warning-200, #fff59d);
+  --bs-alert-link-color: var(--warning-900, #4d3c00);
+}
+
+// ── Info ─────────────────────────────────────────────────────────────────────
+.alert-usli-info {
+  --bs-alert-color: var(--info-800, #235aa0);
+  --bs-alert-bg: var(--info-50, #e8f4ff);
+  --bs-alert-border-color: var(--info-200, #90c8fe);
+  --bs-alert-link-color: var(--info-800, #235aa0);
+}
+
+// ── Success ──────────────────────────────────────────────────────────────────
+.alert-usli-success {
+  --bs-alert-color: var(--success-700, #0d4411);
+  --bs-alert-bg: var(--success-50, #edfaee);
+  --bs-alert-border-color: var(--success-200, #88d58b);
+  --bs-alert-link-color: var(--success-700, #0d4411);
+}

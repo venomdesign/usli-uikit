@@ -1,0 +1,11 @@
+<div [class]="classes()">
+  <div class="card-body">
+    @if (title()) {
+      <h5 class="card-title">{{ title() }}</h5>
+    }
+    @if (subtitle()) {
+      <h6 class="card-subtitle mb-2 usli-card__subtitle">{{ subtitle() }}</h6>
+    }
+    <ng-content></ng-content>
+  </div>
+</div>

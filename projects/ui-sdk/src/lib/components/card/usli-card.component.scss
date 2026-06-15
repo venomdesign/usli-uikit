@@ -1,0 +1,53 @@
+:host {
+  display: block;
+}
+
+.usli-card {
+  font-family: var(--font-roboto, 'Roboto', sans-serif);
+}
+
+.usli-card__subtitle {
+  color: var(--gray-600, #757575);
+}
+
+// ── Primary ──────────────────────────────────────────────────────────────────
+.card-usli-primary {
+  border-top-width: 3px;
+  border-top-color: var(--blue-500, #00338e);
+}
+
+// ── Secondary ────────────────────────────────────────────────────────────────
+.card-usli-secondary {
+  border-top-width: 3px;
+  border-top-color: var(--blue-300, #4d78c9);
+}
+
+// ── Tertiary ─────────────────────────────────────────────────────────────────
+.card-usli-tertiary {
+  border-top-width: 3px;
+  border-top-color: var(--gray-400, #bdbdbd);
+}
+
+// ── Error ────────────────────────────────────────────────────────────────────
+.card-usli-error {
+  border-top-width: 3px;
+  border-top-color: var(--error-500, #b10505);
+}
+
+// ── Warning ──────────────────────────────────────────────────────────────────
+.card-usli-warning {
+  border-top-width: 3px;
+  border-top-color: var(--warning-500, #efc100);
+}
+
+// ── Info ─────────────────────────────────────────────────────────────────────
+.card-usli-info {
+  border-top-width: 3px;
+  border-top-color: var(--info-600, #4996e3);
+}
+
+// ── Success ──────────────────────────────────────────────────────────────────
+.card-usli-success {
+  border-top-width: 3px;
+  border-top-color: var(--success-500, #14661a);
+}

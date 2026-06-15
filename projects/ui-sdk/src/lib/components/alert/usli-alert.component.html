@@ -1,0 +1,11 @@
+@if (visible()) {
+  <div [class]="classes()" role="alert">
+    @if (title()) {
+      <h4 class="alert-heading">{{ title() }}</h4>
+    }
+    <ng-content></ng-content>
+    @if (dismissible()) {
+      <button type="button" class="btn-close" aria-label="Close" (click)="dismiss()"></button>
+    }
+  </div>
+}

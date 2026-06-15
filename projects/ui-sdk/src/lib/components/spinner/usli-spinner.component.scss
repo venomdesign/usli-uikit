@@ -1,0 +1,43 @@
+:host {
+  display: inline-block;
+}
+
+.spinner-usli-lg {
+  --bs-spinner-width: 3rem;
+  --bs-spinner-height: 3rem;
+}
+
+// ── Primary ──────────────────────────────────────────────────────────────────
+.spinner-usli-primary {
+  color: var(--blue-500, #00338e);
+}
+
+// ── Secondary ────────────────────────────────────────────────────────────────
+.spinner-usli-secondary {
+  color: var(--blue-300, #4d78c9);
+}
+
+// ── Tertiary ─────────────────────────────────────────────────────────────────
+.spinner-usli-tertiary {
+  color: var(--gray-500, #a8a8a8);
+}
+
+// ── Error ────────────────────────────────────────────────────────────────────
+.spinner-usli-error {
+  color: var(--error-500, #b10505);
+}
+
+// ── Warning ──────────────────────────────────────────────────────────────────
+.spinner-usli-warning {
+  color: var(--warning-500, #efc100);
+}
+
+// ── Info ─────────────────────────────────────────────────────────────────────
+.spinner-usli-info {
+  color: var(--info-600, #4996e3);
+}
+
+// ── Success ──────────────────────────────────────────────────────────────────
+.spinner-usli-success {
+  color: var(--success-500, #14661a);
+}

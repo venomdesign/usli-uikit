@@ -1,0 +1,12 @@
+@use '../../docs-page';
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  usli-card {
+    flex: 1 1 16rem;
+    max-width: 20rem;
+  }
+}
