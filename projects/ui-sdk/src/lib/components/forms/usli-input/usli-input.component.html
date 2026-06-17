@@ -1,0 +1,13 @@
+<input
+  class="form-control"
+  [class.is-invalid]="hasError()"
+  [type]="type()"
+  [placeholder]="placeholder()"
+  [disabled]="isDisabled()"
+  [value]="value()"
+  (input)="onInput($event)"
+  (blur)="onTouched()"
+/>
+@if (errorMessage()) {
+  <div class="invalid-feedback d-block">{{ errorMessage() }}</div>
+}

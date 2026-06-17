@@ -1,0 +1,12 @@
+<textarea
+  class="form-control"
+  [class.is-invalid]="hasError()"
+  [placeholder]="placeholder()"
+  [rows]="rows()"
+  [disabled]="isDisabled()"
+  (input)="onInput($event)"
+  (blur)="onTouched()"
+>{{ value() }}</textarea>
+@if (errorMessage()) {
+  <div class="invalid-feedback d-block">{{ errorMessage() }}</div>
+}
