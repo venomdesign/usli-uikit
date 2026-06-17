@@ -1,0 +1,229 @@
+<div class="page">
+
+  <header class="page-header">
+    <nav class="breadcrumb">
+      <span>Components</span>
+      <span class="breadcrumb__sep">/</span>
+      <span>Selection</span>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Select</span>
+    </nav>
+    <h1 class="page-title">Select</h1>
+    <p class="page-lead">
+      Dropdown select component for choosing from predefined options. Supports single and
+      multiple selection modes, optgroups, and full reactive forms integration. Works with
+      ControlValueAccessor for seamless FormControl binding.
+    </p>
+  </header>
+
+  <!-- Validation Examples -->
+  <section class="section">
+    <h2 class="section__title">Validation Examples</h2>
+    <p class="section__desc">
+      Select fields validate like other form controls. Display validation errors via
+      FormField component. Required validation ensures a selection is made.
+    </p>
+
+    <h3 class="section__subtitle">Required selection</h3>
+    <div class="example-box">
+      <usli-select>
+        <option value="">-- Select an option --</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </usli-select>
+    </div>
+    <div class="code-block">
+      <pre><code>// In your component:
+control = new FormControl('', Validators.required);
+
+// In template:
+&lt;usli-select [formControl]="control"&gt;
+  &lt;option value=""&gt;-- Select an option --&lt;/option&gt;
+  &lt;option value="option1"&gt;Option 1&lt;/option&gt;
+  &lt;option value="option2"&gt;Option 2&lt;/option&gt;
+  &lt;option value="option3"&gt;Option 3&lt;/option&gt;
+&lt;/usli-select&gt;</code></pre>
+    </div>
+
+    <h3 class="section__subtitle section__subtitle--spaced">With optgroup</h3>
+    <div class="example-box">
+      <usli-select>
+        <optgroup label="Fruit">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+        </optgroup>
+        <optgroup label="Vegetables">
+          <option value="carrot">Carrot</option>
+          <option value="broccoli">Broccoli</option>
+        </optgroup>
+      </usli-select>
+    </div>
+    <div class="code-block">
+      <pre><code>&lt;usli-select&gt;
+  &lt;optgroup label="Fruit"&gt;
+    &lt;option value="apple"&gt;Apple&lt;/option&gt;
+    &lt;option value="banana"&gt;Banana&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="Vegetables"&gt;
+    &lt;option value="carrot"&gt;Carrot&lt;/option&gt;
+    &lt;option value="broccoli"&gt;Broccoli&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/usli-select&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Form Integration Patterns -->
+  <section class="section">
+    <h2 class="section__title">Form Integration Patterns</h2>
+    <p class="section__desc">
+      Select works with FormGroup and FormField. Supports single-select (default) and
+      multiple selection modes.
+    </p>
+
+    <h3 class="section__subtitle">Single select with FormGroup</h3>
+    <div class="code-block">
+      <pre><code>// In your component:
+form = new FormGroup({
+  category: new FormControl('', Validators.required),
+  priority: new FormControl('medium')
+});
+
+// In template:
+&lt;form [formGroup]="form"&gt;
+  &lt;usli-form-field label="Category"&gt;
+    &lt;usli-select formControlName="category"&gt;
+      &lt;option value=""&gt;-- Select category --&lt;/option&gt;
+      &lt;option value="bug"&gt;Bug&lt;/option&gt;
+      &lt;option value="feature"&gt;Feature Request&lt;/option&gt;
+      &lt;option value="docs"&gt;Documentation&lt;/option&gt;
+    &lt;/usli-select&gt;
+  &lt;/usli-form-field&gt;
+
+  &lt;usli-form-field label="Priority"&gt;
+    &lt;usli-select formControlName="priority"&gt;
+      &lt;option value="low"&gt;Low&lt;/option&gt;
+      &lt;option value="medium"&gt;Medium&lt;/option&gt;
+      &lt;option value="high"&gt;High&lt;/option&gt;
+    &lt;/usli-select&gt;
+  &lt;/usli-form-field&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+
+    <h3 class="section__subtitle section__subtitle--spaced">Multiple selection</h3>
+    <div class="code-block">
+      <pre><code>// In your component:
+form = new FormGroup({
+  tags: new FormControl([], Validators.required)
+});
+
+// In template:
+&lt;usli-form-field label="Tags"&gt;
+  &lt;usli-select formControlName="tags" multiple&gt;
+    &lt;option value="javascript"&gt;JavaScript&lt;/option&gt;
+    &lt;option value="typescript"&gt;TypeScript&lt;/option&gt;
+    &lt;option value="angular"&gt;Angular&lt;/option&gt;
+    &lt;option value="react"&gt;React&lt;/option&gt;
+  &lt;/usli-select&gt;
+&lt;/usli-form-field&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Error States -->
+  <section class="section">
+    <h2 class="section__title">Error States</h2>
+    <p class="section__desc">
+      Select displays validation errors below when wrapped in FormField. The select border
+      turns red on error state.
+    </p>
+
+    <h3 class="section__subtitle">Required field error</h3>
+    <div class="code-block">
+      <pre><code>// In your component:
+control = new FormControl('', Validators.required);
+
+// User sees error: "This field is required"
+// when select is touched and no option selected
+
+// In template:
+&lt;usli-form-field label="Choose Option"&gt;
+  &lt;usli-select [formControl]="control"&gt;
+    &lt;option value=""&gt;-- Select an option --&lt;/option&gt;
+    &lt;option value="opt1"&gt;Option 1&lt;/option&gt;
+  &lt;/usli-select&gt;
+&lt;/usli-form-field&gt;</code></pre>
+    </div>
+
+    <h3 class="section__subtitle section__subtitle--spaced">Disabled state</h3>
+    <div class="example-box">
+      <usli-select disabled>
+        <option value="">-- Select an option --</option>
+        <option value="option1">Option 1</option>
+      </usli-select>
+    </div>
+    <div class="code-block">
+      <pre><code>&lt;usli-select disabled&gt;
+  &lt;option value=""&gt;-- Select an option --&lt;/option&gt;
+  &lt;option value="option1"&gt;Option 1&lt;/option&gt;
+&lt;/usli-select&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- API -->
+  <section class="section">
+    <h2 class="section__title">API</h2>
+
+    <h3 class="api-subtitle">Inputs</h3>
+    <table class="api-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="prop-name">value</span></td>
+          <td><span class="prop-type">string | string[]</span></td>
+          <td><span class="prop-default">''</span></td>
+          <td>Selected option value(s). Array for multiple mode.</td>
+        </tr>
+        <tr>
+          <td><span class="prop-name">multiple</span></td>
+          <td><span class="prop-type">boolean</span></td>
+          <td><span class="prop-default">false</span></td>
+          <td>Enables multiple selection mode.</td>
+        </tr>
+        <tr>
+          <td><span class="prop-name">disabled</span></td>
+          <td><span class="prop-type">boolean</span></td>
+          <td><span class="prop-default">false</span></td>
+          <td>Disables the select field.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="api-subtitle api-subtitle--spaced">Outputs</h3>
+    <table class="api-table">
+      <thead>
+        <tr><th>Name</th><th>Type</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="prop-name">changed</span></td>
+          <td><span class="prop-type">OutputEmitterRef&lt;string | string[]&gt;</span></td>
+          <td>Emits the new selected value(s) on change.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
