@@ -102,7 +102,7 @@
         <form>
           <fieldset>
             <legend>Select permissions:</legend>
-            <div [formGroup]="checkboxGroup">
+            <div>
               <label *ngFor="let control of checkboxGroup.controls; let i = index">
                 <app-usli-checkbox [formControl]="control"></app-usli-checkbox>
                 {{ ['Read', 'Write', 'Delete'][i] }}
