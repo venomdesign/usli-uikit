@@ -86,10 +86,10 @@ control = new FormControl('', Validators.required);
     <h3 class="section__subtitle">Single select with FormGroup</h3>
     <div class="code-block">
       <pre><code>// In your component:
-form = new FormGroup({
+form = new FormGroup(&#123;
   category: new FormControl('', Validators.required),
   priority: new FormControl('medium')
-});
+&#125;);
 
 // In template:
 &lt;form [formGroup]="form"&gt;
@@ -115,9 +115,9 @@ form = new FormGroup({
     <h3 class="section__subtitle section__subtitle--spaced">Multiple selection</h3>
     <div class="code-block">
       <pre><code>// In your component:
-form = new FormGroup({
+form = new FormGroup(&#123;
   tags: new FormControl([], Validators.required)
-});
+&#125;);
 
 // In template:
 &lt;usli-form-field label="Tags"&gt;

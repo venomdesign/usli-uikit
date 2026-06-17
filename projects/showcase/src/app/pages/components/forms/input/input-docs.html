@@ -17,51 +17,39 @@
     <div class="example">
       <h3>Email Validation</h3>
       <div class="demo-box">
-        <app-usli-input
+        <usli-input
           type="email"
-          placeholder="Enter your email"
-          label="Email Address">
-        </app-usli-input>
+          placeholder="Enter your email">
+        </usli-input>
       </div>
-      <pre><code>&lt;app-usli-input
+      <pre><code>&lt;usli-input
   type="email"
-  placeholder="Enter your email"
-  label="Email Address"&gt;
-&lt;/app-usli-input&gt;</code></pre>
+  placeholder="Enter your email"&gt;
+&lt;/usli-input&gt;</code></pre>
     </div>
 
     <div class="example">
       <h3>Required Field</h3>
       <div class="demo-box">
-        <app-usli-input
-          placeholder="This field is required"
-          label="Full Name"
-          required="true">
-        </app-usli-input>
+        <usli-input
+          placeholder="This field is required">
+        </usli-input>
       </div>
-      <pre><code>&lt;app-usli-input
-  placeholder="This field is required"
-  label="Full Name"
-  required="true"&gt;
-&lt;/app-usli-input&gt;</code></pre>
+      <pre><code>&lt;usli-input
+  placeholder="This field is required"&gt;
+&lt;/usli-input&gt;</code></pre>
     </div>
 
     <div class="example">
       <h3>Min/Max Length</h3>
       <div class="demo-box">
-        <app-usli-input
-          placeholder="Enter 3-20 characters"
-          label="Username"
-          minlength="3"
-          maxlength="20">
-        </app-usli-input>
+        <usli-input
+          placeholder="Enter 3-20 characters">
+        </usli-input>
       </div>
-      <pre><code>&lt;app-usli-input
-  placeholder="Enter 3-20 characters"
-  label="Username"
-  minlength="3"
-  maxlength="20"&gt;
-&lt;/app-usli-input&gt;</code></pre>
+      <pre><code>&lt;usli-input
+  placeholder="Enter 3-20 characters"&gt;
+&lt;/usli-input&gt;</code></pre>
     </div>
   </section>
 
@@ -72,38 +60,25 @@
     <div class="example">
       <h3>FormGroup Integration</h3>
       <div class="demo-box">
-        <app-usli-input
-          label="Form Field with FormControl"
+        <usli-input
           placeholder="Bound to FormControl">
-        </app-usli-input>
+        </usli-input>
       </div>
-      <pre><code>// TypeScript
-export class MyComponent {{
-  form = new FormGroup({{
-    email: new FormControl('', [Validators.required, Validators.email])
-  }});
-}}
-
-// HTML
-&lt;app-usli-input
-  label="Form Field with FormControl"
+      <pre><code>&lt;usli-input
   placeholder="Bound to FormControl"&gt;
-&lt;/app-usli-input&gt;</code></pre>
+&lt;/usli-input&gt;</code></pre>
     </div>
 
     <div class="example">
       <h3>Two-Way Binding</h3>
       <div class="demo-box">
-        <app-usli-input
-          placeholder="Type to see value update"
-          label="Two-Way Bound Field">
-        </app-usli-input>
+        <usli-input
+          placeholder="Type to see value update">
+        </usli-input>
       </div>
-      <pre><code>&lt;app-usli-input
-  placeholder="Type to see value update"
-  label="Two-Way Bound Field"
-  [(ngModel)]="fieldValue"&gt;
-&lt;/app-usli-input&gt;</code></pre>
+      <pre><code>&lt;usli-input
+  placeholder="Type to see value update"&gt;
+&lt;/usli-input&gt;</code></pre>
     </div>
   </section>
 
@@ -114,53 +89,31 @@ export class MyComponent {{
     <div class="example">
       <h3>Validation Error Display</h3>
       <div class="demo-box">
-        <app-usli-input
+        <usli-input
           type="email"
           placeholder="Invalid email will show error"
-          label="Email with Error State"
-          error="true">
-        </app-usli-input>
-        <span class="error-message">Please enter a valid email address</span>
+          errorMessage="Please enter a valid email address">
+        </usli-input>
       </div>
-      <pre><code>&lt;app-usli-input
+      <pre><code>&lt;usli-input
   type="email"
   placeholder="Invalid email will show error"
-  label="Email with Error State"
-  error="true"&gt;
-&lt;/app-usli-input&gt;
-&lt;span class="error-message"&gt;Please enter a valid email address&lt;/span&gt;</code></pre>
+  errorMessage="Please enter a valid email address"&gt;
+&lt;/usli-input&gt;</code></pre>
     </div>
 
     <div class="example">
       <h3>Disabled State</h3>
       <div class="demo-box">
-        <app-usli-input
+        <usli-input
           placeholder="This field is disabled"
-          label="Disabled Field"
           disabled="true">
-        </app-usli-input>
+        </usli-input>
       </div>
-      <pre><code>&lt;app-usli-input
+      <pre><code>&lt;usli-input
   placeholder="This field is disabled"
-  label="Disabled Field"
   disabled="true"&gt;
-&lt;/app-usli-input&gt;</code></pre>
-    </div>
-
-    <div class="example">
-      <h3>Success State</h3>
-      <div class="demo-box">
-        <app-usli-input
-          placeholder="Field validation passed"
-          label="Valid Email"
-          success="true">
-        </app-usli-input>
-      </div>
-      <pre><code>&lt;app-usli-input
-  placeholder="Field validation passed"
-  label="Valid Email"
-  success="true"&gt;
-&lt;/app-usli-input&gt;</code></pre>
+&lt;/usli-input&gt;</code></pre>
     </div>
   </section>
 
@@ -192,125 +145,16 @@ export class MyComponent {{
           <td>Placeholder text displayed when input is empty</td>
         </tr>
         <tr>
-          <td>label</td>
-          <td>string</td>
-          <td>undefined</td>
-          <td>Associated label text for the input field</td>
-        </tr>
-        <tr>
-          <td>value</td>
-          <td>string</td>
-          <td>''</td>
-          <td>Initial value of the input</td>
-        </tr>
-        <tr>
           <td>disabled</td>
           <td>boolean</td>
           <td>false</td>
           <td>Disables the input field</td>
         </tr>
         <tr>
-          <td>required</td>
-          <td>boolean</td>
-          <td>false</td>
-          <td>Marks the input as required</td>
-        </tr>
-        <tr>
-          <td>readonly</td>
-          <td>boolean</td>
-          <td>false</td>
-          <td>Makes the input read-only</td>
-        </tr>
-        <tr>
-          <td>minlength</td>
-          <td>number</td>
-          <td>undefined</td>
-          <td>Minimum character length validation</td>
-        </tr>
-        <tr>
-          <td>maxlength</td>
-          <td>number</td>
-          <td>undefined</td>
-          <td>Maximum character length validation</td>
-        </tr>
-        <tr>
-          <td>pattern</td>
+          <td>errorMessage</td>
           <td>string</td>
           <td>undefined</td>
-          <td>Regular expression pattern for validation</td>
-        </tr>
-        <tr>
-          <td>error</td>
-          <td>boolean</td>
-          <td>false</td>
-          <td>Displays error state styling</td>
-        </tr>
-        <tr>
-          <td>success</td>
-          <td>boolean</td>
-          <td>false</td>
-          <td>Displays success state styling</td>
-        </tr>
-        <tr>
-          <td>hint</td>
-          <td>string</td>
-          <td>undefined</td>
-          <td>Helper text displayed below the input</td>
-        </tr>
-        <tr>
-          <td>icon</td>
-          <td>string</td>
-          <td>undefined</td>
-          <td>Icon name or class to display inside input</td>
-        </tr>
-        <tr>
-          <td>clearable</td>
-          <td>boolean</td>
-          <td>false</td>
-          <td>Shows a clear button to reset the input</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>Outputs</h3>
-    <table class="api-table">
-      <thead>
-        <tr>
-          <th>Event</th>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>valueChange</td>
-          <td>EventEmitter&lt;string&gt;</td>
-          <td>Emits when the input value changes</td>
-        </tr>
-        <tr>
-          <td>focus</td>
-          <td>EventEmitter&lt;FocusEvent&gt;</td>
-          <td>Emits when the input receives focus</td>
-        </tr>
-        <tr>
-          <td>blur</td>
-          <td>EventEmitter&lt;FocusEvent&gt;</td>
-          <td>Emits when the input loses focus</td>
-        </tr>
-        <tr>
-          <td>keydown</td>
-          <td>EventEmitter&lt;KeyboardEvent&gt;</td>
-          <td>Emits when a key is pressed</td>
-        </tr>
-        <tr>
-          <td>keyup</td>
-          <td>EventEmitter&lt;KeyboardEvent&gt;</td>
-          <td>Emits when a key is released</td>
-        </tr>
-        <tr>
-          <td>clear</td>
-          <td>EventEmitter&lt;void&gt;</td>
-          <td>Emits when the clear button is clicked</td>
+          <td>Error message displayed when validation fails</td>
         </tr>
       </tbody>
     </table>
