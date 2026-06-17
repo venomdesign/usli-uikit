@@ -1,11 +1,12 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { UsliRadioGroupComponent, UsliRadioComponent } from 'ui-sdk';
 
 @Component({
   selector: 'app-radio-group-docs',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, UsliRadioGroupComponent, UsliRadioComponent],
   templateUrl: './radio-group-docs.html',
   styleUrl: './radio-group-docs.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -15,6 +16,7 @@ export class RadioGroupDocs implements OnInit {
   selectionControl!: FormControl;
   preferenceControl!: FormControl;
   agreementControl!: FormControl;
+  disabledPreferenceControl!: FormControl;
 
   radioOptions = [
     { value: 'option1', label: 'Option 1' },
@@ -26,6 +28,7 @@ export class RadioGroupDocs implements OnInit {
     this.selectionControl = new FormControl('', Validators.required);
     this.preferenceControl = new FormControl('option1');
     this.agreementControl = new FormControl('', Validators.required);
+    this.disabledPreferenceControl = new FormControl({ value: 'option1', disabled: true });
 
     this.radioForm = new FormGroup({
       selection: this.selectionControl,

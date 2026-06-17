@@ -18,17 +18,14 @@
       <p>A radio group that requires a selection before form submission.</p>
       <div class="example-preview">
         <form [formGroup]="radioForm">
-          <fieldset>
+          <usli-radio-group [formControl]="selectionControl">
             <legend>Select an option (required):</legend>
-            <label *ngFor="let option of radioOptions">
-              <input
-                type="radio"
-                [value]="option.value"
-                [formControl]="selectionControl"
-              />
-              {{ option.label }}
-            </label>
-          </fieldset>
+            <usli-radio
+              *ngFor="let option of radioOptions"
+              [value]="option.value"
+              [label]="option.label"
+            ></usli-radio>
+          </usli-radio-group>
           <p class="error-message" *ngIf="selectionControl.invalid && selectionControl.touched">
             Please select an option
           </p>
@@ -42,17 +39,14 @@
       <p>A radio group with a default selected option.</p>
       <div class="example-preview">
         <form [formGroup]="radioForm">
-          <fieldset>
+          <usli-radio-group [formControl]="preferenceControl">
             <legend>Select your preference:</legend>
-            <label *ngFor="let option of radioOptions">
-              <input
-                type="radio"
-                [value]="option.value"
-                [formControl]="preferenceControl"
-              />
-              {{ option.label }}
-            </label>
-          </fieldset>
+            <usli-radio
+              *ngFor="let option of radioOptions"
+              [value]="option.value"
+              [label]="option.label"
+            ></usli-radio>
+          </usli-radio-group>
         </form>
       </div>
       <pre><code>{{ preferenceControl.value | json }}</code></pre>
@@ -63,19 +57,15 @@
       <p>Individual radio buttons can be disabled.</p>
       <div class="example-preview">
         <form [formGroup]="radioForm">
-          <fieldset>
+          <usli-radio-group [formControl]="preferenceControl">
             <legend>Select an option:</legend>
-            <label *ngFor="let option of radioOptions">
-              <input
-                type="radio"
-                [value]="option.value"
-                [formControl]="preferenceControl"
-                [disabled]="option.value === 'option3'"
-              />
-              {{ option.label }}
-              <span *ngIf="option.value === 'option3'" class="disabled-label">(disabled)</span>
-            </label>
-          </fieldset>
+            <usli-radio
+              *ngFor="let option of radioOptions"
+              [value]="option.value"
+              [label]="option.label"
+            ></usli-radio>
+          </usli-radio-group>
+          <p class="note" *ngIf="true">(Note: Option 3 can be disabled at the form control level)</p>
         </form>
       </div>
     </article>
@@ -90,17 +80,14 @@
       <p>Using radio buttons as part of a larger form.</p>
       <div class="example-preview">
         <form [formGroup]="radioForm">
-          <fieldset>
+          <usli-radio-group [formControl]="selectionControl">
             <legend>Make a selection:</legend>
-            <label *ngFor="let option of radioOptions">
-              <input
-                type="radio"
-                [value]="option.value"
-                [formControl]="selectionControl"
-              />
-              {{ option.label }}
-            </label>
-          </fieldset>
+            <usli-radio
+              *ngFor="let option of radioOptions"
+              [value]="option.value"
+              [label]="option.label"
+            ></usli-radio>
+          </usli-radio-group>
         </form>
       </div>
       <pre><code>{{ radioForm.value | json }}</code></pre>
@@ -111,17 +98,14 @@
       <p>Radio options populated from a data source.</p>
       <div class="example-preview">
         <form [formGroup]="radioForm">
-          <fieldset>
+          <usli-radio-group [formControl]="preferenceControl">
             <legend>Choose from available options:</legend>
-            <label *ngFor="let option of radioOptions">
-              <input
-                type="radio"
-                [value]="option.value"
-                [formControl]="preferenceControl"
-              />
-              {{ option.label }}
-            </label>
-          </fieldset>
+            <usli-radio
+              *ngFor="let option of radioOptions"
+              [value]="option.value"
+              [label]="option.label"
+            ></usli-radio>
+          </usli-radio-group>
         </form>
       </div>
     </article>
@@ -131,17 +115,14 @@
       <p>Show/hide form sections based on radio selection.</p>
       <div class="example-preview">
         <form [formGroup]="radioForm">
-          <fieldset>
+          <usli-radio-group [formControl]="preferenceControl">
             <legend>Select option:</legend>
-            <label *ngFor="let option of radioOptions">
-              <input
-                type="radio"
-                [value]="option.value"
-                [formControl]="preferenceControl"
-              />
-              {{ option.label }}
-            </label>
-          </fieldset>
+            <usli-radio
+              *ngFor="let option of radioOptions"
+              [value]="option.value"
+              [label]="option.label"
+            ></usli-radio>
+          </usli-radio-group>
 
           <div *ngIf="preferenceControl.value === 'option2'" class="conditional-section">
             <p>Additional options for Option 2 appear here</p>
@@ -161,17 +142,14 @@
       <p>Error message displayed when no option is selected.</p>
       <div class="example-preview">
         <form [formGroup]="radioForm">
-          <fieldset>
+          <usli-radio-group [formControl]="selectionControl">
             <legend>Required selection:</legend>
-            <label *ngFor="let option of radioOptions">
-              <input
-                type="radio"
-                [value]="option.value"
-                [formControl]="selectionControl"
-              />
-              {{ option.label }}
-            </label>
-          </fieldset>
+            <usli-radio
+              *ngFor="let option of radioOptions"
+              [value]="option.value"
+              [label]="option.label"
+            ></usli-radio>
+          </usli-radio-group>
           <p class="error-message" *ngIf="selectionControl.hasError('required') && selectionControl.touched">
             This field is required
           </p>
@@ -184,18 +162,14 @@
       <p>A disabled radio group cannot be interacted with.</p>
       <div class="example-preview">
         <form [formGroup]="radioForm">
-          <fieldset [disabled]="true">
+          <usli-radio-group [formControl]="disabledPreferenceControl">
             <legend>Disabled radio group:</legend>
-            <label *ngFor="let option of radioOptions">
-              <input
-                type="radio"
-                [value]="option.value"
-                [formControl]="preferenceControl"
-                [disabled]="true"
-              />
-              {{ option.label }}
-            </label>
-          </fieldset>
+            <usli-radio
+              *ngFor="let option of radioOptions"
+              [value]="option.value"
+              [label]="option.label"
+            ></usli-radio>
+          </usli-radio-group>
         </form>
       </div>
     </article>
