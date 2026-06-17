@@ -36,5 +36,26 @@ export class Sidebar {
         { label: 'Typography',  path: '/design/typography' },
       ],
     },
+    {
+      title: 'Inputs',
+      items: [
+        { label: 'Input',    path: '/components/forms/input' },
+        { label: 'Textarea', path: '/components/forms/textarea' },
+      ],
+    },
+    {
+      title: 'Selection',
+      items: [
+        { label: 'Select',      path: '/components/forms/select' },
+        { label: 'Checkbox',    path: '/components/forms/checkbox' },
+        { label: 'Radio Group', path: '/components/forms/radio-group' },
+      ],
+    },
+    {
+      title: 'Containers',
+      items: [
+        { label: 'Form Field', path: '/components/forms/form-field' },
+      ],
+    },
   ];
 }
