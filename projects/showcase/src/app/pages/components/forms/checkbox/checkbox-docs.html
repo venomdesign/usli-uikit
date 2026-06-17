@@ -20,7 +20,7 @@
         <form [formGroup]="checkboxForm">
           <label>
             <app-usli-checkbox
-              [formControl]="checkboxForm.get('terms')!"
+              [formControl]="$any(checkboxForm.get('terms'))"
             ></app-usli-checkbox>
             I agree to terms
           </label>
@@ -39,7 +39,7 @@
         <form [formGroup]="checkboxForm">
           <label>
             <app-usli-checkbox
-              [formControl]="checkboxForm.get('notifications')!"
+              [formControl]="$any(checkboxForm.get('notifications'))"
             ></app-usli-checkbox>
             Enable notifications
           </label>
@@ -55,8 +55,8 @@
         <form [formGroup]="checkboxForm">
           <label>
             <app-usli-checkbox
-              [formControl]="checkboxForm.get('newsletter')!"
-              disabled
+              [formControl]="$any(checkboxForm.get('newsletter'))"
+              [disabled]="true"
             ></app-usli-checkbox>
             Subscribe to newsletter
           </label>
@@ -78,15 +78,15 @@
           <fieldset>
             <legend>Select options:</legend>
             <label>
-              <app-usli-checkbox [formControl]="checkboxForm.get('terms')!"></app-usli-checkbox>
+              <app-usli-checkbox [formControl]="$any(checkboxForm.get('terms'))"></app-usli-checkbox>
               Read
             </label>
             <label>
-              <app-usli-checkbox [formControl]="checkboxForm.get('newsletter')!"></app-usli-checkbox>
+              <app-usli-checkbox [formControl]="$any(checkboxForm.get('newsletter'))"></app-usli-checkbox>
               Write
             </label>
             <label>
-              <app-usli-checkbox [formControl]="checkboxForm.get('notifications')!"></app-usli-checkbox>
+              <app-usli-checkbox [formControl]="$any(checkboxForm.get('notifications'))"></app-usli-checkbox>
               Delete
             </label>
           </fieldset>
@@ -121,7 +121,7 @@
         <form [formGroup]="checkboxForm">
           <label>
             <app-usli-checkbox
-              [formControl]="checkboxForm.get('newsletter')!"
+              [formControl]="$any(checkboxForm.get('newsletter'))"
             ></app-usli-checkbox>
             Subscribe to newsletter
           </label>
@@ -140,13 +140,13 @@
         <form [formGroup]="checkboxForm">
           <label>
             <app-usli-checkbox
-              [formControl]="checkboxForm.get('terms')!"
+              [formControl]="$any(checkboxForm.get('terms'))"
             ></app-usli-checkbox>
             Accept terms and conditions
           </label>
           <label>
             <app-usli-checkbox
-              [formControl]="checkboxForm.get('newsletter')!"
+              [formControl]="$any(checkboxForm.get('newsletter'))"
             ></app-usli-checkbox>
             Receive marketing emails
           </label>
@@ -166,7 +166,7 @@
         <form [formGroup]="checkboxForm">
           <label>
             <app-usli-checkbox
-              [formControl]="checkboxForm.get('terms')!"
+              [formControl]="$any(checkboxForm.get('terms'))"
             ></app-usli-checkbox>
             I accept the terms
           </label>
@@ -184,8 +184,8 @@
         <form [formGroup]="checkboxForm">
           <label>
             <app-usli-checkbox
-              [formControl]="checkboxForm.get('newsletter')!"
-              disabled
+              [formControl]="$any(checkboxForm.get('newsletter'))"
+              [disabled]="true"
             ></app-usli-checkbox>
             This checkbox is disabled
           </label>
