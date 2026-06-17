@@ -1,0 +1,9 @@
+<div role="radiogroup">
+  <ng-content />
+</div>
+@if (errorMessage()) {
+  <div class="invalid-feedback d-block">{{ errorMessage() }}</div>
+}
+@if (!errorMessage() && hasError()) {
+  <div class="invalid-feedback d-block">Invalid selection</div>
+}
