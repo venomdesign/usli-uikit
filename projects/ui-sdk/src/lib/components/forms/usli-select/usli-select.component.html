@@ -1,0 +1,15 @@
+<select
+  class="form-select"
+  [class.is-invalid]="hasError()"
+  [disabled]="isDisabled()"
+  (change)="onSelect($event)"
+  (blur)="onTouched()"
+>
+  @if (placeholder()) {
+    <option value="" disabled [selected]="!value()">{{ placeholder() }}</option>
+  }
+  <ng-content />
+</select>
+@if (errorMessage()) {
+  <div class="invalid-feedback d-block">{{ errorMessage() }}</div>
+}

@@ -1,0 +1,7 @@
+@if (label()) {
+  <label class="form-label">{{ label() }}</label>
+}
+<ng-content />
+@if (showError()) {
+  <div class="invalid-feedback d-block">{{ errorText() }}</div>
+}

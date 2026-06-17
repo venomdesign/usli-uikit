@@ -1,0 +1,17 @@
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    [class.is-invalid]="hasError()"
+    [checked]="checked()"
+    [disabled]="isDisabled()"
+    (change)="onToggle($event)"
+    (blur)="onTouched()"
+  />
+  @if (label()) {
+    <label class="form-check-label">{{ label() }}</label>
+  }
+  @if (errorMessage()) {
+    <div class="invalid-feedback d-block">{{ errorMessage() }}</div>
+  }
+</div>
