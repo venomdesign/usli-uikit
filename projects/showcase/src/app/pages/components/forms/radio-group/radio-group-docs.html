@@ -1,0 +1,245 @@
+<div class="app-docs-container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> / <a href="/components">Components</a> /
+    <a href="/components/selection">Selection</a> / <strong>Radio Group</strong>
+  </div>
+
+  <h1>Radio Group Component</h1>
+  <p class="component-description">
+    A set of radio buttons for selecting a single option from multiple choices with reactive forms support.
+  </p>
+
+  <!-- Validation Examples Section -->
+  <section class="docs-section">
+    <h2>Validation Examples</h2>
+
+    <article class="example">
+      <h3>Required Selection</h3>
+      <p>A radio group that requires a selection before form submission.</p>
+      <div class="example-preview">
+        <form [formGroup]="radioForm">
+          <fieldset>
+            <legend>Select an option (required):</legend>
+            <label *ngFor="let option of radioOptions">
+              <input
+                type="radio"
+                [value]="option.value"
+                [formControl]="selectionControl"
+              />
+              {{ option.label }}
+            </label>
+          </fieldset>
+          <p class="error-message" *ngIf="selectionControl.invalid && selectionControl.touched">
+            Please select an option
+          </p>
+        </form>
+      </div>
+      <pre><code>{{ selectionControl.value | json }}</code></pre>
+    </article>
+
+    <article class="example">
+      <h3>Default Selected</h3>
+      <p>A radio group with a default selected option.</p>
+      <div class="example-preview">
+        <form [formGroup]="radioForm">
+          <fieldset>
+            <legend>Select your preference:</legend>
+            <label *ngFor="let option of radioOptions">
+              <input
+                type="radio"
+                [value]="option.value"
+                [formControl]="preferenceControl"
+              />
+              {{ option.label }}
+            </label>
+          </fieldset>
+        </form>
+      </div>
+      <pre><code>{{ preferenceControl.value | json }}</code></pre>
+    </article>
+
+    <article class="example">
+      <h3>Disabled Radio</h3>
+      <p>Individual radio buttons can be disabled.</p>
+      <div class="example-preview">
+        <form [formGroup]="radioForm">
+          <fieldset>
+            <legend>Select an option:</legend>
+            <label *ngFor="let option of radioOptions">
+              <input
+                type="radio"
+                [value]="option.value"
+                [formControl]="preferenceControl"
+                [disabled]="option.value === 'option3'"
+              />
+              {{ option.label }}
+              <span *ngIf="option.value === 'option3'" class="disabled-label">(disabled)</span>
+            </label>
+          </fieldset>
+        </form>
+      </div>
+    </article>
+  </section>
+
+  <!-- Form Integration Patterns Section -->
+  <section class="docs-section">
+    <h2>Form Integration Patterns</h2>
+
+    <article class="example">
+      <h3>Radio Group in FormGroup</h3>
+      <p>Using radio buttons as part of a larger form.</p>
+      <div class="example-preview">
+        <form [formGroup]="radioForm">
+          <fieldset>
+            <legend>Make a selection:</legend>
+            <label *ngFor="let option of radioOptions">
+              <input
+                type="radio"
+                [value]="option.value"
+                [formControl]="selectionControl"
+              />
+              {{ option.label }}
+            </label>
+          </fieldset>
+        </form>
+      </div>
+      <pre><code>{{ radioForm.value | json }}</code></pre>
+    </article>
+
+    <article class="example">
+      <h3>Dynamic Options from Data</h3>
+      <p>Radio options populated from a data source.</p>
+      <div class="example-preview">
+        <form [formGroup]="radioForm">
+          <fieldset>
+            <legend>Choose from available options:</legend>
+            <label *ngFor="let option of radioOptions">
+              <input
+                type="radio"
+                [value]="option.value"
+                [formControl]="preferenceControl"
+              />
+              {{ option.label }}
+            </label>
+          </fieldset>
+        </form>
+      </div>
+    </article>
+
+    <article class="example">
+      <h3>Conditional Display Based on Selection</h3>
+      <p>Show/hide form sections based on radio selection.</p>
+      <div class="example-preview">
+        <form [formGroup]="radioForm">
+          <fieldset>
+            <legend>Select option:</legend>
+            <label *ngFor="let option of radioOptions">
+              <input
+                type="radio"
+                [value]="option.value"
+                [formControl]="preferenceControl"
+              />
+              {{ option.label }}
+            </label>
+          </fieldset>
+
+          <div *ngIf="preferenceControl.value === 'option2'" class="conditional-section">
+            <p>Additional options for Option 2 appear here</p>
+          </div>
+        </form>
+      </div>
+      <pre><code>{{ preferenceControl.value | json }}</code></pre>
+    </article>
+  </section>
+
+  <!-- Error States Section -->
+  <section class="docs-section">
+    <h2>Error States</h2>
+
+    <article class="example">
+      <h3>Required Field Error</h3>
+      <p>Error message displayed when no option is selected.</p>
+      <div class="example-preview">
+        <form [formGroup]="radioForm">
+          <fieldset>
+            <legend>Required selection:</legend>
+            <label *ngFor="let option of radioOptions">
+              <input
+                type="radio"
+                [value]="option.value"
+                [formControl]="selectionControl"
+              />
+              {{ option.label }}
+            </label>
+          </fieldset>
+          <p class="error-message" *ngIf="selectionControl.hasError('required') && selectionControl.touched">
+            This field is required
+          </p>
+        </form>
+      </div>
+    </article>
+
+    <article class="example">
+      <h3>Disabled State</h3>
+      <p>A disabled radio group cannot be interacted with.</p>
+      <div class="example-preview">
+        <form [formGroup]="radioForm">
+          <fieldset [disabled]="true">
+            <legend>Disabled radio group:</legend>
+            <label *ngFor="let option of radioOptions">
+              <input
+                type="radio"
+                [value]="option.value"
+                [formControl]="preferenceControl"
+                [disabled]="true"
+              />
+              {{ option.label }}
+            </label>
+          </fieldset>
+        </form>
+      </div>
+    </article>
+  </section>
+
+  <!-- API Documentation Section -->
+  <section class="docs-section">
+    <h2>API Documentation</h2>
+
+    <table class="api-table">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>value</td>
+          <td>any</td>
+          <td>The value of the selected radio button</td>
+        </tr>
+        <tr>
+          <td>checked</td>
+          <td>boolean</td>
+          <td>Whether the radio button is selected</td>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>boolean</td>
+          <td>Whether the radio button is disabled</td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>string</td>
+          <td>Name attribute for radio button grouping</td>
+        </tr>
+        <tr>
+          <td>change</td>
+          <td>EventEmitter</td>
+          <td>Emitted when radio selection changes</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
