@@ -33,5 +33,29 @@ export const routes: Routes = [
     path: 'design/typography',
     loadComponent: () => import('./pages/design/typography/typography-docs').then(m => m.TypographyDocs),
   },
+  {
+    path: 'components/forms/input',
+    loadComponent: () => import('./pages/components/forms/input/input-docs').then(m => m.InputDocs),
+  },
+  {
+    path: 'components/forms/textarea',
+    loadComponent: () => import('./pages/components/forms/textarea/textarea-docs').then(m => m.TextareaDocs),
+  },
+  {
+    path: 'components/forms/select',
+    loadComponent: () => import('./pages/components/forms/select/select-docs').then(m => m.SelectDocs),
+  },
+  {
+    path: 'components/forms/checkbox',
+    loadComponent: () => import('./pages/components/forms/checkbox/checkbox-docs').then(m => m.CheckboxDocs),
+  },
+  {
+    path: 'components/forms/radio-group',
+    loadComponent: () => import('./pages/components/forms/radio-group/radio-group-docs').then(m => m.RadioGroupDocs),
+  },
+  {
+    path: 'components/forms/form-field',
+    loadComponent: () => import('./pages/components/forms/form-field/form-field-docs').then(m => m.FormFieldDocs),
+  },
   { path: '**', redirectTo: '' },
 ];
