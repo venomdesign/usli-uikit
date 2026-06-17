@@ -1,0 +1,63 @@
+<div class="page">
+  <header class="page-header">
+    <nav class="breadcrumb">
+      <span>Components</span>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Textarea</span>
+    </nav>
+    <h1 class="page-title">Textarea</h1>
+    <p class="page-lead">A multi-line text input that integrates with Angular Reactive Forms.</p>
+  </header>
+
+  <section class="section">
+    <h2 class="section__title">Default</h2>
+    <div class="example-box" style="max-width:400px">
+      <usli-textarea placeholder="Enter your message..." />
+    </div>
+    <div class="code-block">
+      <pre><code>&lt;usli-textarea placeholder="Enter your message..." /&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section class="section">
+    <h2 class="section__title">Custom rows</h2>
+    <div class="example-box" style="max-width:400px">
+      <usli-textarea [rows]="6" placeholder="Tall textarea..." />
+    </div>
+    <div class="code-block">
+      <pre><code>&lt;usli-textarea [rows]="6" placeholder="Tall textarea..." /&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section class="section">
+    <h2 class="section__title">With FormField</h2>
+    <div class="example-box" style="max-width:400px">
+      <usli-form-field label="Notes">
+        <usli-textarea [formControl]="notesCtrl" placeholder="Enter notes..." />
+      </usli-form-field>
+    </div>
+    <div class="code-block">
+      <pre><code>&lt;usli-form-field label="Notes"&gt;
+  &lt;usli-textarea [formControl]="notesCtrl" /&gt;
+&lt;/usli-form-field&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section class="section">
+    <h2 class="section__title">API</h2>
+    <table class="api-table">
+      <thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><span class="prop-name">placeholder</span></td><td><span class="prop-type">string</span></td><td><span class="prop-default">''</span></td><td>Placeholder text.</td></tr>
+        <tr><td><span class="prop-name">rows</span></td><td><span class="prop-type">number</span></td><td><span class="prop-default">3</span></td><td>Number of visible text rows.</td></tr>
+        <tr><td><span class="prop-name">errorMessage</span></td><td><span class="prop-type">string | undefined</span></td><td><span class="prop-default">undefined</span></td><td>Standalone error message.</td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>
