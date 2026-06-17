@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
 import { UsliRadioGroupComponent } from './usli-radio-group.component';
 import { UsliRadioComponent } from '../usli-radio/usli-radio.component';
@@ -7,7 +7,7 @@ const meta: Meta<UsliRadioGroupComponent> = {
   component: UsliRadioGroupComponent,
   title: 'Form Components/Radio Group',
   tags: ['autodocs'],
-  imports: [ReactiveFormsModule, UsliRadioComponent],
+  decorators: [moduleMetadata({ imports: [ReactiveFormsModule, UsliRadioComponent] })],
 };
 
 export default meta;
@@ -44,7 +44,6 @@ export const WithLabel: Story = {
         </usli-radio-group>
       </usli-form-field>
     `,
-    imports: [...(meta.imports || [])],
   }),
 };
 
@@ -63,7 +62,6 @@ export const WithValidation: Story = {
         </usli-radio-group>
       </usli-form-field>
     `,
-    imports: [...(meta.imports || [])],
   }),
 };
 

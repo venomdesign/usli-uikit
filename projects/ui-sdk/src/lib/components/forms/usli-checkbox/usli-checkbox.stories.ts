@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
 import { UsliCheckboxComponent } from './usli-checkbox.component';
 
@@ -6,7 +6,7 @@ const meta: Meta<UsliCheckboxComponent> = {
   component: UsliCheckboxComponent,
   title: 'Form Components/Checkbox',
   tags: ['autodocs'],
-  imports: [ReactiveFormsModule],
+  decorators: [moduleMetadata({ imports: [ReactiveFormsModule] })],
 };
 
 export default meta;

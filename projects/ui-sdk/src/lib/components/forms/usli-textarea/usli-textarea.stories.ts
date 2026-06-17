@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
 import { UsliTextareaComponent } from './usli-textarea.component';
 
@@ -6,7 +6,7 @@ const meta: Meta<UsliTextareaComponent> = {
   component: UsliTextareaComponent,
   title: 'Form Components/Textarea',
   tags: ['autodocs'],
-  imports: [ReactiveFormsModule],
+  decorators: [moduleMetadata({ imports: [ReactiveFormsModule] })],
 };
 
 export default meta;

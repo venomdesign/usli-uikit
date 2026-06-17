@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { ReactiveFormsModule, FormControl, Validators, FormGroup } from '@angular/forms';
 import { UsliFormFieldComponent } from './usli-form-field.component';
 import { UsliInputComponent } from '../usli-input/usli-input.component';
@@ -9,7 +9,7 @@ const meta: Meta<UsliFormFieldComponent> = {
   component: UsliFormFieldComponent,
   title: 'Form Components/Form Field',
   tags: ['autodocs'],
-  imports: [ReactiveFormsModule, UsliInputComponent, UsliTextareaComponent, UsliSelectComponent],
+  decorators: [moduleMetadata({ imports: [ReactiveFormsModule, UsliInputComponent, UsliTextareaComponent, UsliSelectComponent] })],
 };
 
 export default meta;

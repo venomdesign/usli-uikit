@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
 import { UsliSelectComponent } from './usli-select.component';
 
@@ -6,7 +6,7 @@ const meta: Meta<UsliSelectComponent> = {
   component: UsliSelectComponent,
   title: 'Form Components/Select',
   tags: ['autodocs'],
-  imports: [ReactiveFormsModule],
+  decorators: [moduleMetadata({ imports: [ReactiveFormsModule] })],
 };
 
 export default meta;
