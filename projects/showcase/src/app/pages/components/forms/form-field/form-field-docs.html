@@ -1,0 +1,257 @@
+<div class="page">
+
+  <header class="page-header">
+    <nav class="breadcrumb">
+      <span>Components</span>
+      <span class="breadcrumb__sep">/</span>
+      <span>Containers</span>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Form Field</span>
+    </nav>
+    <h1 class="page-title">Form Field</h1>
+    <p class="page-lead">
+      Container component for form inputs. Wraps Input, Textarea, Select, Checkbox, or
+      Radio Group components and automatically displays labels and validation error messages.
+      Integrates seamlessly with reactive forms for a complete form experience.
+    </p>
+  </header>
+
+  <!-- Validation Examples -->
+  <section class="section">
+    <h2 class="section__title">Validation Examples</h2>
+    <p class="section__desc">
+      FormField automatically displays validation errors from the wrapped form control.
+      Errors appear below the control in red text. Multiple error types can be handled
+      with custom error messages.
+    </p>
+
+    <h3 class="section__subtitle">Email validation with error</h3>
+    <div class="example-box">
+      <usli-form-field label="Email Address">
+        <input type="email" placeholder="you@example.com" />
+      </usli-form-field>
+    </div>
+    <div class="code-block">
+      <pre><code>// In your component:
+emailControl = new FormControl('', [
+  Validators.required,
+  Validators.email
+]);
+
+// In template:
+&lt;usli-form-field label="Email Address"&gt;
+  &lt;input type="email" [formControl]="emailControl" placeholder="you@example.com" /&gt;
+&lt;/usli-form-field&gt;</code></pre>
+    </div>
+
+    <h3 class="section__subtitle section__subtitle--spaced">Min/max length validation</h3>
+    <div class="code-block">
+      <pre><code>// In your component:
+passwordControl = new FormControl('', [
+  Validators.required,
+  Validators.minLength(8),
+  Validators.maxLength(128)
+]);
+
+// Possible errors:
+// - "This field is required" (if empty)
+// - "Must be at least 8 characters" (if too short)
+// - "Must not exceed 128 characters" (if too long)
+
+// In template:
+&lt;usli-form-field label="Password"&gt;
+  &lt;input type="password" [formControl]="passwordControl" placeholder="••••••••" /&gt;
+&lt;/usli-form-field&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Form Integration Patterns -->
+  <section class="section">
+    <h2 class="section__title">Form Integration Patterns</h2>
+    <p class="section__desc">
+      FormField is a container that works with any form control inside (Input, Textarea,
+      Select, Checkbox, Radio Group). It automatically handles label display and error
+      message rendering based on the control's validation state.
+    </p>
+
+    <h3 class="section__subtitle">Complete form example</h3>
+    <div class="code-block">
+      <pre><code>// In your component:
+form = new FormGroup(&#123;
+  username: new FormControl('', [
+    Validators.required,
+    Validators.minLength(3)
+  ]),
+  email: new FormControl('', [
+    Validators.required,
+    Validators.email
+  ]),
+  bio: new FormControl(''),
+  agreeToTerms: new FormControl(false, Validators.requiredTrue)
+&#125;);
+
+// In template:
+&lt;form [formGroup]="form"&gt;
+  &lt;usli-form-field label="Username"&gt;
+    &lt;usli-input formControlName="username" placeholder="Enter username" /&gt;
+  &lt;/usli-form-field&gt;
+
+  &lt;usli-form-field label="Email"&gt;
+    &lt;usli-input type="email" formControlName="email" placeholder="your@email.com" /&gt;
+  &lt;/usli-form-field&gt;
+
+  &lt;usli-form-field label="Bio"&gt;
+    &lt;usli-textarea formControlName="bio" placeholder="Tell us about yourself..." rows="4"&gt;&lt;/usli-textarea&gt;
+  &lt;/usli-form-field&gt;
+
+  &lt;usli-form-field&gt;
+    &lt;usli-checkbox formControlName="agreeToTerms" label="I agree to the terms and conditions"&gt;&lt;/usli-checkbox&gt;
+  &lt;/usli-form-field&gt;
+
+  &lt;button type="submit" [disabled]="form.invalid"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+
+    <h3 class="section__subtitle section__subtitle--spaced">With select dropdown</h3>
+    <div class="code-block">
+      <pre><code>// In your component:
+form = new FormGroup(&#123;
+  category: new FormControl('', Validators.required),
+  priority: new FormControl('medium')
+&#125;);
+
+// In template:
+&lt;usli-form-field label="Category"&gt;
+  &lt;usli-select formControlName="category"&gt;
+    &lt;option value=""&gt;-- Select category --&lt;/option&gt;
+    &lt;option value="bug"&gt;Bug Report&lt;/option&gt;
+    &lt;option value="feature"&gt;Feature Request&lt;/option&gt;
+    &lt;option value="docs"&gt;Documentation&lt;/option&gt;
+  &lt;/usli-select&gt;
+&lt;/usli-form-field&gt;
+
+&lt;usli-form-field label="Priority"&gt;
+  &lt;usli-select formControlName="priority"&gt;
+    &lt;option value="low"&gt;Low&lt;/option&gt;
+    &lt;option value="medium"&gt;Medium&lt;/option&gt;
+    &lt;option value="high"&gt;High&lt;/option&gt;
+  &lt;/usli-select&gt;
+&lt;/usli-form-field&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Error States -->
+  <section class="section">
+    <h2 class="section__title">Error States</h2>
+    <p class="section__desc">
+      FormField displays validation errors automatically when the wrapped control is
+      invalid and touched. Multiple error types are displayed with specific messages.
+    </p>
+
+    <h3 class="section__subtitle">Required field error</h3>
+    <div class="code-block">
+      <pre><code>// In your component:
+control = new FormControl('', Validators.required);
+
+// FormField shows: "This field is required"
+// when control is touched and empty
+
+// In template:
+&lt;usli-form-field label="Name"&gt;
+  &lt;usli-input [formControl]="control" placeholder="Enter your name" /&gt;
+&lt;/usli-form-field&gt;</code></pre>
+    </div>
+
+    <h3 class="section__subtitle section__subtitle--spaced">Multiple error types</h3>
+    <div class="code-block">
+      <pre><code>// In your component:
+control = new FormControl('', [
+  Validators.required,
+  Validators.email,
+  Validators.minLength(5)
+]);
+
+// Error messages shown (in order):
+// 1. "This field is required" (if empty)
+// 2. "Invalid email format" (if not valid email)
+// 3. "Must be at least 5 characters" (if too short)
+
+// In template:
+&lt;usli-form-field label="Email"&gt;
+  &lt;usli-input type="email" [formControl]="control" placeholder="user@example.com" /&gt;
+&lt;/usli-form-field&gt;</code></pre>
+    </div>
+
+    <h3 class="section__subtitle section__subtitle--spaced">No error when valid</h3>
+    <div class="code-block">
+      <pre><code>// When the wrapped control is valid, FormField shows no error
+// and the control displays normally with the label
+
+// In template:
+&lt;usli-form-field label="Username"&gt;
+  &lt;usli-input [formControl]="validControl" placeholder="Enter username" /&gt;
+&lt;/usli-form-field&gt;
+
+// If validControl is valid: no error shown, control displays normally
+// If validControl is invalid and touched: error message shown in red</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- API -->
+  <section class="section">
+    <h2 class="section__title">API</h2>
+
+    <h3 class="api-subtitle">Inputs</h3>
+    <table class="api-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="prop-name">label</span></td>
+          <td><span class="prop-type">string</span></td>
+          <td><span class="prop-default">''</span></td>
+          <td>Label text shown above the form control.</td>
+        </tr>
+        <tr>
+          <td><span class="prop-name">required</span></td>
+          <td><span class="prop-type">boolean</span></td>
+          <td><span class="prop-default">false</span></td>
+          <td>Shows asterisk (*) on label if true.</td>
+        </tr>
+        <tr>
+          <td><span class="prop-name">disabled</span></td>
+          <td><span class="prop-type">boolean</span></td>
+          <td><span class="prop-default">false</span></td>
+          <td>Disables the wrapped form control.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="api-subtitle api-subtitle--spaced">Projected Content</h3>
+    <table class="api-table">
+      <thead>
+        <tr><th>Selector</th><th>Type</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="prop-name">default</span></td>
+          <td><span class="prop-type">ng-content</span></td>
+          <td>Accepts form control component(s) (usli-input, usli-textarea, usli-select, usli-checkbox, usli-radio-group).</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
