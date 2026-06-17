@@ -96,6 +96,25 @@
     </article>
 
     <article class="example">
+      <h3>Checkbox Group with FormArray</h3>
+      <p>Multiple checkboxes managed as a group using FormArray.</p>
+      <div class="example-preview">
+        <form>
+          <fieldset>
+            <legend>Select permissions:</legend>
+            <div [formGroup]="checkboxGroup">
+              <label *ngFor="let control of checkboxGroup.controls; let i = index">
+                <app-usli-checkbox [formControl]="control"></app-usli-checkbox>
+                {{ ['Read', 'Write', 'Delete'][i] }}
+              </label>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <pre><code>{{ checkboxGroup.value | json }}</code></pre>
+    </article>
+
+    <article class="example">
       <h3>Conditional Visibility</h3>
       <p>Showing/hiding form sections based on checkbox state.</p>
       <div class="example-preview">
