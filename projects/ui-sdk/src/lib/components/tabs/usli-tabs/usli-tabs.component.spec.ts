@@ -65,6 +65,17 @@ describe('UsliTabsComponent', () => {
     expect(tabButtons()[1].getAttribute('aria-selected')).toBe('false');
   });
 
+  it('sets tabindex to 0 on the active tab and -1 on the others', () => {
+    expect(tabButtons()[0].getAttribute('tabindex')).toBe('0');
+    expect(tabButtons()[1].getAttribute('tabindex')).toBe('-1');
+
+    tabButtons()[1].click();
+    fixture.detectChanges();
+
+    expect(tabButtons()[0].getAttribute('tabindex')).toBe('-1');
+    expect(tabButtons()[1].getAttribute('tabindex')).toBe('0');
+  });
+
   it('moves selection to the next enabled tab on ArrowRight, wrapping past disabled tabs', () => {
     tabButtons()[1].dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight' }));
     fixture.detectChanges();
@@ -81,6 +92,14 @@ describe('UsliTabsComponent', () => {
     tabButtons()[1].dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight' }));
     fixture.detectChanges();
     expect(document.activeElement).toBe(tabButtons()[0]);
+  });
+
+  it('ignores arrow keys held with a modifier key', () => {
+    tabButtons()[1].dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'ArrowRight', ctrlKey: true }),
+    );
+    fixture.detectChanges();
+    expect(host.active).toBe('a');
   });
 
   it('jumps to the last enabled tab on End', () => {
