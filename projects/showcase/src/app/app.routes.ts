@@ -38,6 +38,11 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/components/tabs/tabs-docs').then(m => m.TabsDocs),
   },
   {
+    path: 'components/accordion',
+    loadComponent: () =>
+      import('./pages/components/accordion/accordion-docs').then(m => m.AccordionDocs),
+  },
+  {
     path: 'components/forms/input',
     loadComponent: () => import('./pages/components/forms/input/input-docs').then(m => m.InputDocs),
     data: { name: 'input-docs' },
