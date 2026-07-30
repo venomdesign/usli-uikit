@@ -34,6 +34,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/design/typography/typography-docs').then(m => m.TypographyDocs),
   },
   {
+    path: 'components/tabs',
+    loadComponent: () => import('./pages/components/tabs/tabs-docs').then(m => m.TabsDocs),
+  },
+  {
     path: 'components/forms/input',
     loadComponent: () => import('./pages/components/forms/input/input-docs').then(m => m.InputDocs),
     data: { name: 'input-docs' },

@@ -1,0 +1,126 @@
+<div class="page">
+
+  <header class="page-header">
+    <nav class="breadcrumb">
+      <span>Components</span>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Tabs</span>
+    </nav>
+    <h1 class="page-title">Tabs</h1>
+    <p class="page-lead">
+      Switch between panels of content. Project <code>usli-tab</code> children into
+      <code>usli-tabs</code>, each keyed by a unique value.
+    </p>
+  </header>
+
+  <section class="section">
+    <h2 class="section__title">Basic usage</h2>
+    <p class="section__desc">
+      The first non-disabled tab is selected by default. Bind
+      <code>[(value)]</code> to control selection from outside, or leave it
+      uncontrolled. Left/Right/Home/End arrow keys move both focus and selection.
+    </p>
+    <div class="example-box">
+      <usli-tabs>
+        <usli-tab value="account" label="Account">Account settings content.</usli-tab>
+        <usli-tab value="billing" label="Billing">Billing settings content.</usli-tab>
+        <usli-tab value="notifications" label="Notifications" [disabled]="true">
+          Notifications content.
+        </usli-tab>
+      </usli-tabs>
+    </div>
+    <div class="code-block">
+      <pre><code>&lt;usli-tabs&gt;
+  &lt;usli-tab value="account" label="Account"&gt;Account settings content.&lt;/usli-tab&gt;
+  &lt;usli-tab value="billing" label="Billing"&gt;Billing settings content.&lt;/usli-tab&gt;
+  &lt;usli-tab value="notifications" label="Notifications" [disabled]="true"&gt;
+    Notifications content.
+  &lt;/usli-tab&gt;
+&lt;/usli-tabs&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section class="section">
+    <h2 class="section__title">Accent variant</h2>
+    <p class="section__desc">
+      Set the variant input to tint the active tab's underline and label. Accepts
+      the same values as Button.
+    </p>
+    <div class="example-box">
+      <usli-tabs variant="success">
+        <usli-tab value="one" label="One">First panel content.</usli-tab>
+        <usli-tab value="two" label="Two">Second panel content.</usli-tab>
+      </usli-tabs>
+    </div>
+    <div class="code-block">
+      <pre><code>&lt;usli-tabs variant="success"&gt;
+  &lt;usli-tab value="one" label="One"&gt;First panel content.&lt;/usli-tab&gt;
+  &lt;usli-tab value="two" label="Two"&gt;Second panel content.&lt;/usli-tab&gt;
+&lt;/usli-tabs&gt;</code></pre>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section class="section">
+    <h2 class="section__title">API</h2>
+
+    <h3 class="api-subtitle">usli-tabs</h3>
+    <table class="api-table">
+      <thead>
+        <tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="prop-name">value</span></td>
+          <td><span class="prop-type">unknown</span></td>
+          <td><span class="prop-default">undefined</span></td>
+          <td>
+            Two-way bindable via <span class="prop-name">[(value)]</span>. Defaults
+            to the first non-disabled tab's value.
+          </td>
+        </tr>
+        <tr>
+          <td><span class="prop-name">variant</span></td>
+          <td>
+            <span class="prop-type">
+              'primary' | 'secondary' | 'tertiary' | 'error' | 'warning' | 'info' | 'success' | undefined
+            </span>
+          </td>
+          <td><span class="prop-default">undefined</span></td>
+          <td>Optional accent color for the active tab underline.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="api-subtitle api-subtitle--spaced">usli-tab</h3>
+    <table class="api-table">
+      <thead>
+        <tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="prop-name">value</span></td>
+          <td><span class="prop-type">unknown</span></td>
+          <td><span class="prop-default">required</span></td>
+          <td>Unique value identifying this tab.</td>
+        </tr>
+        <tr>
+          <td><span class="prop-name">label</span></td>
+          <td><span class="prop-type">string</span></td>
+          <td><span class="prop-default">required</span></td>
+          <td>Text shown in the tab's header button.</td>
+        </tr>
+        <tr>
+          <td><span class="prop-name">disabled</span></td>
+          <td><span class="prop-type">boolean</span></td>
+          <td><span class="prop-default">false</span></td>
+          <td>Prevents selection via click or keyboard navigation.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>

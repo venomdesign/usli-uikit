@@ -27,6 +27,7 @@ export class Sidebar {
         { label: 'Alert',   path: '/components/alert' },
         { label: 'Card',    path: '/components/card' },
         { label: 'Spinner', path: '/components/spinner' },
+        { label: 'Tabs',    path: '/components/tabs' },
         {
           label: 'Form Elements',
           items: [
