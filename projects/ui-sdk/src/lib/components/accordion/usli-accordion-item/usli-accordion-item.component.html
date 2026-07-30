@@ -5,6 +5,7 @@
       class="accordion-button"
       [class.collapsed]="!isOpen()"
       [disabled]="disabled()"
+      [id]="headerId"
       [attr.aria-expanded]="isOpen()"
       [attr.aria-controls]="panelId"
       (click)="toggle()"
@@ -12,7 +13,7 @@
       {{ label() }}
     </button>
   </h2>
-  <div class="accordion-collapse" [class.show]="isOpen()" [id]="panelId" role="region">
+  <div class="accordion-collapse" [class.show]="isOpen()" [id]="panelId" [attr.aria-labelledby]="headerId" role="region">
     <div class="accordion-body">
       <ng-content />
     </div>

@@ -21,6 +21,7 @@ export class UsliAccordionItemComponent {
   disabled = input(false);
 
   protected readonly panelId = `usli-accordion-panel-${uid++}`;
+  protected readonly headerId = `usli-accordion-header-${uid++}`;
 
   private readonly group = inject(USLI_ACCORDION);
 
