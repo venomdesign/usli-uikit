@@ -1,0 +1,26 @@
+<div [class]="classes()">
+  <ul class="nav nav-tabs" role="tablist">
+    @for (tab of tabs(); track tab.value()) {
+      <li class="nav-item" role="presentation">
+        <button
+          #tabButton
+          type="button"
+          class="nav-link"
+          role="tab"
+          [class.active]="tab.value() === value()"
+          [disabled]="tab.disabled()"
+          [attr.aria-selected]="tab.value() === value()"
+          [attr.aria-controls]="tab.panelId"
+          [id]="tab.tabId"
+          (click)="select(tab.value())"
+          (keydown)="onKeydown($event, tab)"
+        >
+          {{ tab.label() }}
+        </button>
+      </li>
+    }
+  </ul>
+  <div class="tab-content">
+    <ng-content />
+  </div>
+</div>

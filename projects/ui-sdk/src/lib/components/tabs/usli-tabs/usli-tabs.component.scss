@@ -1,0 +1,44 @@
+:host {
+  display: block;
+}
+
+.usli-tabs {
+  font-family: var(--font-roboto, 'Roboto', sans-serif);
+}
+
+// Per-variant accent for the active tab's underline + label — same accent
+// palette as usli-card's border-top-color (see usli-card.component.scss).
+.usli-tabs--primary .nav-link.active {
+  color: var(--blue-500, #00338e);
+  border-bottom-color: var(--blue-500, #00338e);
+}
+
+.usli-tabs--secondary .nav-link.active {
+  color: var(--blue-300, #4d78c9);
+  border-bottom-color: var(--blue-300, #4d78c9);
+}
+
+.usli-tabs--tertiary .nav-link.active {
+  color: var(--gray-600, #757575);
+  border-bottom-color: var(--gray-400, #bdbdbd);
+}
+
+.usli-tabs--error .nav-link.active {
+  color: var(--error-500, #b10505);
+  border-bottom-color: var(--error-500, #b10505);
+}
+
+.usli-tabs--warning .nav-link.active {
+  color: var(--warning-700, #997800);
+  border-bottom-color: var(--warning-500, #efc100);
+}
+
+.usli-tabs--info .nav-link.active {
+  color: var(--info-600, #4996e3);
+  border-bottom-color: var(--info-600, #4996e3);
+}
+
+.usli-tabs--success .nav-link.active {
+  color: var(--success-500, #14661a);
+  border-bottom-color: var(--success-500, #14661a);
+}
