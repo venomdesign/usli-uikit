@@ -10,6 +10,7 @@
           [class.active]="tab.value() === value()"
           [disabled]="tab.disabled()"
           [attr.aria-selected]="tab.value() === value()"
+          [attr.tabindex]="tab.value() === value() ? 0 : -1"
           [attr.aria-controls]="tab.panelId"
           [id]="tab.tabId"
           (click)="select(tab.value())"

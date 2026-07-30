@@ -54,6 +54,7 @@ export class UsliTabsComponent implements UsliTabsControl {
 
   protected onKeydown(event: KeyboardEvent, tab: UsliTabComponent): void {
     if (!(ARROW_KEYS as readonly string[]).includes(event.key)) return;
+    if (event.ctrlKey || event.metaKey || event.altKey) return;
     event.preventDefault();
 
     const all = this.tabs();
