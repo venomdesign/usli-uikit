@@ -1,0 +1,64 @@
+// Per-variant accent for the expanded panel — same accent palette as
+// usli-card's border-top-color (see usli-card.component.scss).
+.usli-accordion-item--primary {
+  border-left: 3px solid var(--blue-500, #00338e);
+
+  .accordion-button:not(.collapsed) {
+    --bs-accordion-active-color: var(--blue-500, #00338e);
+    --bs-accordion-active-bg: var(--blue-50, #e3e9f6);
+  }
+}
+
+.usli-accordion-item--secondary {
+  border-left: 3px solid var(--blue-300, #4d78c9);
+
+  .accordion-button:not(.collapsed) {
+    --bs-accordion-active-color: var(--blue-300, #4d78c9);
+    --bs-accordion-active-bg: var(--blue-50, #e3e9f6);
+  }
+}
+
+.usli-accordion-item--tertiary {
+  border-left: 3px solid var(--gray-400, #bdbdbd);
+
+  .accordion-button:not(.collapsed) {
+    --bs-accordion-active-color: var(--gray-600, #757575);
+    --bs-accordion-active-bg: var(--gray-100, #f5f5f5);
+  }
+}
+
+.usli-accordion-item--error {
+  border-left: 3px solid var(--error-500, #b10505);
+
+  .accordion-button:not(.collapsed) {
+    --bs-accordion-active-color: var(--error-500, #b10505);
+    --bs-accordion-active-bg: var(--error-50, #fff0f0);
+  }
+}
+
+.usli-accordion-item--warning {
+  border-left: 3px solid var(--warning-500, #efc100);
+
+  .accordion-button:not(.collapsed) {
+    --bs-accordion-active-color: var(--warning-700, #997800);
+    --bs-accordion-active-bg: var(--warning-50, #fffde7);
+  }
+}
+
+.usli-accordion-item--info {
+  border-left: 3px solid var(--info-600, #4996e3);
+
+  .accordion-button:not(.collapsed) {
+    --bs-accordion-active-color: var(--info-600, #4996e3);
+    --bs-accordion-active-bg: var(--info-50, #e8f4ff);
+  }
+}
+
+.usli-accordion-item--success {
+  border-left: 3px solid var(--success-500, #14661a);
+
+  .accordion-button:not(.collapsed) {
+    --bs-accordion-active-color: var(--success-500, #14661a);
+    --bs-accordion-active-bg: var(--success-50, #edfaee);
+  }
+}
